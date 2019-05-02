@@ -4,7 +4,12 @@
         <title>Login</title>
     </head>
     <body>
-        Connectez vous
-        <form action="../C/login.php" action="GET"></form>
+        <h1>Login</h1><p></p>
+        <form action="../index.php" action="GET">
+            <input type="text" name="login" placeholder="e-mail"><br>
+            <input type="text" name="psw" placeholder="password"><br>
+            <input type="hidden" name="page" value="login">
+            <input type="submit" value="connection">
+        </form>
     </body>
 </html>
