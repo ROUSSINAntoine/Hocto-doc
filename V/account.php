@@ -18,5 +18,6 @@
             <input type="hidden" name="page" value="account">
             <input type="submit" value="Register">
         </form>
+        <a href="./home.php"><button>return</button></a>
     </body>
 </html>
