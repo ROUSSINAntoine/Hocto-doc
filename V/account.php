@@ -15,6 +15,7 @@
             <input type="text" name="city" placeholder="City"><br>
             <input type="text" name="postcode" placeholder="Postcode"><br>
             <input type="text" name="ssn" placeholder="Social security number"><br>
+            <input type="checkbox" name="prac" value="prac"><br>
             <input type="hidden" name="page" value="account">
             <input type="submit" value="Register">
         </form>
