@@ -11,8 +11,8 @@
         <select name="member">
             <option value="tempo">temporaire</option>
         </select></br>
-        <input type="submit" value="go">
         <input type="hidden" name="page" value="login">
+        <input type="submit" value="go">
     </form>
 </body>
 </html>
