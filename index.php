@@ -22,5 +22,4 @@
         default:
             include('C/login.php');
     }
->>>>>>> master
 ?>
