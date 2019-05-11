@@ -13,6 +13,9 @@
                     break;
                 case "result":
                     include("C/result.php");
+                case "modif_account":
+                    include("C/req_modif_account.php");
+                    break;
                 default:
                     include('E/404.html');
             }

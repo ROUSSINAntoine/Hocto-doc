@@ -2,22 +2,30 @@
 function modif_psw () 
 {
     
+  $bdd = new PDO('mysql:host=localhost;dbname=hoctodoc', 'root', '');
+
+  $reponse =$bdd->prepare ("UPDATE account SET psw =:psw WHERE email LIKE :email");
+  $reponse ->execute (array (
+      "psw"=>$_GET['modif_psw'],
+      "email"=>$_GET['email'] ));
+ 
+  $reponse->closeCursor();
+  return $reponse;
+}
+
+
+function afficher_account()
+{
+
     $bdd = new PDO('mysql:host=localhost;dbname=hoctodoc', 'root', '');
 
-    $reponse =$bdd->prepare ("UPDATE account SET psw =:psw WHERE email LIKE :email");
-    $reponse ->execute (array (
-        "psw"=>$_GET['modif_psw'],
-        "email"=>$_GET['email'] ));
-while ($donnes = $reponse -> fetch()) {
-   echo $donnes['psw']. '<br/>';
-}
-  $reponse->closeCursor();
-return $reponse;
+    $reponse =$bdd->query ("SELECT email , psw FROM account");
+
+    $donnees = $reponse->fetch();
+
+    return $donnees;
 }
 
-$reponse = modif_psw();
-?>
-<?php
 
 function modif_email () 
 {
@@ -28,12 +36,18 @@ function modif_email ()
     $reponse ->execute (array (
         "psw"=>$_GET['psw'],
         "email"=>$_GET['modif_email'] ));
-while ($donnes = $reponse -> fetch()) {
-   echo $donnes['psw']. '<br/>';
-}
-  $reponse->closeCursor();
+    $reponse->closeCursor();
 return $reponse;
 }
 
-$reponse = modif_email();
+if (isset($_GET["email"])) {
+    $psw = modif_psw();
+    $email = modif_email();
+}
+
+$donnees = afficher_account();
+
+include("V\mod_modif_account.php");
+
+
 ?>
