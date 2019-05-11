@@ -4,36 +4,16 @@ function modif_psw ()
     
     $bdd = new PDO('mysql:host=localhost;dbname=hoctodoc', 'root', '');
 
-    $reponse =$bdd->prepare ("UPDATE account SET psw =:psw WHERE email LIKE :email");
+    $reponse =$bdd->prepare ("UPDATE account SET psw =:psw , email = :email WHERE email LIKE :e-mail");
     $reponse ->execute (array (
-        "psw"=>$_GET['modif_psw'],
-        "email"=>$_GET['email'] ));
-while ($donnes = $reponse -> fetch()) {
-   echo $donnes['psw']. '<br/>';
-}
-  $reponse->closeCursor();
-return $reponse;
-}
+        "psw"=>$_GET['psw'],
+        "e-mail"=>$_GET['e-mail']
+        "email"=>$_GET['email'],
+        "id" =>$_GET['id'] ));
+};
+
+
 
 $reponse = modif_psw();
 ?>
 <?php
-
-function modif_email () 
-{
-    
-    $bdd = new PDO('mysql:host=localhost;dbname=hoctodoc', 'root', '');
-
-    $reponse =$bdd->prepare ("UPDATE account SET email = :email WHERE psw LIKE :psw");
-    $reponse ->execute (array (
-        "psw"=>$_GET['psw'],
-        "email"=>$_GET['modif_email'] ));
-while ($donnes = $reponse -> fetch()) {
-   echo $donnes['psw']. '<br/>';
-}
-  $reponse->closeCursor();
-return $reponse;
-}
-
-$reponse = modif_email();
-?>
