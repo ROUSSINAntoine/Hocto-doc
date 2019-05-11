@@ -10,4 +10,21 @@ function modif_psw ()
         "email"=>$_GET['email'] ));
 };
 $reponse = modif_psw();
+
+function affichage_account()
+    {
+    $bdd = new PDO('mysql:host=localhost;dbname=hoctodoc', 'root', '');
+
+    $reponse =$bdd->query ("SELECT * FROM account");
+
+    while($donnees = $reponse->fetch()) {
+    
+        echo $donnees['psw']. '<br/>';
+        echo $donnees['email']. '<br/>';
+
+    }
+}
+
+$reponse = affichage_account();
+
 ?>
