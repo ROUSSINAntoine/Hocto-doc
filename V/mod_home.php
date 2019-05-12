@@ -8,5 +8,6 @@
         <a href="../index.php?page=search&type=prac"><button>Choose a practitioner</button></a>
         <a href="../index.php?page=search&type=str"><button>Choose near a location</button></a>
         <a href="../C/logout.php"><button>Logout</button></a>   
+        
     </body>
 </html>

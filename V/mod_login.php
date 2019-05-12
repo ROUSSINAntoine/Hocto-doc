@@ -5,10 +5,11 @@
     </head>
     <body>
         <h1>Login</h1><p></p>
-        <?php if(isset($_GET['erreur'])) {
-                if($_GET['erreur'] == 'email') {
-                    echo "Nom d'utilisateur ou mot de passe incorrect";
-                }
+        <?php 
+        if(isset($_GET['erreur'])) {
+            if($_GET['erreur'] == 'email') {
+                echo "Nom d'utilisateur ou mot de passe incorrect";
+            }
         }
         ?>
         <form action="../C/login.php" action="GET">

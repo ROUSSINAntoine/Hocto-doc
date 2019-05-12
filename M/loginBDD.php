@@ -1,6 +1,7 @@
 <?php
     function login_bdd($bdd)
     {
+        
         try {
             $bdd = new PDO("mysql:host=localhost;dbname=hoctodoc;charset=utf8", "root" ,"");
             // fait la liaison avec la base de donnée via la variable $bdd
