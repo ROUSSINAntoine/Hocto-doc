@@ -7,6 +7,6 @@
             }
             break;
         default:
-            include('C/login.php');
+            include('V/mod_login.php');
     }
 ?>
