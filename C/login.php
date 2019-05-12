@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 //include('../M/loginBDD.php');
 $bdd = new PDO("mysql:host=localhost;dbname=hoctodoc;charset=utf8", "root" ,"");
 
