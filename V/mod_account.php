@@ -7,7 +7,7 @@
         <h1>Your account</h1><p></p>
         
         </form>
-        <a href="../index.php?">Change your data</a><br>
+        <a href="../index.php?page=modif_account">change your data</a>
         <a href="../index.php?">add member</a><br>
         <a href="../index.php?">calendar</a><br>
         <form action="../index" method="post">
