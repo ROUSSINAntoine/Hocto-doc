@@ -4,7 +4,7 @@
 
 // verifie s'il une personne à rentrer quelque chose
 if(isset($_GET['email']) && isset($_GET['password'])) {
-    include("M/connexion.php");
+    include("M/get_sql.php");
     $req = check_login();
     $data = $req->fetch();
 
