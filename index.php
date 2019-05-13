@@ -6,6 +6,9 @@
                 case "login":
                     include("C/req_login.php");
                     break;
+                case "logout":
+                    include("C/req_logout.php");
+                    break;
                 case "register":
                     include("C/register.php");
                     break;
