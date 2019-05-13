@@ -12,6 +12,9 @@
                 case "register":
                     include("C/register.php");
                     break;
+                case "add_patient":
+                    include("C/req_add_patient.php");
+                    break;
                 case "account":
                     include("C/req_account.php");
                     break;

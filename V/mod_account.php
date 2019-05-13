@@ -16,6 +16,7 @@
             <input type="hidden" name="page" value="modif_account">
             <input type="submit" value="Change user data">
         </form>
+        <a href="index.php?page=add_patient">add patient</a></p>
         <a href="index.php?page=login"><button>return</button></a>
     </body>
 </html>
