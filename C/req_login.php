@@ -14,16 +14,22 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
     $req = $bdd->prepare("SELECT * FROM account WHERE email LIKE :email AND psw LIKE :psw");
     $req->execute(array("email"=>$email, "psw"=>$password));
 
+    if ($req->fetch() == false) {
+        $verif_mail = false;
+        $verif_psw = false;
+    }
+
     while($verif = $req->fetch()) {
-        
+        echo "2";
         if($email == $verif['email']) {
             $verif_mail = true;
+        } else {
+            $verif_mail = false;
         }
                 
         if($_GET['password'] == $verif['psw']) {
             $verif_psw = true;
         } else {
-            $verif_mail = false;
             $verif_psw = false;
         }
     }
