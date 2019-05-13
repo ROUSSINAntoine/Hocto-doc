@@ -11,8 +11,8 @@
         <a href="index.php?">add member</a><br>
         <a href="index.php?">calendar</a><br>
         <form action="index.php" method="post">
-            <select name="member" id="">
-                <option value="tempo">tempo</option>
+            <select name="member">
+                <?php echo $select ?>
             </select>
             <input type="hidden" name="page" value="new_member">
             <input type="submit" value="go">
