@@ -1,8 +1,10 @@
 <?php
 
+//Connexion sur le site web
 //include('../M/loginBDD.php');
 $bdd = new PDO("mysql:host=localhost;dbname=hoctodoc;charset=utf8", "root" ,"");
 
+// verifie s'il une personne à rentrer quelque chose
 if(isset($_GET['email']) && isset($_GET['password'])) {
     
     $email = htmlspecialchars($_GET['email']);
@@ -20,6 +22,9 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
                 
         if($_GET['password'] == $verif['psw']) {
             $verif_psw = true;
+        } else {
+            $verif_mail = false;
+            $verif_psw = false;
         }
     }
     
@@ -27,11 +32,11 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
 
-        //redirecton d'une page 
-        include("V/mod_login.php");
+        //redirecton vers le home 
+        include("../V/mod_home.php");
     } else {
-        include("V/mod_home.php");
-                
+        //redirection vers le login car erreur
+        include("../V/mod_login.php");        
     } 
 } else {
     $error = " Erreur";
