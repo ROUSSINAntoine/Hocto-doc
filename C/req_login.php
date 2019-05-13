@@ -15,11 +15,17 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
     $req->execute(array("email"=>$email, "psw"=>$password));
 
     if ($req->fetch() == false) {
-        $verif_mail = false;
-        $verif_psw = false;
+        //redirection vers le login car erreur
+        include("./V/mod_login.php");
+    } else {
+        $_SESSION['email'] = $email;
+        $_SESSION['password'] = $password;
+
+        //redirecton vers le home 
+        include("./V/mod_home.php");
     }
 
-    while($verif = $req->fetch()) {
+    /*while($verif = $req->fetch()) {
         echo "2";
         if($email == $verif['email']) {
             $verif_mail = true;
@@ -43,7 +49,7 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
     } else {
         //redirection vers le login car erreur
         include("./V/mod_login.php");        
-    } 
+    } */
 } else {
     $error = " Erreur";
 }

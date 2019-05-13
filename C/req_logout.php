@@ -1,10 +1,7 @@
 <?php
 //session_start();
-
+$_SESSION = array();
 session_destroy();
-
-echo $_SESSION['email'];
-echo $_SESSION['password'];
 include('./V/mod_login.php');
 exit;	
 ?>
