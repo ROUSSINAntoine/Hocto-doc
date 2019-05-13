@@ -5,7 +5,7 @@
     <title>appointement</title>
 </head>
 <body>
-    <form action="../index.php" method="post">
+    <form action="index.php" method="post">
         <input type="date" name="dtrdv"></br>
         <input type="time" name="hrdv"><br>          
         <select name="member">

@@ -12,7 +12,7 @@
             }
         }
         ?>
-        <form action="../C/login.php" action="GET">
+        <form action="index.php" action="GET">
             <input type="text" name="email" placeholder="e-mail"><br>
             <input type="text" name="password" placeholder="password"><br>
             <input type="hidden" name="page" value="login">

@@ -11,6 +11,6 @@
         <input type="hidden" name="emails" value="<?php echo $donnees['email']?>">
         <input type="submit" value="valider">
     </form>
-    <a href="V/mod_account.php">back</a>
+    <a href="index.php?page=account">back</a>
 </body>
 </html>
