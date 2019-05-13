@@ -2,11 +2,11 @@
 
 //Connexion sur le site web
 //include('../M/db_connect.php');
-$bdd = new PDO("mysql:host=localhost;dbname=hoctodoc;charset=utf8", "root" ,"");
+
 
 // verifie s'il une personne à rentrer quelque chose
 if(isset($_GET['email']) && isset($_GET['password'])) {
-    
+    $bdd = new PDO("mysql:host=localhost;dbname=hoctodoc;charset=utf8", "root" ,"");
     $email = htmlspecialchars($_GET['email']);
     $password = htmlspecialchars($_GET['password']);
 
@@ -25,8 +25,9 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
         //redirecton vers le home 
         include("./V/mod_home.php");
     }
+    $req->closeCursor();
 } else if (isset($_SESSION['email'])) {
     include("./V/mod_home.php");
 }
-$req->closeCursor();
+
 ?>
