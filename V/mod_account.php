@@ -10,11 +10,11 @@
         <a href="index.php?page=modif_account">change your data</a>
         <a href="index.php?">add member</a><br>
         <a href="index.php?">calendar</a><br>
-        <form action="index.php" method="post">
+        <form action="index.php" method="GET">
             <select name="member">
                 <?php echo $select ?>
             </select>
-            <input type="hidden" name="page" value="new_member">
+            <input type="hidden" name="page" value="modif_account">
             <input type="submit" value="go">
         </form>
         <a href="index.php?page=login"><button>return</button></a>
