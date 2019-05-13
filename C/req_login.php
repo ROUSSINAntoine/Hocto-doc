@@ -1,40 +1,33 @@
 <?php
 
-//include('../M/loginBDD.php');
-$bdd = new PDO("mysql:host=localhost;dbname=hoctodoc;charset=utf8", "root" ,"");
+//Connexion sur le site web
+//include('../M/db_connect.php');
 
+
+// verifie s'il une personne à rentrer quelque chose
 if(isset($_GET['email']) && isset($_GET['password'])) {
-    
+    $bdd = new PDO("mysql:host=localhost;dbname=hoctodoc;charset=utf8", "root" ,"");
     $email = htmlspecialchars($_GET['email']);
     $password = htmlspecialchars($_GET['password']);
 
     //login_bdd($bdd);
     $req = $bdd->prepare("SELECT * FROM account WHERE email LIKE :email AND psw LIKE :psw");
     $req->execute(array("email"=>$email, "psw"=>$password));
-
-    while($verif = $req->fetch()) {
-        
-        if($email == $verif['email']) {
-            $verif_mail = true;
-        }
-                
-        if($_GET['password'] == $verif['psw']) {
-            $verif_psw = true;
-        }
-    }
-    
-    if($verif_mail == true && $verif_psw == true) {
+    $data = $req->fetch();
+    if ($data == false) {
+        //redirection vers le login car erreur
+        include("./V/mod_login.php");
+    } else {
+        $_SESSION['id'] = $data['id'];
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
 
-        //redirecton d'une page 
-        include("V/mod_login.php");
-    } else {
-        include("V/mod_home.php");
-                
-    } 
-} else {
-    $error = " Erreur";
+        //redirecton vers le home 
+        include("./V/mod_home.php");
+    }
+    $req->closeCursor();
+} else if (isset($_SESSION['email'])) {
+    include("./V/mod_home.php");
 }
 
 ?>

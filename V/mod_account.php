@@ -17,6 +17,6 @@
             <input type="hidden" name="page" value="new_member">
             <input type="submit" value="go">
         </form>
-        <a href="V/mod_home.php"><button>return</button></a>
+        <a href="index.php?page=login"><button>return</button></a>
     </body>
 </html>
