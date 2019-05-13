@@ -32,7 +32,7 @@ function modif_patient ()
     //modifier la table practicien
     {
 
-        $reponse =$bdd->prepare ("UPDATE practitioner SET fistname =:firstname,lastname=:lastname ,adrs = :adrs , phone_number =:phone ,city = :city , postcode =:postcode ,email =:email  WHERE id LIKE :id");
+        $reponse =$bdd->prepare ("UPDATE practitioner SET firstname =:firstname,lastname=:lastname ,adrs = :adrs , phone_number =:phone ,city = :city , postcode =:postcode ,email =:email  WHERE id LIKE :id");
         $reponse ->execute (array (
             "id"=>$_GET['id'],
             "firstname"=>$_GET['firstname'],
