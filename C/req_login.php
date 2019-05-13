@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 //include('../M/loginBDD.php');
 $bdd = new PDO("mysql:host=localhost;dbname=hoctodoc;charset=utf8", "root" ,"");
@@ -29,9 +28,9 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
         $_SESSION['password'] = $password;
 
         //redirecton d'une page 
-        header('location: ../V/mod_home.php');
+        include("V/mod_login.php");
     } else {
-        header('location: ..\V\mod_login.php?erreur=email');
+        include("V/mod_home.php");
                 
     } 
 } else {
