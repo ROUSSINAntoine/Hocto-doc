@@ -7,16 +7,16 @@
         <h1>Your account</h1><p></p>
         
         </form>
-        <a href="../index.php?page=modif_account">change your data</a>
-        <a href="../index.php?">add member</a><br>
-        <a href="../index.php?">calendar</a><br>
-        <form action="../index" method="post">
+        <a href="index.php?page=modif_account">change your data</a>
+        <a href="index.php?">add member</a><br>
+        <a href="index.php?">calendar</a><br>
+        <form action="index.php" method="post">
             <select name="member" id="">
                 <option value="tempo">tempo</option>
             </select>
             <input type="hidden" name="page" value="new_member">
             <input type="submit" value="go">
         </form>
-        <a href="./home.php"><button>return</button></a>
+        <a href="index.php?page=login"><button>return</button></a>
     </body>
 </html>

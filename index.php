@@ -1,12 +1,19 @@
 <?php
+    session_start();
     switch(isset($_GET)) {
         case(isset($_GET['page'])):
             switch($_GET['page']){
                 case "login":
-                    include("C/login.php");
+                    include("C/req_login.php");
+                    break;
+                case "logout":
+                    include("C/req_logout.php");
                     break;
                 case "register":
                     include("C/register.php");
+                    break;
+                case "account":
+                    include("C/req_account.php");
                     break;
                 case "search":
                     include("C/search.php");
@@ -21,6 +28,6 @@
             }
             break;
         default:
-            include('V/login.php');
+            include('V/mod_login.php');
     }
 ?>
