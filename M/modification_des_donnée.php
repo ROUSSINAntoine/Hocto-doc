@@ -7,6 +7,7 @@ function modif () {
         "psw"=>$_GET['psw'],
         "emails"=>$_GET['emails'],
         "email"=>$_GET['email'] ));
+    $reponse->closeCursor();
 
 }
 function modif_patient () 
@@ -23,6 +24,8 @@ function modif_patient ()
             "city" =>$_GET['city'],
             "postcode" =>$_GET['postcode'],
             "ssn" =>$_GET['ssn']));
+
+        $reponse->closeCursor();
         }
 
     function modif_practitioner () 
@@ -39,5 +42,7 @@ function modif_patient ()
             "city" =>$_GET['city'],
             "email" =>$_GET['email'],
             "postcode" =>$_GET['postcode'] ));
+        
+        $reponse->closeCursor();
         }
 ?>
