@@ -5,7 +5,10 @@ function modif () {
     include("M/other_sql.php");
     sql_modif();
 }
-
+function modif_patient() {
+    include("M/other_sql.php");
+    modif_patient();
+}
 function affichage_account() {
     include("M/get_sql.php");
     $req = sql_modif_account();
@@ -21,6 +24,7 @@ if (isset($_GET["psw"])) {
 
 $data = affichage_account();
 include("V/mod_modif_account.php");
+
 
 
 ?>
