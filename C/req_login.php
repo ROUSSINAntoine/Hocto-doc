@@ -33,10 +33,10 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
         $_SESSION['password'] = $password;
 
         //redirecton vers le home 
-        include("../V/mod_home.php");
+        include("./V/mod_home.php");
     } else {
         //redirection vers le login car erreur
-        include("../V/mod_login.php");        
+        include("./V/mod_login.php");        
     } 
 } else {
     $error = " Erreur";
