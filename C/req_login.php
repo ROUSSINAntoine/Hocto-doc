@@ -1,7 +1,7 @@
 <?php
 
 //Connexion sur le site web
-//include('../M/loginBDD.php');
+//include('../M/db_connect.php');
 $bdd = new PDO("mysql:host=localhost;dbname=hoctodoc;charset=utf8", "root" ,"");
 
 // verifie s'il une personne à rentrer quelque chose
