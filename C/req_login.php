@@ -13,45 +13,20 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
     //login_bdd($bdd);
     $req = $bdd->prepare("SELECT * FROM account WHERE email LIKE :email AND psw LIKE :psw");
     $req->execute(array("email"=>$email, "psw"=>$password));
-
-    if ($req->fetch() == false) {
+    $data = $req->fetch();
+    if ($data == false) {
         //redirection vers le login car erreur
         include("./V/mod_login.php");
     } else {
+        $_SESSION['id'] = $data['id'];
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
 
         //redirecton vers le home 
         include("./V/mod_home.php");
     }
-
-    /*while($verif = $req->fetch()) {
-        echo "2";
-        if($email == $verif['email']) {
-            $verif_mail = true;
-        } else {
-            $verif_mail = false;
-        }
-                
-        if($_GET['password'] == $verif['psw']) {
-            $verif_psw = true;
-        } else {
-            $verif_psw = false;
-        }
-    }
-    
-    if($verif_mail == true && $verif_psw == true) {
-        $_SESSION['email'] = $email;
-        $_SESSION['password'] = $password;
-
-        //redirecton vers le home 
-        include("./V/mod_home.php");
-    } else {
-        //redirection vers le login car erreur
-        include("./V/mod_login.php");        
-    } */
-} else {
-    $error = " Erreur";
+} else if (isset($_SESSION['email'])) {
+    include("./V/mod_home.php");
 }
-
+$req->closeCursor();
 ?>
