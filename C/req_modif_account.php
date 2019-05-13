@@ -8,7 +8,7 @@ function modif () {
 
 function affichage_account() {
     include("M/get_sql.php");
-    $req = sql_modif_account();
+    $req = sql_display_account();
     $data = $req->fetch();
     
     return $data;

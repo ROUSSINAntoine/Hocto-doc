@@ -21,7 +21,7 @@
         return $req;
     }
 
-    function sql_modif_account() {
+    function sql_display_account() {
         include("M/db_connect.php");
 
         $req = $db->query("SELECT * FROM account WHERE id LIKE ".$_SESSION['id']);
