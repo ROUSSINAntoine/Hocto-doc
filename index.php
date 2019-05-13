@@ -1,4 +1,5 @@
 <?php
+    session_start();
     switch(isset($_GET)) {
         case(isset($_GET['page'])):
             switch($_GET['page']){
