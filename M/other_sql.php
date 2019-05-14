@@ -4,18 +4,7 @@
         //modif account
         $req =$db->prepare ("UPDATE account JOIN patient ON account.id = patient.account SET account.psw =:psw , account.email =:emails ,patient.firstname =:firstname ,patient.lastname=:lastname, patient.adrs= :adrs , patient.phone_number =:phone , patient.city=:city , patient.postcode =:postcode , patient.ssn =:ssn WHERE patient.id LIKE :id AND account.email=:email");
         $req ->execute (array (
-            "psw"=>$_GET['psw'],
-            "emails"=>$_GET['emails'],
-            "email"=>$_GET['email'] ));
-            $req->closeCursor();
-    }
-
-    function sql_add_patient () {
-        include("M/db_connect.php");
-        
-        $req = $db->query("INSERT INTO patient (id, firstname, lastname, phone_number, adrs, city, postcode, ssn, account) VALUES (NULL, ".$_GET['firstname'].", ".$_GET['lastname'].", ".$_GET['phone_number'].", ".$_GET['adrs'].", ".$_GET['city'].", ".$_GET['postcode'].", ".$_GET['ssn'].", ".$_SESSION['id'].")");
-        $req->closeCursor();
-    }
+            "psw"=>$_GET["psw"],
             "id"=>$_GET['id'],
             "firstname"=>$_GET['firstname'],
             "lastname" =>$_GET['lastname'],
@@ -27,6 +16,13 @@
             "email"=>$_GET['email'],
             "emails"=>$_GET['emails'] ));
         return $req;
-         
-    };
+    }
+
+    function sql_add_patient () {
+        include("M/db_connect.php");
+        
+        $req = $db->query("INSERT INTO patient (id, firstname, lastname, phone_number, adrs, city, postcode, ssn, account) VALUES (NULL, \"".$_GET['firstname']."\", \"".$_GET['lastname']."\", ".$_GET['phone_number'].", \"".$_GET['adrs']."\", \"".$_GET['city']."\", ".$_GET['postcode'].", ".$_GET['ssn'].", ".$_SESSION['id'].")");
+        $req->closeCursor();
+    }
+            
 ?>

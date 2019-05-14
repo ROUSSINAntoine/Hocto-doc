@@ -18,6 +18,6 @@
         <input type="hidden" name="page" value="add_patient">
         <input type="submit" value="Register">
     </form>
-    <a href="index.php?page=account">return</a>
+    <a href="index.php?page=account"><button>return</button></a> <br>
 </body>
 </html>
