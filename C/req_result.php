@@ -1,0 +1,1 @@
+<?php include("V/mod_result.php") ?>

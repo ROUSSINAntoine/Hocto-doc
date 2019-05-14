@@ -19,10 +19,11 @@
                     include("C/req_account.php");
                     break;
                 case "search":
-                    include("C/search.php");
+                    include("C/req_search.php");
                     break;
                 case "result":
-                    include("C/result.php");
+                    include("C/req_result.php");
+                    break;
                 case "modif_account":
                     include("C/req_modif_account.php");
                     break;
