@@ -27,6 +27,15 @@
         $req = $db->query("SELECT * FROM account WHERE id LIKE ".$_SESSION['id']);
         
         return $req;
+    }  
+    function sql_display_member() {
+        include("M/db_connect.php");
+        $req = $db->prepare ("SELECT * FROM account JOIN patient ON account.id = patient.account WHERE patient.id LIKE :id ");
+        $req ->execute (array(
+        "id"=>$_GET['id'] ));
+
+        return $req;
+
     }
 
     function sql_search_by_prac() {
@@ -36,6 +45,7 @@
 
         return $req;
     }
+  
     
 
 ?>

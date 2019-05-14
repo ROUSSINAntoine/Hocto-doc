@@ -19,6 +19,7 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
         
         //si identifient son bon alors enregistre les données en session
         $_SESSION['id'] = $data['id'];
+        $_SESSION['id_ac'] = $data['id'];
         $_SESSION['email'] = $_GET['email'];
         $_SESSION['password'] = $_GET['password'];
 
