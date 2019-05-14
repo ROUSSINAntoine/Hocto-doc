@@ -3,7 +3,8 @@
 
 function modif () {
     include("M/other_sql.php");
-    sql_modif();
+    $req=sql_modif();
+    $req->closeCursor();
 }
 function modif_patient() {
     include("M/other_sql.php");
@@ -11,11 +12,12 @@ function modif_patient() {
 }
 function affichage_account() {
     include("M/get_sql.php");
-    $req = sql_modif_account();
+    $req = sql_display_member();
     $data = $req->fetch();
     
-    return $data;
     $req->closeCursor();
+    return $data;
+    
 }
 
 if (isset($_GET["psw"])) {
@@ -24,7 +26,6 @@ if (isset($_GET["psw"])) {
 
 $data = affichage_account();
 include("V/mod_modif_account.php");
-
 
 
 ?>

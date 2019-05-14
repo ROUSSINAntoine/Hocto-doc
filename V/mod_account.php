@@ -10,7 +10,7 @@
         <a href="index.php?">add member</a><br>
         <a href="index.php?">calendar</a><br>
         <form action="index.php" method="GET">
-            <select name="member">
+            <select name="id">
                 <?php echo $select ?>
             </select>
             <input type="hidden" name="page" value="modif_account">
