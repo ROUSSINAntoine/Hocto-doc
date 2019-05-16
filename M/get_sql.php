@@ -21,6 +21,22 @@
         return $req;
     }
 
+    function check_practitioner() {
+
+        //j'appelle la fonction pour se connecter à la database
+        include("M/db_connect.php");
+        
+        //je récupere ce que à remplis l'user
+        $email = htmlspecialchars($_GET['email']);
+        $password = htmlspecialchars($_GET['password']);
+        
+        $req = $db->prepare("SELECT * FROM practitioner WHERE email LIKE :email AND psw LIKE :psw");
+        $req->execute(array("email"=>$email, "psw"=>$password));
+
+        return $req;
+
+    }
+
     function sql_display_account() {
         include("M/db_connect.php");
 
