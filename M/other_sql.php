@@ -24,5 +24,14 @@
         $req = $db->query("INSERT INTO patient (id, firstname, lastname, phone_number, adrs, city, postcode, ssn, account) VALUES (NULL, \"".$_GET['firstname']."\", \"".$_GET['lastname']."\", ".$_GET['phone_number'].", \"".$_GET['adrs']."\", \"".$_GET['city']."\", ".$_GET['postcode'].", ".$_GET['ssn'].", ".$_SESSION['id'].")");
         $req->closeCursor();
     }
+
+    function savoir_membre () {
+    //savoir quelle membre appartient a quel compte
+     
+    include("M/db_connect.php");
+    $req =$db->prepare ("SELECT account.id aid,patient.firstname pf,patient.lastname pn FROM account JOIN patient ON account.id = patient.account WHERE email=:email ");
+    $req ->execute (array (
+        "email"=>$_GET['email'] ));
+}
             
 ?>
