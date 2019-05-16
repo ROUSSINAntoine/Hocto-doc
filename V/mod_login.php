@@ -18,5 +18,6 @@
             <input type="hidden" name="page" value="login">
             <input type="submit" value="connection">
         </form>
+        <a href="index.php?page=register">register</a>
     </body>
 </html>
