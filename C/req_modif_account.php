@@ -1,29 +1,30 @@
 <?php
+//include("M/db_connect.php");
+
 function modif () {
-    
-    $bdd = new PDO('mysql:host=localhost;dbname=hoctodoc', 'root', '');
-    $reponse =$bdd->prepare ("UPDATE account SET psw =:psw , email =:email WHERE email LIKE :emails");
-    $reponse ->execute (array (
-        "psw"=>$_GET['psw'],
-        "emails"=>$_GET['emails'],
-        "email"=>$_GET['email'] ));
+    include("M/other_sql.php");
+    $req=sql_modif();
+    $req->closeCursor();
 }
-
+function modif_patient() {
+    include("M/other_sql.php");
+    modif_patient();
+}
 function affichage_account() {
-    $bdd = new PDO('mysql:host=localhost;dbname=hoctodoc', 'root', '');
-
-    $reponse =$bdd->query ("SELECT * FROM account");
-
-    $donnees = $reponse->fetch();
+    include("M/get_sql.php");
+    $req = sql_display_member();
+    $data = $req->fetch();
     
-    return $donnees;
+    $req->closeCursor();
+    return $data;
+    
 }
 
 if (isset($_GET["psw"])) {
     modif();
 }
 
-$donnees = affichage_account();
+$data = affichage_account();
 include("V/mod_modif_account.php");
 
 

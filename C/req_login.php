@@ -1,33 +1,62 @@
 <?php
 
 //Connexion sur le site web
-//include('../M/db_connect.php');
-
 
 // verifie s'il une personne à rentrer quelque chose
 if(isset($_GET['email']) && isset($_GET['password'])) {
-    $bdd = new PDO("mysql:host=localhost;dbname=hoctodoc;charset=utf8", "root" ,"");
-    $email = htmlspecialchars($_GET['email']);
-    $password = htmlspecialchars($_GET['password']);
-
-    //login_bdd($bdd);
-    $req = $bdd->prepare("SELECT * FROM account WHERE email LIKE :email AND psw LIKE :psw");
-    $req->execute(array("email"=>$email, "psw"=>$password));
+    
+    //appelle la fonction sql qui permet de verifier le bon email et password
+    include("M/get_sql.php");
+    $req = check_login();
     $data = $req->fetch();
-    if ($data == false) {
-        //redirection vers le login car erreur
-        include("./V/mod_login.php");
-    } else {
-        $_SESSION['id'] = $data['id'];
-        $_SESSION['email'] = $email;
-        $_SESSION['password'] = $password;
 
-        //redirecton vers le home 
+    // si c'est faux regarde si c'est un practitioner
+    if ($data == false) {
+
+        //appelle la fonction sql qui permet de verifier le bon email et password du practitioner
+        $req = check_practitioner();
+        $data = $req->fetch();
+
+        //si c'est faux renvoie une erreur
+        if ($data == false) {
+        
+            //redirection vers le login car erreur
+            include("./V/mod_login.php");
+        
+            //message d'erreur en rouge
+            echo '<span style="color:red;">Mot De Passe ou Email Incorrect</span>';
+
+        //connecte le practitionner
+        } else {
+
+            //crée une session avec les logins et id du practitioner
+            $_SESSION['id'] = $data['id'];
+            $_SESSION['email'] = $_GET['email'];
+            $_SESSION['password'] = $_GET['password'];
+            
+            //redirecton vers le home pour l'user connecté
+            include("./V/mod_home.php");
+        }
+
+    } else {
+        
+        //si identifient son bon alors enregistre les données en session
+        $_SESSION['id'] = $data['id'];
+        $_SESSION['id_ac'] = $data['id'];
+        $_SESSION['email'] = $_GET['email'];
+        $_SESSION['password'] = $_GET['password'];
+
+        //redirecton vers le home pour l'user connecté
         include("./V/mod_home.php");
     }
+    
+    //ferme la db
     $req->closeCursor();
+
+    //deja connecté
 } else if (isset($_SESSION['email'])) {
+
+    //redirige vers le home
     include("./V/mod_home.php");
 }
-
 ?>

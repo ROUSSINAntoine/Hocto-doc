@@ -1,8 +1,14 @@
 <?php
 
+<<<<<<< HEAD
 
     
     $servername = "localhost";
+=======
+    include('M/db_connect.php');
+    
+    /*$servername = "localhost";
+>>>>>>> master
     $username = "root";
     $password = ""; // mdp jérémy
     $db = "hoctodoc";
@@ -13,7 +19,11 @@
         //echo "Connected successfully";  //connection faite à la base de donnée
     } catch(PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
+<<<<<<< HEAD
     }
+=======
+    }*/ 
+>>>>>>> master
 
 
     if(isset($_GET['city'])){   

@@ -5,12 +5,20 @@
 </head>
 <body>
     <form action="index.php" method="GET">
-        <input type="text" name="email" value="<?php echo $donnees['email']?>"><br>
-        <input type="text" name="psw" value="<?php echo $donnees['psw']?>"><br>
+        <input type="text" name="emails" value="<?php echo $data['email']?>"><br>
+        <input type="text" name="psw" value="<?php echo $data['psw']?>"><br>
+        <input type="text" name="firstname" value="<?php echo $data['firstname']?>"><br>
+        <input type="text" name="lastname" value="<?php echo $data['lastname']?>"><br>
+        <input type="text" name="phone" value="<?php echo $data['phone_number']?>"><br>
+        <input type="text" name="adrs" value="<?php echo $data['adrs']?>"><br>
+        <input type="text" name="city" value="<?php echo $data['city']?>"><br>
+        <input type="text" name="postcode" value="<?php echo $data['postcode']?>"><br>
+        <input type="text" name="ssn" value="<?php echo $data['ssn']?>"><br>
         <input type="hidden" name="page" value="modif_account">
-        <input type="hidden" name="emails" value="<?php echo $donnees['email']?>">
+        <input type="hidden" name="email" value="<?php echo $data['email']?>">
+        <input type="hidden" name="id" value="<?php echo $data['id']?>">
         <input type="submit" value="valider">
     </form>
-    <a href="index.php?page=account">back</a>
+    <a href="index.php?page=account"><button>return</button></a>
 </body>
 </html>
