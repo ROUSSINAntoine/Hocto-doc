@@ -15,6 +15,7 @@
             <input type="submit" value="Change user data">
         </form>
         <a href="index.php?page=add_patient"><button>add patient</button></a></p>
+        <a href="index.php?page=delete"><button>delete account</button></a>
         <a href="index.php?page=login"><button>return</button></a>
     </body>
 </html>

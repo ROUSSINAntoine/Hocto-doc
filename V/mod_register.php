@@ -9,15 +9,10 @@
             <input type="text" name="email" placeholder="e-mail"><br>
             <input type="text" name="pass" placeholder="password"><br>
             <input type="text" name="conf" placeholder="password"><br>
-            <input type="text" name="name" placeholder="First name"><br>
-            <input type="text" name="lastname" placeholder="Name"><br>
-            <input type="text" name="phone_number" placeholder="Phone number"><br>
-            <input type="text" name="adrs" placeholder="Address"><br>
-            <input type="text" name="city" placeholder="City"><br>
-            <input type="text" name="postcode" placeholder="Postcode"><br>
-            <input type="text" name="vital" placeholder="Social security number"><br>
+            
             <input type="hidden" name="page" value="register">
             <input type="submit" name="submit" value="Register">
         </form>
+        <a href="index.php"><button>return</button></a>
     </body>
 </html>
