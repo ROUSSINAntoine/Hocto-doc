@@ -10,7 +10,7 @@
                     include("C/req_logout.php");
                     break;
                 case "register":
-                    include("C/register.php");
+                    include("C/req_register.php");
                     break;
                 case "add_patient":
                     include("C/req_add_patient.php");
@@ -26,6 +26,9 @@
                     break;
                 case "appointment":
                     include("C/req_appointment.php");
+                    break;
+                case "delete":
+                    include("C/req_delete.php");
                     break;
                 case "modif_account":
                     include("C/req_modif_account.php");
