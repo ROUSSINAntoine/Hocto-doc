@@ -32,6 +32,12 @@
     $req =$db->prepare ("SELECT account.id aid,patient.firstname pf,patient.lastname pn FROM account JOIN patient ON account.id = patient.account WHERE email=:email ");
     $req ->execute (array (
         "email"=>$_GET['email'] ));
-}
-            
+
+    }
+    
+    function sql_appointment () {
+        include("M/db_connect.php");
+        $hr = date("H:i", strtotime($_GET['hrrdv']));
+        $req =$db->query("INSERT INTO `rdv` (`id`, `dtrdv`, `hrrdv`, `observations`, `practitioner`, `patient`) VALUES (NULL, \"".$_GET["dtrdv"]."\", \"".$hr."\", '', \"".$_GET['doc']."\", \"".$_GET['patient']."\")");
+    }
 ?>
