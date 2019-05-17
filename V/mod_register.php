@@ -5,18 +5,14 @@
     </head>
     <body>
         <h1>Create your account</h1><p></p>
-        <form action="../index.php" action="GET">
-            <input type="text" name="login" placeholder="e-mail"><br>
-            <input type="text" name="psw" placeholder="password"><br>
-            <input type="text" name="first_name" placeholder="First name"><br>
-            <input type="text" name="name" placeholder="Name"><br>
-            <input type="text" name="phone_number" placeholder="Phone number"><br>
-            <input type="text" name="address" placeholder="Address"><br>
-            <input type="text" name="city" placeholder="City"><br>
-            <input type="text" name="postcode" placeholder="Postcode"><br>
-            <input type="text" name="ssn" placeholder="Social security number"><br>
+        <form action="index.php" action="GET">
+            <input type="text" name="email" placeholder="e-mail"><br>
+            <input type="text" name="pass" placeholder="password"><br>
+            <input type="text" name="conf" placeholder="password"><br>
+            
             <input type="hidden" name="page" value="register">
-            <input type="submit" value="Register">
+            <input type="submit" name="submit" value="Register">
         </form>
+        <a href="index.php"><button>return</button></a>
     </body>
 </html>
