@@ -8,13 +8,13 @@
 </head>
 <body>
     <form action="index.php" action="GET">
-        <input type="text" name="firstname" placeholder="First name"><br>
-        <input type="text" name="lastname" placeholder="Lastame"><br>
-        <input type="text" name="phone_number" placeholder="Phone number"><br>
-        <input type="text" name="adrs" placeholder="Address"><br>
-        <input type="text" name="city" placeholder="City"><br>
-        <input type="text" name="postcode" placeholder="Postcode"><br>
-        <input type="text" name="ssn" placeholder="Social security number"><br>
+        <input type="text" name="firstname" placeholder="First name" value='<?php echo $firstname ?>'><br>
+        <input type="text" name="lastname" placeholder="Lastame" value='<?php echo $lastname ?>'><br>
+        <input type="text" name="phone_number" placeholder="Phone number" value='<?php echo $phone_number ?>'><br>
+        <input type="text" name="adrs" placeholder="Address" value='<?php echo $adrs ?>'><br>
+        <input type="text" name="city" placeholder="City" value='<?php echo $city ?>'><br>
+        <input type="text" name="postcode" placeholder="Postcode" value='<?php echo $postcode ?>'><br>
+        <input type="text" name="ssn" placeholder="Social security number" value='<?php echo $ssn ?>'><br>
         <input type="hidden" name="page" value="add_patient">
         <input type="submit" value="Register">
     </form>
