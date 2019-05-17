@@ -5,11 +5,19 @@
     </head>
     <body>
         <h1>Login</h1><p></p>
-        <form action="../index.php" action="GET">
-            <input type="text" name="login" placeholder="e-mail"><br>
-            <input type="text" name="psw" placeholder="password"><br>
+        <?php 
+        if(isset($_GET['erreur'])) {
+            if($_GET['erreur'] == 'email') {
+                echo "Nom d'utilisateur ou mot de passe incorrect";
+            }
+        }
+        ?>
+        <form action="index.php?page" action="GET">
+            <input type="email" name="email" placeholder="email"><br>
+            <input type="password" name="password" placeholder="password"><br>
             <input type="hidden" name="page" value="login">
             <input type="submit" value="connection">
         </form>
+        <a href="index.php?page=register"><button>register</button></a>
     </body>
 </html>
