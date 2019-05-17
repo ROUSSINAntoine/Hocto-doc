@@ -4,6 +4,7 @@
     <title>results</title>
 </head>
 <body>
+    <?php echo $add ?>
     <a href="index.php?page=login">Home</a>  
 </body>
 </html> 

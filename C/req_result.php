@@ -7,8 +7,9 @@
             break;
     }
 
-    $data = $req->fetch();
-    var_dump($data);    
+    while ($data = $req->fetch()) {
+        $add = $data['lastname']." ".$data['firstname']."</br><a href='index.php?page=appointment&doc=".$data["id"]."'><button>take an appointment</button></a></br>";
+    }    
 
-    include("V/mod_result.php") 
+    include("V/mod_results.php");
 ?>

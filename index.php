@@ -24,6 +24,9 @@
                 case "result":
                     include("C/req_result.php");
                     break;
+                case "appointment":
+                    include("C/req_appointment.php");
+                    break;
                 case "modif_account":
                     include("C/req_modif_account.php");
                     break;

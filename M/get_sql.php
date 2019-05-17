@@ -57,7 +57,7 @@
     function sql_search_by_prac() {
         include("M/db_connect.php");
 
-        $req = $db->query("SELECT * FROM practitioner WHERE lastname LIKE ".$_GET['srch']);
+        $req = $db->query("SELECT * FROM practitioner WHERE lastname LIKE \"".$_GET["srch"]."\"");
 
         return $req;
     }
