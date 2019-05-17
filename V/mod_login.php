@@ -18,6 +18,10 @@
             <input type="hidden" name="page" value="login">
             <input type="submit" value="connection">
         </form>
+<<<<<<< HEAD
+        <a href="index.php?page=register">register</a>
+=======
         <a href="index.php?page=register"><button>register</button></a>
+>>>>>>> master
     </body>
 </html>
