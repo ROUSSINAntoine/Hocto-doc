@@ -19,6 +19,6 @@
         <input type="hidden" name="id" value="<?php echo $data['id']?>">
         <input type="submit" value="valider">
     </form>
-    <a href="index.php?page=account">back</a>
+    <a href="index.php?page=account"><button>return</button></a>
 </body>
 </html>
