@@ -24,20 +24,15 @@
         $req = $db->query("INSERT INTO patient (id, firstname, lastname, phone_number, adrs, city, postcode, ssn, account) VALUES (NULL, \"".$_GET['firstname']."\", \"".$_GET['lastname']."\", ".$_GET['phone_number'].", \"".$_GET['adrs']."\", \"".$_GET['city']."\", ".$_GET['postcode'].", ".$_GET['ssn'].", ".$_SESSION['id'].")");
         $req->closeCursor();
     }
-
-    function savoir_membre () {
-    //savoir quelle membre appartient a quel compte
-     
-    include("M/db_connect.php");
-    $req =$db->prepare ("SELECT account.id aid,patient.firstname pf,patient.lastname pn FROM account JOIN patient ON account.id = patient.account WHERE email=:email ");
-    $req ->execute (array (
-        "email"=>$_GET['email'] ));
-
-    }
     
     function sql_appointment () {
         include("M/db_connect.php");
         $hr = date("H:i", strtotime($_GET['hrrdv']));
         $req =$db->query("INSERT INTO `rdv` (`id`, `dtrdv`, `hrrdv`, `observations`, `practitioner`, `patient`) VALUES (NULL, \"".$_GET["dtrdv"]."\", \"".$hr."\", '', \"".$_GET['doc']."\", \"".$_GET['patient']."\")");
+    }
+
+    function sql_del_patient () {
+        include("M/db_connect.php");
+        $req = $db->query("DELETE FROM patient WHERE id = ".$_GET["id"]);
     }
 ?>

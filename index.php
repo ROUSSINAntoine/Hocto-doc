@@ -31,7 +31,11 @@
                     include("C/req_delete.php");
                     break;
                 case "modif_account":
-                    include("C/req_modif_account.php");
+                    if (isset($_GET["modif"])) {
+                        include("C/req_modif_account.php");
+                    } else if (isset($_GET["del"])) {
+                        include("C/req_del_patient.php");
+                    }
                     break;
                 default:
                     include('E/404.html');
