@@ -9,7 +9,7 @@
         <input type="text" name="srch">
         <input type="hidden" name="page" value="result">
         <input type="hidden" name="type" value="<?php echo $type ?>">
-        <input type="submit" value="go">
+        <input type="submit" value="confirm">
     </form>
 </body>
 </html>

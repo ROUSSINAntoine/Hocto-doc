@@ -10,7 +10,7 @@
         //j'appelle la fonction pour se connecter à la database
         include("M/db_connect.php");
         
-        //je récupere ce que à remplis l'user
+        //je récupere ce qui est du formulaire et normalisation du form
         $email = htmlspecialchars($_GET['email']);
         $password = htmlspecialchars($_GET['password']);
         

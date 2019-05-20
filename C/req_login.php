@@ -24,7 +24,7 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
             include("./V/mod_login.php");
         
             //message d'erreur en rouge
-            echo '<span style="color:red;">Mot De Passe ou Email Incorrect</span>';
+            echo '<span style="color:red;">Password or Incorrect Email</span>';
 
         //connecte le practitionner
         } else {
