@@ -15,6 +15,6 @@
         <input type="hidden" name="doc" value="<?php echo $_GET["doc"] ?>">
         <input type="submit" value="go">
     </form>
-    <a href="index.php?page=login">Home</a>
+    <a href="index.php?page=login"><button>return</button></a>
 </body>
 </html>

@@ -5,7 +5,7 @@
 </head>
 <body>
     <?php echo $add ?>
-    <a href="index.php?page=login">Home</a>  
+    <a href="index.php?page=login"><button>return</button></a>  
 </body>
 </html> 
     

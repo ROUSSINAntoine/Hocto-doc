@@ -13,11 +13,11 @@
         <input type="text" name="adrs" value="<?php echo $data['adrs']?>"><br>
         <input type="text" name="city" value="<?php echo $data['city']?>"><br>
         <input type="text" name="postcode" value="<?php echo $data['postcode']?>"><br>
-        <input type="text" name="ssn" value="<?php echo $data['ssn']?>"><br>
+        <input type="text" name="ssn" required minlength="16" maxlength="16" value="<?php echo $data['ssn']?>"><br>
         <input type="hidden" name="page" value="modif_account">
         <input type="hidden" name="email" value="<?php echo $data['email']?>">
         <input type="hidden" name="id" value="<?php echo $data['id']?>">
-        <input type="submit" value="valider">
+        <input type="submit" value="confirm">
     </form>
     <a href="index.php?page=account"><button>return</button></a>
 </body>

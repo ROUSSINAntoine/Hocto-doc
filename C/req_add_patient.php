@@ -43,7 +43,7 @@
         
     } else if (count($_GET) > 1) {
         include("V/mod_add_patient.php");
-        echo "Certain champs sont vide, mal complété ou trop long";
+        echo "Some fields are empty, incomplete or too long";
     } else {
         $ssn = "";
         $postcode = "";
