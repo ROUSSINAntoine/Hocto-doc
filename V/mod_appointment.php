@@ -9,12 +9,7 @@
 $date = date('Y-m-j');?>
 <body>
     <form action="index.php" method="GET">
-<<<<<<< HEAD
         <input type="date" name="dtrdv" required></br>
-=======
-        <input type="date"  name="dtrdv" min="<?= $date;?>" required></br>
-        <input type="time" name="hrdv" required><br>          
->>>>>>> f476c5b3e261b949b27fe91a991ce919ac25ee16
         <select name="patient">
                 <?php echo $select ?>
         </select><br>
