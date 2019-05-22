@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <title>appointement</title>
 </head>
+<?php
+
+$date = date('Y-m-j');?>
 <body>
     <form action="index.php" method="GET">
-        <input type="date" name="dtrdv" required></br>
+        <input type="date"  name="dtrdv" min="<?= $date;?>" required></br>
         <input type="time" name="hrdv" required><br>          
         <select name="patient">
                 <?php echo $select ?>
