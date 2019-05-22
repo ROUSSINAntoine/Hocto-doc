@@ -70,7 +70,13 @@
         $req ->execute (array (
             "email"=>$_GET['email'] ));
     
-        }
+    }
+
+    function sql_consult () {
+        include("M/db_connect.php");
+        $req =$db->query("SELECT * FROM planning WHERE practitioner = ".$_GET["doc"]);
+        return $req;
+    }
   
     
 

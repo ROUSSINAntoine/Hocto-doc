@@ -25,9 +25,9 @@
         $req->closeCursor();
     }
     
-    function sql_appointment () {
+    function sql_appointment ($hr) {
         include("M/db_connect.php");
-        $hr = date("H:i", strtotime($_GET['hrrdv']));
+        //$hr = date("H:i", strtotime($_GET['hrrdv']));
         $req =$db->query("INSERT INTO `rdv` (`id`, `dtrdv`, `hrrdv`, `observations`, `practitioner`, `patient`) VALUES (NULL, \"".$_GET["dtrdv"]."\", \"".$hr."\", '', \"".$_GET['doc']."\", \"".$_GET['patient']."\")");
     }
 
