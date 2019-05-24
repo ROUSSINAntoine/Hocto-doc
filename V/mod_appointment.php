@@ -9,15 +9,25 @@
 $date = date('Y-m-j');?>
 <body>
     <form action="index.php" method="GET">
+<<<<<<< HEAD
         <input type="date"  name="dtrdv" min="<?= $date;?>" required></br>
         <input type="time" name="hrdv" required><br>          
+=======
+        <input type="date" name="dtrdv" required></br>
+>>>>>>> antoine
         <select name="patient">
                 <?php echo $select ?>
+        </select><br>
+        <select name="hours">
+                <?php echo $select_hours ?>
+        </select>         
+        <select name="minutes">
+                <?php echo $select_minutes ?>
         </select>
         <input type="hidden" name="page" value="appointment">
         <input type="hidden" name="doc" value="<?php echo $_GET["doc"] ?>">
         <input type="submit" value="go">
     </form>
-    <a href="index.php?page=login"><button>return</button></a>
+    <p></p><a href="index.php?page=login"><button>return</button></a>
 </body>
 </html>

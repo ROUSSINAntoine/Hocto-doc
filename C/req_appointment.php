@@ -8,12 +8,49 @@
         $select = $select."<option value='".$data["id"]."'>".$data["firstname"]." ".$data["lastname"]."</option>\n";
     }
 
-    if (isset($_GET["hrdv"])) {
-        sql_appointment();
-        echo "a";
+    $req->closeCursor();
+
+    $req = sql_consult();
+
+    $data = $req->fetch();
+
+    $select_hours;
+    $select_minutes;
+    $length = $data["length_time"];
+    $date["start"] = $data["open_time"];
+    $date["break"] = $data["break_time"];
+    $date["resume"] = $data["resume_time"];
+    $date["end"] = $data["close_time"];
+
+    foreach ($date as $key => $value) {
+        //echo $value."</br>";
+        $time["h"][$key] = $value[0].$value[1];
+        $time["m"][$key] = $value[3].$value[4];
+        $time["h"][$key]=(int)$time["h"][$key];
+        $time["m"][$key]=(int)$time["m"][$key];
+    }
+    //var_dump($time);
+    
+    $select_hours = create_select($time["h"]["start"], $time["h"]["end"], 1);
+
+    $select_minutes = create_select(0, 60, $length);
+    
+    if (isset($_GET["hours"])) {
+        $hr = $_GET["hours"].":".$_GET["minutes"].":00";
+        sql_appointment($hr);
+        //echo "a";
         header('Location: index.php?page=login');
     } else {
         include("V/mod_appointment.php");
     }
     
+
+    function create_select ($start, $end, $step) {
+        $select = "";
+        for ($i=$start; $i < $end ; $i = $i+$step) {
+            $select = $select."<option value='$i'>$i</option>\n";
+        }
+
+        return $select;
+    }
 ?>

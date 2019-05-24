@@ -44,6 +44,7 @@
         
         return $req;
     }  
+
     function sql_display_member() {
         include("M/db_connect.php");
         $req = $db->prepare ("SELECT * FROM account JOIN patient ON account.id = patient.account WHERE patient.id LIKE :id ");
@@ -57,20 +58,17 @@
     function sql_search_by_prac() {
         include("M/db_connect.php");
 
-        $req = $db->query("SELECT * FROM practitioner WHERE lastname LIKE \"".$_GET["srch"]."\"");
+        $req = $db->query("SELECT * FROM practitioner WHERE lastname LIKE \"%".$_GET["srch"]."%\"");
 
         return $req;
     }
 
-    function savoir_membre () {
-        //savoir quelle membre appartient a quel compte
-         
+
+    function sql_consult () {
         include("M/db_connect.php");
-        $req =$db->prepare ("SELECT account.id aid,patient.firstname pf,patient.lastname pn FROM account JOIN patient ON account.id = patient.account WHERE email=:email ");
-        $req ->execute (array (
-            "email"=>$_GET['email'] ));
-    
-        }
+        $req =$db->query("SELECT * FROM planning WHERE practitioner = ".$_GET["doc"]);
+        return $req;
+    }
   
     
 
