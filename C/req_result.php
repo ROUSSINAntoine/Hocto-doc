@@ -6,9 +6,11 @@
             $req = sql_search_by_prac();
             break;
     }
-
+    
+    $add = "";
+    
     while ($data = $req->fetch()) {
-        $add = $data['lastname']." ".$data['firstname']."</br><a href='index.php?page=appointment&doc=".$data["id"]."'><button>take an appointment</button></a></br>";
+        $add = $add.$data['lastname']." ".$data['firstname']."</br><a href='index.php?page=appointment&doc=".$data["id"]."'><button>take an appointment</button></a></p>";
     }    
     $req-> closeCursor();
 

@@ -4,7 +4,7 @@
     <title>results</title>
 </head>
 <body>
-    <?php echo $add ?>
+    <?php echo $add ?><p></p>
     <a href="index.php?page=login"><button>return</button></a>  
 </body>
 </html> 

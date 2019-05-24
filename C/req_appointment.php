@@ -14,8 +14,8 @@
 
     $data = $req->fetch();
 
-    $select_hours = "";
-    $select_minutes = "";
+    $select_hours;
+    $select_minutes;
     $length = $data["length_time"];
     $date["start"] = $data["open_time"];
     $date["break"] = $data["break_time"];
@@ -31,16 +31,10 @@
     }
     //var_dump($time);
     
-    for ($i=$time["h"]["start"]; $i < $time["h"]["end"] ; $i++) {
-        //if (time_dif("2019-"))
-        $select_hours = $select_hours."<option value='$i'>$i h</option>\n";
-    }
+    $select_hours = create_select($time["h"]["start"], $time["h"]["end"], 1);
 
-    for ($i=0; $i < 60 ; $i = $i+$length) {
-        //if (time_dif("2019-"))
-        $select_minutes = $select_minutes."<option value='$i'>$i</option>\n";
-    }
-
+    $select_minutes = create_select(0, 60, $length);
+    
     if (isset($_GET["hours"])) {
         $hr = $_GET["hours"].":".$_GET["minutes"].":00";
         sql_appointment($hr);
@@ -50,4 +44,13 @@
         include("V/mod_appointment.php");
     }
     
+
+    function create_select ($start, $end, $step) {
+        $select = "";
+        for ($i=$start; $i < $end ; $i = $i+$step) {
+            $select = $select."<option value='$i'>$i</option>\n";
+        }
+
+        return $select;
+    }
 ?>
