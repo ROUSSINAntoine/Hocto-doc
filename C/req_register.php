@@ -20,36 +20,8 @@
             if (isset($_GET["prac"])) {
                 $req = sql_reg_prac();
             } else {
-                try {
-                   
-                        $req = $db->prepare("INSERT INTO account(id, email ,psw) VALUES(null, :email, :psw)");
-                    
-
-                    try { 
-                        $db->beginTransaction(); 
-                        $req->execute(array(
-                            'psw' => $_SESSION['pass'],
-                            'email' => $_SESSION['email']
-                            )
-                        );
-                        $req->closeCursor();
-                        
-                        $db->commit(); 
-                        //print $db->lastInsertId();
-                        $id = $db->lastInsertId(); 
-                        
-                        
-                        
-                    } catch(PDOExecption $e) { 
-                        $db->rollback(); 
-                        print "Error!: " . $e->getMessage() . "</br>"; 
-                    } 
-                } catch( PDOExecption $e ) { 
-                    print "Error!: " . $e->getMessage() . "</br>"; 
-                }     
-            }
+                $req = sql_reg_patient();
             }    
-        
         } 
         
         include('V/mod_login.php');
