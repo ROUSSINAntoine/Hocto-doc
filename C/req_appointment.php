@@ -29,7 +29,7 @@
         $time["h"][$key]=(int)$time["h"][$key];
         $time["m"][$key]=(int)$time["m"][$key];
     }
-    //var_dump($time);
+    
     
     $select_hours = create_select($time["h"]["start"], $time["h"]["end"], 1);
 

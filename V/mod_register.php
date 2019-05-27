@@ -9,6 +9,7 @@
             <input type="text" name="email" placeholder="e-mail"><br>
             <input type="password" name="pass" placeholder="password"><br>
             <input type="password" name="conf" placeholder="password"><br>
+            <input type="checkbox" name="prac" value="prac">practitioner account<br>
             
             <input type="hidden" name="page" value="register">
             <input type="submit" name="submit" value="Register">
