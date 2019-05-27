@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Home</title>
+    </head>
+    <body>
+        <h1>Hocto'doc</h1><p></p>
+        <a href="index.php?page=logout"><button>Logout</button></a> 
+        <a href="index.php?page=account_prac"><button>Account</button></a>  
+        
+    </body>
+</html>

@@ -10,7 +10,10 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
     $req = check_login();
     $data = $req->fetch();
     $co = "pat";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9fc9920306cb33cffccdb9bff693ee7a295e26a5
     // si c'est faux regarde si c'est un practitioner
     if ($data == false) {
 
