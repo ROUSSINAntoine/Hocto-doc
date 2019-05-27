@@ -9,17 +9,18 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
     include("M/get_sql.php");
     $req = check_login();
     $data = $req->fetch();
-
+    $co = "pat";
     // si c'est faux regarde si c'est un practitioner
     if ($data == false) {
 
         //appelle la fonction sql qui permet de verifier le bon email et password du practitioner
         $req = check_practitioner();
         $data = $req->fetch();
+        $co = "prac";
 
         //si c'est faux renvoie une erreur
         if ($data == false) {
-        
+            $co = "fail";
             //redirection vers le login car erreur
             include("./V/mod_login.php");
         

@@ -17,15 +17,17 @@
             } else if ($_SESSION['pass']==$_SESSION['conf']) {
                 
                 
-            if (isset($_GET["prac"])) {
-                $req = sql_reg_prac();
-            } else {
-                $req = sql_reg_patient();
-            }    
-        } 
+                if (isset($_GET["prac"])) {
+                    $req = sql_reg_prac();
+                } else {
+                    $req = sql_reg_patient();
+                }    
+
+                $req->closeCursor();
+            } 
         
-        include('V/mod_login.php');
-    } else {
-        include('V/mod_register.php');
-    }
+            include('V/mod_login.php');
+        } else {
+            include('V/mod_register.php');
+        }
 ?>
