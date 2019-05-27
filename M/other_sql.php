@@ -38,6 +38,6 @@
 
     function sql_reg_prac () {
         include("M/db_connect.php");
-        $req = $db->query("INSERT INTO practitioner (id, email, psw) VALUES (null, ".$_GET["email"].",".$_GET["pass"].")");
+        $req = $db->query("INSERT INTO practitioner (id, e_mail, psw) VALUES (null, \"".$_GET["email"]."\",\"".$_GET["pass"]."\")");
     }
 ?> 

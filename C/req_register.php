@@ -17,13 +17,13 @@
             } else if ($_SESSION['pass']==$_SESSION['conf']) {
                 
                 
-                
+            if (isset($_GET["prac"])) {
+                $req = sql_reg_prac();
+            } else {
                 try {
-                    if ($_GET["prac"] == "prac") {
-                        $req = sql_reg_prac();
-                    } else {
+                   
                         $req = $db->prepare("INSERT INTO account(id, email ,psw) VALUES(null, :email, :psw)");
-                    }
+                    
 
                     try { 
                         $db->beginTransaction(); 
@@ -47,7 +47,7 @@
                 } catch( PDOExecption $e ) { 
                     print "Error!: " . $e->getMessage() . "</br>"; 
                 }     
-
+            }
             }    
         
         } 
