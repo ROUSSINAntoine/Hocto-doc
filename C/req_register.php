@@ -1,20 +1,7 @@
 <?php
 
-    include('M/db_connect.php');
-    
-    /*$servername = "localhost";
-    $username = "root";
-    $password = ""; // mdp jérémy
-    $db = "hoctodoc";
-                
-    try {
-        $db = new PDO("mysql:host=".$servername.";port=3308;dbname=hoctodoc;", $username, $password);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        //echo "Connected successfully";  //connection faite à la base de donnée
-    } catch(PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
-    }*/ 
-
+    include('M/db_connect.php'); 
+    include("M/other_sql.php");
 
     if(isset($_GET['email'])){   
         
@@ -30,10 +17,14 @@
             } else if ($_SESSION['pass']==$_SESSION['conf']) {
                 
                 
-                
+            if (isset($_GET["prac"])) {
+                $req = sql_reg_prac();
+            } else {
                 try {
-                    $req = $db->prepare("INSERT INTO account(id, email ,psw) VALUES(null, :email, :psw)");
-                        
+                   
+                        $req = $db->prepare("INSERT INTO account(id, email ,psw) VALUES(null, :email, :psw)");
+                    
+
                     try { 
                         $db->beginTransaction(); 
                         $req->execute(array(
@@ -56,7 +47,7 @@
                 } catch( PDOExecption $e ) { 
                     print "Error!: " . $e->getMessage() . "</br>"; 
                 }     
-
+            }
             }    
         
         } 

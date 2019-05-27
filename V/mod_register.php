@@ -13,6 +13,7 @@
             <input type="email" name="email" id="mail" pattern="[A-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,3}$" placeholder="e-mail" /><br>
             <input type="password" name="pass" minlength='4' maxlength='50' placeholder="password"><br>
             <input type="password" name="conf" minlength='4' maxlength='50' placeholder="password"><br>
+            <input type="checkbox" name="prac" value="prac">practitioner account<br>
             
             <input type="hidden" name="page" value="register">
             <input type="submit" name="submit" value="Register">
