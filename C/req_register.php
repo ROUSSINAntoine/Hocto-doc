@@ -19,6 +19,7 @@
                 
             if (isset($_GET["prac"])) {
                 $req = sql_reg_prac();
+                $req->closeCursor();
             } else {
                 try {
                    
