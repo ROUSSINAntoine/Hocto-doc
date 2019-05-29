@@ -17,44 +17,18 @@
             } else if ($_SESSION['pass']==$_SESSION['conf']) {
                 
                 
-            if (isset($_GET["prac"])) {
-                $req = sql_reg_prac();
-                $req->closeCursor();
-            } else {
-                try {
-                   
-                        $req = $db->prepare("INSERT INTO account(id, email ,psw) VALUES(null, :email, :psw)");
-                    
+                if (isset($_GET["prac"])) {
+                    $req = sql_reg_prac();
+                } else {
+                    $req = sql_reg_patient();
+                }    
 
-                    try { 
-                        $db->beginTransaction(); 
-                        $req->execute(array(
-                            'psw' => $_SESSION['pass'],
-                            'email' => $_SESSION['email']
-                            )
-                        );
-                        $req->closeCursor();
-                        
-                        $db->commit(); 
-                        //print $db->lastInsertId();
-                        $id = $db->lastInsertId(); 
-                        
-                        
-                        
-                    } catch(PDOExecption $e) { 
-                        $db->rollback(); 
-                        print "Error!: " . $e->getMessage() . "</br>"; 
-                    } 
-                } catch( PDOExecption $e ) { 
-                    print "Error!: " . $e->getMessage() . "</br>"; 
-                }     
-            }
-            }    
+                $req->closeCursor();
+            } 
         
-        } 
-        
-        include('V/mod_login.php');
-    } else {
-        include('V/mod_register.php');
+            include('V/mod_login.php');
+        } else {
+            include('V/mod_register.php');
+        }
     }
 ?>
