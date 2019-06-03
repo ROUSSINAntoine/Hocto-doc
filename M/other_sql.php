@@ -70,9 +70,14 @@
         );
     }
     
-    function $req = sql_reg_del() {
+    function sql_reg_del() {
         $req = $db->query("DELETE FROM account WHERE id = $id");
         header('Location: index.php');  
-    } 
+    }
+    
+    function sql_reg_del_prac() {
+        $req = $db->query("DELETE FROM practitioner WHERE id = $id");
+        header('Location: index.php');  
+    }
 
 ?> 
