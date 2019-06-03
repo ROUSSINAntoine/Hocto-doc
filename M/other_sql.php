@@ -24,7 +24,7 @@
     include("M/db_connect.php");
         $req =$db->prepare ("UPDATE planning SET start_hollyday=:start_hollyday,end_hollyday=:end_hollyday, open_time =:open_time,break_time=:break_time ,resume_time =:resume_time , close_time =:close_time ,length_time= :length_time , days_time =:days_time  WHERE practitioner LIKE :practitioner AND id=:id_planning");
         $req ->execute (array (
-            "id_planning"=>$_GET['id_planning'],
+            "id"=>$_GET['id'],
             "open_time"=>$_GET['open_time'],
             "break_time" =>$_GET['break_time'],
             "resume_time"=>$_GET['resume_time'],
@@ -34,7 +34,7 @@
             "start_hollyday" =>$_GET['start_hollyday'],
             "end_hollyday" =>$_GET['end_hollyday'],
             "practitioner" =>$_GET['practitioner'] ));
-        return $req;
+        
         }
     
     function sql_add_patient () {

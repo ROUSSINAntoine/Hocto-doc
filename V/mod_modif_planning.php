@@ -9,31 +9,31 @@
  <body>
      
  
- <form action="index.php?page" method="GET">
+ <form action="index.php" method="GET">
     
 <p>
     
-    <input type="text" name="id_planning"/><br/>
+    <input type="text" name="id"><br/>
     open
-    <input type="time" name="open_time"/><br/>
+    <input type="time" name="open_time"><br/>
     break_time
-    <input type="time" name="break_time" /><br/>
+    <input type="time" name="break_time" ><br/>
     resume
-    <input type="time" name="resume_time"/><br/>
+    <input type="time" name="resume_time"><br/>
     fin
-    <input type="time" name="close_time" /><br/>
+    <input type="time" name="close_time" ><br/>
     durée
-    <input type="number" name="length_time"/><br/>
+    <input type="number" name="length_time"><br/>
     days
-    <input type="text" name="days_time"/><br/>
+    <input type="text" name="days_time"><br/>
     id practicien 
-    <input type="text" name="practitioner"/><br/>
+    <input type="text" name="practitioner"><br/>
     début des vacanse
-    <input type="date" name="start_hollyday"/><br/>
+    <input type="date" name="start_hollyday"><br/>
     fin des vacanse
-    <input type="date" name="end_hollyday"/><br>
+    <input type="date" name="end_hollyday"><br>
     <input type="hidden" name="page" value="modif_planning">
-    <input type="submit" value="valider" />
+    <input type="submit" value="valider" >
 </form>
 
 </p>

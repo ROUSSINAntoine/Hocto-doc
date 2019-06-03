@@ -8,7 +8,7 @@
     </style>
 </head>
 <body>
-    <form action="index.php?page" method="GET">
+    <form action="index.php" method="GET">
         <input type="text" name="emails"pattern="[A-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,3}$" value="<?php echo $data['email']?>"><br>
         <input type="text" name="psw"minlength='4' maxlength='50' value="<?php echo $data['psw']?>"><br>
         <input type="text" name="firstname"require pattern="[A-z ' - é è ê ç à ï]{2,90}" value="<?php echo $data['firstname']?>"><br>

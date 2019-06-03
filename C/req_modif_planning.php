@@ -1,8 +1,9 @@
 <?php
-include("M/other_sql.php");
 include("V/mod_modif_planning.php");
-    $req = modif_planning();
-    
+include("M/other_sql.php");
+$req = modif_planning();
+
+
 
 
 
