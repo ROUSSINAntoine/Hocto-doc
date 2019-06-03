@@ -9,7 +9,7 @@
  <body>
      
  
- <form action="index.php" method="GET">
+ <form action="index.php?page" method="GET">
     
 <p>
     
@@ -29,9 +29,9 @@
     id practicien 
     <input type="text" name="practitioner"/><br/>
     début des vacanse
-    <input type="date" name="start_holiday"/><br/>
+    <input type="date" name="start_hollyday"/><br/>
     fin des vacanse
-    <input type="date" name="end_holiday"/><br>
+    <input type="date" name="end_hollyday"/><br>
     <input type="hidden" name="page" value="modif_planning">
     <input type="submit" value="valider" />
 </form>
