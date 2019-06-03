@@ -10,5 +10,6 @@
         <a href="index.php?page=logout"><button>Logout</button></a> 
         <a href="index.php?page=account"><button>Account</button></a>  
         
+        
     </body>
 </html>

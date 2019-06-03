@@ -1,6 +1,7 @@
 <?php
     include("M/get_sql.php");
     include("M/other_sql.php");
+    include("C/fct/select.php");
 
     $req = sql_account();
     $select = "";
@@ -44,13 +45,4 @@
         include("V/mod_appointment.php");
     }
     
-
-    function create_select ($start, $end, $step) {
-        $select = "";
-        for ($i=$start; $i < $end ; $i = $i+$step) {
-            $select = $select."<option value='$i'>$i</option>\n";
-        }
-
-        return $select;
-    }
 ?>
