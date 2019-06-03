@@ -34,6 +34,7 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
             $_SESSION['id'] = $data['id'];
             $_SESSION['email'] = $_GET['email'];
             $_SESSION['password'] = $_GET['password'];
+            $_SESSION['type'] = "prac";
             
             //redirecton vers le home pour l'user connecté
             if ($co = "prac") {
@@ -51,6 +52,7 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
         $_SESSION['id'] = $data['id'];
         $_SESSION['email'] = $_GET['email'];
         $_SESSION['password'] = $_GET['password'];
+        $_SESSION['type'] = "pat";
 
         //redirecton vers le home pour l'user connecté
         if ($co = "prac") {
