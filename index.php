@@ -30,6 +30,9 @@
                 case "delete":
                     include("C/req_delete.php");
                     break;
+                case"modif_planning";
+                    include("C/req_modif_planning.php");
+                    break;
                 case "modif_account":
                     if (isset($_GET["modif"])) {
                         include("C/req_modif_account.php");
