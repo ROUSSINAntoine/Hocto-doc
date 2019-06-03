@@ -60,7 +60,8 @@
         $req = $db->query("INSERT INTO practitioner (id, email, psw) VALUES (null, \"".$_GET["email"]."\",\"".$_GET["pass"]."\")");
     }
 
-    function sql_reg_patient() {        
+    function sql_reg_patient() { 
+        include("M/db_connect.php");       
         $req = $db->prepare("INSERT INTO account(id, email ,psw) VALUES(null, :email, :psw)");
         
         $req->execute(array(
@@ -71,12 +72,14 @@
     }
     
     function sql_reg_del() {
-        $req = $db->query("DELETE FROM account WHERE id = $id");
+        include("M/db_connect.php");
+        $req = $db->query("DELETE FROM account WHERE id = ".$_SESSION["type"]);
         header('Location: index.php');  
     }
     
     function sql_reg_del_prac() {
-        $req = $db->query("DELETE FROM practitioner WHERE id = $id");
+        include("M/db_connect.php");
+        $req = $db->query("DELETE FROM practitioner WHERE id = ".$_SESSION["id"]);
         header('Location: index.php');  
     }
 

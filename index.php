@@ -28,7 +28,7 @@
                     include("C/req_appointment.php");
                     break;
                 case "delete":
-                    include("C/req_delete.php");
+                    include("C/req_del_account.php");
                     break;
                 case"modif_planning";
                     include("C/req_modif_planning.php");

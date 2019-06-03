@@ -38,7 +38,6 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
             
             //redirecton vers le home pour l'user connecté
             if ($co = "prac") {
-                echo "panda";
                 include("./V/mod_prac_home.php");
             } else if ($co = "pat") {
                 include("./V/mod_home.php");
