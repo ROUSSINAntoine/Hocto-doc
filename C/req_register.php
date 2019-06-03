@@ -11,24 +11,23 @@
 
 
         
-        if (isset($_SESSION['email'])) {
-            if (!(preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#i", $_SESSION['email']))) {
-                header('Location: index.php?page=register');
-            } else if ($_SESSION['pass']==$_SESSION['conf']) {
-                
-                
-                if (isset($_GET["prac"])) {
-                    $req = sql_reg_prac();
-                } else {
-                    $req = sql_reg_patient();
-                }    
 
-                $req->closeCursor();
-            } 
-        
+        if (!(preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#i", $_SESSION['email']))) {
+            //header('Location: index.php?page=register');
+        } else if ($_SESSION['pass']==$_SESSION['conf']) {
+            
+            
+            if (isset($_GET["prac"])) {
+                $req = sql_reg_prac();
+            } else {
+                $req = sql_reg_patient();
+            }    
+
+            $req->closeCursor();
+        }
+    
             include('V/mod_login.php');
         } else {
             include('V/mod_register.php');
         }
-    }
 ?>
