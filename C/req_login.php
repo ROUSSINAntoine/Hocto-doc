@@ -10,10 +10,6 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
     $req = check_login();
     $data = $req->fetch();
     $co = "pat";
-<<<<<<< HEAD
-
-=======
->>>>>>> 9fc9920306cb33cffccdb9bff693ee7a295e26a5
     // si c'est faux regarde si c'est un practitioner
     if ($data == false) {
 
@@ -38,6 +34,7 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
             $_SESSION['id'] = $data['id'];
             $_SESSION['email'] = $_GET['email'];
             $_SESSION['password'] = $_GET['password'];
+            $_SESSION['type'] = "prac";
             
             //redirecton vers le home pour l'user connecté
             if ($co = "prac") {
@@ -55,6 +52,7 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
         $_SESSION['id'] = $data['id'];
         $_SESSION['email'] = $_GET['email'];
         $_SESSION['password'] = $_GET['password'];
+        $_SESSION['type'] = "pat";
 
         //redirecton vers le home pour l'user connecté
         if ($co = "prac") {

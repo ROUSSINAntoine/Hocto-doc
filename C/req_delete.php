@@ -2,7 +2,9 @@
     include('M/db_connect.php');
     include("M/other_sql.php");
 
-    if (isset($_SESSION['id'])) {
-        $req = sql_reg_del();
-    } 
+    if (isset($_SESSION['type']) && $_SESSION["type"] == "pat") {
+        sql_reg_del();
+    } elseif (isset($_SESSION['type']) && $_SESSION["type"] == "prac") {
+        sql_reg_del_prac();
+    }
 ?>    

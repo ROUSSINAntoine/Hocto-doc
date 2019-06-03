@@ -30,4 +30,5 @@
         } else {
             include('V/mod_register.php');
         }
+    }
 ?>
