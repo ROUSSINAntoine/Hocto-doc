@@ -22,15 +22,14 @@
     //modifier la table planning
     {
     include("M/db_connect.php");
-        $req =$db->prepare ("UPDATE planning SET start_hollyday=:start_hollyday,end_hollyday=:end_hollyday, open_time =:open_time,break_time=:break_time ,resume_time =:resume_time , close_time =:close_time ,length_time= :length_time , days_time =:days_time  WHERE practitioner LIKE :practitioner AND id=:id");
+        $req =$db->prepare ("UPDATE planning SET start_hollyday=:start_hollyday,end_hollyday=:end_hollyday, open_time =:open_time,break_time=:break_time ,resume_time =:resume_time , close_time =:close_time ,length_time= :length_time , days_time =:days_time  WHERE practitioner LIKE :practitioner");
         $req ->execute (array (
-            "id"=>$_GET['id'],
             "open_time"=>$_GET['open_time'],
             "break_time" =>$_GET['break_time'],
             "resume_time"=>$_GET['resume_time'],
             "close_time" =>$_GET['close_time'],
             "length_time" =>$_GET['length_time'],
-            "days_time" =>$_GET['days_time'],
+            "days_time" =>$_GET['days'],
             "start_hollyday" =>$_GET['start_hollyday'],
             "end_hollyday" =>$_GET['end_hollyday'],
             "practitioner" =>$_GET['practitioner'] ));

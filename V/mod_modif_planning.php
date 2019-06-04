@@ -28,9 +28,13 @@
     durée
     <input type="number" name="length_time" min="10" max="120" required>/><br/>
     days
-    <input type="text" name="days_time"/><br/>
-    id planning
-    <input type="text" name="id"/><br/>
+    formulaire modif_planning<input type="checkbox" name="lundi" value="lundi" />lundi<br>
+   <input type="checkbox" name="mardi" value="mardi" />mardi<br>
+   <input type="checkbox" name="mercredi" value="mercredi" />mercredi<br>
+   <input type="checkbox" name="jeudi" value="jeudi" />jeudi<br>
+   <input type="checkbox" name="vendredi" value="vendredi" />vendredi<br>
+   <input type="checkbox" name="samdedi" value="samedi" />samedi<br>
+    
     début des vacanse
     <input type="date" name="start_hollyday"/><br/>
     fin des vacanse
