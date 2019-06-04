@@ -33,6 +33,9 @@
                 case"modif_planning";
                     include("C/req_modif_planning.php");
                     break;
+                case "modif_rdv":
+                    include("C/req_modif_rdv.php");
+                    break;
                 case "modif_account":
                     if (isset($_GET["modif"])) {
                         include("C/req_modif_account.php");

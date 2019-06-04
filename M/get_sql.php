@@ -69,7 +69,14 @@
         $req =$db->query("SELECT * FROM planning WHERE practitioner = ".$_GET["doc"]);
         return $req;
     }
-  
+
+    function sql_modif_rdv () {
+        include("M/db_connect.php");
+        $req =$db->query("SELECT practitioner.id, practitioner.firstname, practitioner.lastname, rdv.* FROM practitioner JOIN rdv ON practitioner.id = rdv.practitioner");
+        return $req;
+    }
+    
+
     
 
 ?>
