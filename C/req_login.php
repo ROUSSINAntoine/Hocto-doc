@@ -9,14 +9,14 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
     include("M/get_sql.php");
     $req = check_login();
     $data = $req->fetch();
-    $co = "pat";
+    
     // si c'est faux regarde si c'est un practitioner
     if ($data == false) {
 
         //appelle la fonction sql qui permet de verifier le bon email et password du practitioner
         $req = check_practitioner();
         $data = $req->fetch();
-        $co = "prac";
+        
 
         //si c'est faux renvoie une erreur
         if ($data == false) {
@@ -29,7 +29,7 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
 
         //connecte le practitionner
         } else {
-
+            $co = "prac";
             //crée une session avec les logins et id du practitioner
             $_SESSION['id'] = $data['id'];
             $_SESSION['email'] = $_GET['email'];
@@ -37,16 +37,16 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
             $_SESSION['type'] = "prac";
             
             //redirecton vers le home pour l'user connecté
-            if ($co = "prac") {
+            if ($co == "prac") {
                 include("./V/mod_prac_home.php");
-            } else if ($co = "pat") {
+            } else if ($co == "pat") {
                 include("./V/mod_home.php");
             }
             
         }
 
     } else {
-        
+        $co = "pat";    
         //si identifient son bon alors enregistre les données en session
         $_SESSION['id'] = $data['id'];
         $_SESSION['email'] = $_GET['email'];
@@ -54,9 +54,9 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
         $_SESSION['type'] = "pat";
 
         //redirecton vers le home pour l'user connecté
-        if ($co = "prac") {
+        if ($co == "prac") {
             include("./V/mod_prac_home.php");
-        } else if ($co = "pat") {
+        } else if ($co == "pat") {
             include("./V/mod_home.php");
         }
     }
@@ -68,6 +68,10 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
 } else if (isset($_SESSION['email'])) {
 
     //redirige vers le home
-    include("./V/mod_home.php");
+    if ($_SESSION['type'] == "prac") {
+        include("./V/mod_prac_home.php");
+    } else if ($_SESSION['type'] == "pat") {
+        include("./V/mod_home.php");
+    }
 }
 ?>

@@ -17,14 +17,14 @@
     
 <p>
     open
-    <input type="time" name="open_time" min="07:00" max="15:00" required>/><br/>
+    <input type="time" name="open_time" min="07:00" max="21:30" required>/><br/>
    
     break_time
-    <input type="time" name="break_time" min="11:00" max="20:30" required> /><br/>
+    <input type="time" name="break_time" min="11:00" max="21:30" required> /><br/>
     resume
-    <input type="time" name="resume_time" min="11:30" max="20:30" required>/><br/>
+    <input type="time" name="resume_time" min="11:30" max="21:30" required>/><br/>
     fin
-    <input type="time" name="close_time" min="11:00" max="22:00" required> /><br/>
+    <input type="time" name="close_time" min="11:00" max="22:30" required> /><br/>
     durée
     <input type="number" name="length_time" min="10" max="120" required>/><br/>
     days
@@ -39,6 +39,7 @@
     <input type="hidden" name="page" value="modif_planning">
     <input type="submit" value="valider" >
 </form>
+<a href="index.php?page=login"><button>return</button></a>
 
 </p>
 </body>
