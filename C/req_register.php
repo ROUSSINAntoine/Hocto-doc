@@ -23,8 +23,6 @@
                 sql_reg_patient();
             }    
 
-            //$req->closeCursor();
-
         }
     
             include('V/mod_login.php');
