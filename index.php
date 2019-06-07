@@ -36,6 +36,12 @@
                 case "histo";
                     include("C/req_histo.php");
                     break;
+                    case "modif_rdv";
+                    include("C/req_modif_rdv.php");
+                    break;
+                    case "delete_rdv";
+                    include("C/req_delete_rdv.php");
+                    break;
                 case "modif_account":
                     if (isset($_GET["modif"])) {
                         include("C/req_modif_account.php");
