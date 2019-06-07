@@ -27,6 +27,7 @@
     <input type="time" name="close_time" min="11:00" max="22:30" required><br/>
     durée
     <input type="number" name="length_time" min="10" max="120" required><br/>
+<<<<<<< HEAD
     days <br>
    <input type="checkbox" name="lundi" value="lundi" />lundi<br>
    <input type="checkbox" name="mardi" value="mardi" />mardi<br>
@@ -34,11 +35,20 @@
    <input type="checkbox" name="jeudi" value="jeudi" />jeudi<br>
    <input type="checkbox" name="vendredi" value="vendredi" />vendredi<br>
    <input type="checkbox" name="samedi" value="samedi" />samedi<br>
+=======
+    days : <br>
+    <input type="checkbox" name="lundi" value="lundi">lundi<br>
+   <input type="checkbox" name="mardi" value="mardi">mardi<br>
+   <input type="checkbox" name="mercredi" value="mercredi">mercredi<br>
+   <input type="checkbox" name="jeudi" value="jeudi">jeudi<br>
+   <input type="checkbox" name="vendredi" value="vendredi">vendredi<br>
+   <input type="checkbox" name="samdedi" value="samedi">samedi<br>
+>>>>>>> master
     
     début des vacanse
-    <input type="date" name="start_hollyday"/><br/>
+    <input type="date" name="start_hollyday"><br/>
     fin des vacanse
-    <input type="date" name="end_hollyday"/><br>
+    <input type="date" name="end_hollyday"><br>
     <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
     <input type="hidden" name="page" value="modif_planning">
     <input type="submit" value="valider" >
