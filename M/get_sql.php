@@ -72,7 +72,7 @@
 
     function sql_modif_rdv () {
         include("M/db_connect.php");
-        $req =$db->prepare("SELECT CONCAT(patient.firstname,\" \", patient.lastname) AS patient, rdv.dtrdv, rdv.hrrdv, rdv.observations, CONCAT(practitioner.firstname,\" \", practitioner.lastname) AS practitioner, rdv.id FROM rdv JOIN patient ON rdv.patient = patient.id JOIN practitioner ON rdv.practitioner = practitioner.id JOIN account ON patient.account = account.id WHERE account.id =:id");
+        $req =$db->prepare("SELECT CONCAT(patient.firstname,\" \", patient.lastname) AS patient, rdv.dtrdv, rdv.hrrdv, rdv.observations, CONCAT(practitioner.firstname,\" \", practitioner.lastname) AS practitioner, rdv.id FROM rdv JOIN patient ON rdv.patient = patient.id JOIN practitioner ON rdv.practitioner = practitioner.id JOIN account ON patient.account = account.id WHERE account.id =:id AND DATEDIFF(DATE(CONCAT(rdv.dtrdv,\" \", rdv.hrrdv)),DATE(NOW())) >= 0");
         $req ->execute (array (
             "id"=> $_SESSION["id"] 
             )
