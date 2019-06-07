@@ -18,12 +18,13 @@
             
             
             if (isset($_GET["prac"])) {
-                $req = sql_reg_prac();
+                sql_reg_prac();
             } else {
-                $req = sql_reg_patient();
+                sql_reg_patient();
             }    
 
             //$req->closeCursor();
+
         }
     
             include('V/mod_login.php');
