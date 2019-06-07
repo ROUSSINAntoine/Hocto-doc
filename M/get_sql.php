@@ -84,7 +84,14 @@
 
     function sql_histo_appointment_pat () {
         include("M/db_connect.php");
-        $req = $db->query("SELECT R.dtrdv, R.hrrdv, R.observations, CONCAT(Prac.firstname,\" \", Prac.lastname) AS practitioner, CONCAT(Pat.firstname,\" \", Pat.lastname) AS patient FROM rdv R JOIN practitioner Prac ON R.practitioner = Prac.id JOIN patient Pat ON R.patient = Pat.id");
+        $req = $db->prepare("SELECT CONCAT(Pat.firstname,\" \", Pat.lastname) AS patient , CONCAT(Prac.firstname,\" \", Prac.lastname) AS practitioner, R.dtrdv, R.hrrdv, R.observations FROM rdv R JOIN practitioner Prac ON R.practitioner = Prac.id JOIN patient Pat ON R.patient = Pat.id WHERE Pat.account = :id AND DATEDIFF(DATE(CONCAT(R.dtrdv,\" \", R.hrrdv)),DATE(NOW())) < 0 ORDER BY R.dtrdv, R.hrrdv");
+        $req ->execute (array (
+            "id"=> $_SESSION["id"] 
+            )
+        
+        );
+        
+        return $req;
     }
     
 

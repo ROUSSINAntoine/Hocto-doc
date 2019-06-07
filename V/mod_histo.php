@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Historic</title>
 </head>
 <body>
     <table border=2>
-        <tr><th>Patient</th><th>Date</th><th>Hour</th><th>Observations</th></tr>
+        <tr><?php echo $first_col ?><th>Date</th><th>Hour</th><th>Observations</th></tr>
         <?php echo $histo ?>
     </table>
     <p></p>
+    
     <a href="index.php?page=account"><button>return</button></a>
+    
 </body>
 </html>
