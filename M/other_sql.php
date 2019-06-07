@@ -83,4 +83,14 @@
         header('Location: index.php');  
     }
 
+    function sql_delete_rdv() {
+        include("M/db_connect.php");
+        $req = $db->prepare("DELETE FROM rdv WHERE id = :id_rdv");
+        $req ->execute (array (
+            "id_rdv"=>$_GET["id_rdv"]
+        ));
+        return $req;
+        header('Location: index.php');  
+    }
+
 ?> 

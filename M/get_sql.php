@@ -72,11 +72,32 @@
 
     function sql_modif_rdv () {
         include("M/db_connect.php");
-        $req =$db->query("SELECT practitioner.id, practitioner.firstname, practitioner.lastname, rdv.* FROM practitioner JOIN rdv ON practitioner.id = rdv.practitioner");
+        $req =$db->prepare("SELECT CONCAT(patient.firstname,\" \", patient.lastname) AS patient, rdv.dtrdv, rdv.hrrdv, rdv.observations, CONCAT(practitioner.firstname,\" \", practitioner.lastname) AS practitioner, rdv.id FROM rdv JOIN patient ON rdv.patient = patient.id JOIN practitioner ON rdv.practitioner = practitioner.id JOIN account ON patient.account = account.id WHERE account.id =:id");
+        $req ->execute (array (
+            "id"=> $_SESSION["id"] 
+            )
+        );
         return $req;
     }
     
 
+  
+    function sql_histo_appointment_prac () {
+        include("M/db_connect.php");
+        $req = $db->prepare("SELECT CONCAT(Pat.firstname,\" \", Pat.lastname) AS patient, R.dtrdv, R.hrrdv, R.observations, R.id FROM rdv R JOIN patient Pat ON R.patient = Pat.id WHERE R.practitioner = :id AND DATEDIFF(DATE(CONCAT(R.dtrdv,\" \", R.hrrdv)),DATE(NOW())) < 0 ORDER BY R.dtrdv, R.hrrdv");
+        $req ->execute (array (
+            "id"=> $_SESSION["id"] 
+            )
+        
+        );
+        
+        return $req;
+    }
+
+    function sql_histo_appointment_pat () {
+        include("M/db_connect.php");
+        $req = $db->query("SELECT R.dtrdv, R.hrrdv, R.observations, CONCAT(Prac.firstname,\" \", Prac.lastname) AS practitioner, CONCAT(Pat.firstname,\" \", Pat.lastname) AS patient FROM rdv R JOIN practitioner Prac ON R.practitioner = Prac.id JOIN patient Pat ON R.patient = Pat.id");
+    }
     
 
 ?>
