@@ -31,7 +31,6 @@
         $time["m"][$key]=(int)$time["m"][$key];
     }
     
-    echo $time["h"]["start"]."  ".$time["h"]["end"]."   ".$length;
     $select_hours = create_select($time["h"]["start"], $time["h"]["end"], 1);
 
     $select_minutes = create_select(0, 60, $length);
