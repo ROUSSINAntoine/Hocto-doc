@@ -38,7 +38,11 @@
         <input type="text" name="postcode"require pattern="[0-9]{5}" value="<?php echo $data['postcode']?>"><br>
         <input type="text" name="ssn"require pattern="[0-9]{15}" value="<?php echo $data['ssn']?>"><br>
         <input type="hidden" name="page" value="modif_account">
+<<<<<<< HEAD
         <input type="hidden" name="modif" value="modif_account">
+=======
+        <input type="hidden" name="modif" value="modif">
+>>>>>>> master
         <input type="hidden" name="email" value="<?php echo $data['email']?>">
         <input type="hidden" name="id" value="<?php echo $data['id']?>">
         <input type="submit" value="confirm">
