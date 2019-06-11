@@ -28,7 +28,7 @@ $date = date('Y-m-j');?>
         </div>
     </nav>
     <form action="index.php" method="GET">
-        <input type="date" name="dtrdv" required></br>
+        <input type="date" name="dtrdv" min="2019-11-06"required></br>
         <select name="patient">
                 <?php echo $select ?>
         </select><br>
