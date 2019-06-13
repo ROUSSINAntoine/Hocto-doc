@@ -18,6 +18,24 @@
         return $req;
     }
 
+    function sql_modif_prac () {
+        include("M/db_connect.php");
+        //modif account prac
+        $req =$db->prepare ("UPDATE practitioner SET practitioner.firstname = :firstname, practitioner.lastname = :lastname, practitioner.psw = :psw, practitioner.adrs = :adrs, practitioner.city = :city, practitioner.postcode= :postcode, practitioner.email = :emails, practitioner.phone_number = :phone WHERE practitioner.id = :id");
+        $req ->execute(array (
+            'psw'=>$_GET['psw'],
+            'id'=>$_SESSION['id'],
+            'firstname'=>$_GET['firstname'],
+            'lastname' =>$_GET['lastname'],
+            'phone'=>$_GET['phone'],
+            'adrs' =>$_GET['adrs'],
+            'city' =>$_GET['city'],
+            'postcode' =>$_GET['postcode'],
+            'emails'=>$_GET['emails'] ));
+        return $req;
+    }
+
+
      function modif_planning () 
     //modifier la table planning
     {
