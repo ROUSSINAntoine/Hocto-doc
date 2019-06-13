@@ -90,13 +90,21 @@
     
     function sql_reg_del() {
         include("M/db_connect.php");
-        $req = $db->query("DELETE FROM account WHERE id = ".$_SESSION["type"]);
+        $req = $db->prepare("DELETE FROM account WHERE id = :id_type");
+        $req->execute(array(
+            'id_type' => $_SESSION['id'],
+            )
+        );
         header('Location: index.php');  
     }
     
     function sql_reg_del_prac() {
         include("M/db_connect.php");
-        $req = $db->query("DELETE FROM practitioner WHERE id = ".$_SESSION["id"]);
+        $req = $db->prepare("DELETE FROM practitioner WHERE id = :id");
+        $req->execute(array(
+            'id' => $_SESSION['id'],
+            )
+        );
         header('Location: index.php');  
     }
 
