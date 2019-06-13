@@ -82,9 +82,9 @@
     
     function sql_reg_del_prac() {
         include("M/db_connect.php");
-        $req = $db->query("DELETE FROM practitioner WHERE id = :id_type");
+        $req = $db->prepare("DELETE FROM practitioner WHERE id = :id");
         $req->execute(array(
-            'id_type' => $_SESSION['id'],
+            'id' => $_SESSION['id'],
             )
         );
         header('Location: index.php');  
