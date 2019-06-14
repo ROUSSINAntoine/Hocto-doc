@@ -106,5 +106,14 @@
         return $req;
     }
     
+    function sql_prac() {
+        include("M/db_connect.php");
+        $req=$db->prepare("SELECT * FROM practitioner WHERE practitioner.id = :id");
+        $req->execute(array(
+            'id'=> $_SESSION["id"]
+        ));
+
+        return $req;
+    }
 
 ?>

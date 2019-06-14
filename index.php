@@ -39,7 +39,7 @@
                     case "modif_rdv";
                     include("C/req_modif_rdv.php");
                     break;
-                    case "delete_rdv";
+                case "delete_rdv";
                     include("C/req_delete_rdv.php");
                     break;
                 case "modif_account":
@@ -48,6 +48,9 @@
                     } else if (isset($_GET["del"])) {
                         include("C/req_del_patient.php");
                     }
+                    break;
+                case "modif_account_prac";
+                    include("C/req_modif_account_prac.php");
                     break;
                 default:
                     include('E/404.html');
