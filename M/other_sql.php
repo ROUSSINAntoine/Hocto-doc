@@ -15,10 +15,28 @@
             "ssn" =>$_GET['ssn'],
             "email"=>$_GET['email'],
             "emails"=>$_GET['emails'] ));
-        return $req;
+            $req->closeCursor();
     }
 
-     function modif_planning() 
+    function sql_modif_prac () {
+        include("M/db_connect.php");
+        //modif account prac
+        $req =$db->prepare ("UPDATE practitioner SET practitioner.firstname = :firstname, practitioner.lastname = :lastname, practitioner.psw = :psw, practitioner.adrs = :adrs, practitioner.city = :city, practitioner.postcode= :postcode, practitioner.email = :emails, practitioner.phone_number = :phone WHERE practitioner.id = :id");
+        $req ->execute(array (
+            'psw'=>$_GET['psw'],
+            'id'=>$_SESSION['id'],
+            'firstname'=>$_GET['firstname'],
+            'lastname' =>$_GET['lastname'],
+            'phone'=>$_GET['phone'],
+            'adrs' =>$_GET['adrs'],
+            'city' =>$_GET['city'],
+            'postcode' =>$_GET['postcode'],
+            'emails'=>$_GET['emails'] ));
+            $req->closeCursor();
+    }
+
+
+     function modif_planning () 
     //modifier la table planning
     {
     include("M/db_connect.php");
@@ -31,7 +49,7 @@
             "length_time" =>$_GET['length_time'],
             "days_time" =>$_GET['days_time'],
             "practitioner" =>$_GET['practitioner'] ));
-            return $req;
+            $req->closeCursor();
         }
     
     function sql_add_patient () {
@@ -45,22 +63,23 @@
         include("M/db_connect.php");
         //$hr = date("H:i", strtotime($_GET['hrrdv']));
         $req =$db->query("INSERT INTO `rdv` (`id`, `dtrdv`, `hrrdv`, `observations`, `practitioner`, `patient`) VALUES (NULL, \"".$_GET["dtrdv"]."\", \"".$hr."\", '', \"".$_GET['doc']."\", \"".$_GET['patient']."\")");
+        $req->closeCursor();
     }
 
     function sql_del_patient () {
         include("M/db_connect.php");
         $req = $db->query("DELETE FROM patient WHERE id = ".$_GET["id"]);
+        $req->closeCursor();
     }
 
     function sql_reg_prac () {
         include("M/db_connect.php");
-        $req = $db->prepare("INSERT INTO practitioner(id, email ,psw) VALUES(null, :email, :psw)");
-        
+        $req = $db->prepare("INSERT INTO practitioner (id, email, psw) VALUES (null, :email, :psw)");
         $req->execute(array(
-            'psw' => $_SESSION['pass'],
-            'email' => $_SESSION['email']
-            )
-        );
+            'email'=>$_GET['email'],
+            'psw'=>$_GET['pass']
+        ));
+        $req->closeCursor();
     }
 
     function sql_reg_patient() { 
@@ -72,18 +91,27 @@
             'email' => $_SESSION['email']
             )
         );
+        $req->closeCursor();
     }
     
     function sql_reg_del() {
         include("M/db_connect.php");
-        $req = $db->query("DELETE FROM account WHERE id = ".$_SESSION["type"]);
-        header('Location: index.php');  
+        $req = $db->prepare("DELETE FROM account WHERE id = :id_type");
+        $req->execute(array(
+            'id_type' => $_SESSION['id'],
+            )
+        );
+        $req->closeCursor();  
     }
     
     function sql_reg_del_prac() {
         include("M/db_connect.php");
-        $req = $db->query("DELETE FROM practitioner WHERE id = ".$_SESSION["id"]);
-        header('Location: index.php');  
+        $req = $db->prepare("DELETE FROM practitioner WHERE id = :id");
+        $req->execute(array(
+            'id' => $_SESSION['id'],
+            )
+        );
+        $req->closeCursor();  
     }
 
     function sql_delete_rdv() {
@@ -92,8 +120,21 @@
         $req ->execute (array (
             "id_rdv"=>$_GET["id_rdv"]
         ));
-        return $req;
-        header('Location: index.php');  
+        return $req; 
+    }
+
+    function sql_available_false () {
+        include("M/db_connect.php");
+        
+        $req = $db->query("INSERT INTO practitioner (available) VALUES (0)");
+        $req->closeCursor();
+    }
+
+    function sql_available_true () {
+        include("M/db_connect.php");
+        
+        $req = $db->query("INSERT INTO practitioner (available) VALUES (1)");
+        $req->closeCursor();
     }
 
 ?> 

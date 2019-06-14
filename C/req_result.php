@@ -14,5 +14,9 @@
     }    
     $req-> closeCursor();
 
+    if ($add == "") {
+        $add = "There is no practitioner register under that name";
+    }
+
     include("V/mod_results.php");
 ?>
