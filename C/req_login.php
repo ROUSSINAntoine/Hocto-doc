@@ -9,13 +9,15 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
     include("M/get_sql.php");
     $req = check_login();
     $data = $req->fetch();
-    
+    $req->closeCursor();
+
     // si c'est faux regarde si c'est un practitioner
     if ($data == false) {
 
         //appelle la fonction sql qui permet de verifier le bon email et password du practitioner
         $req = check_practitioner();
         $data = $req->fetch();
+        $req->closeCursor();
         
 
         //si c'est faux renvoie une erreur
@@ -38,7 +40,16 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
             
             //redirecton vers le home pour l'user connecté
             if ($co == "prac") {
-                include("./V/mod_prac_home.php");
+                //include("./M/get_sql.php");
+                $req= sql_modif_pract();
+                $data= $req->fetch();
+                $req->closeCursor();
+                if($data['firstname'] == null || $data['firstname'] == "") {
+                    include("./V/mod_info_prac.php");
+                } else {
+                    include("./V/mod_prac_home.php");
+                }
+                
             } else if ($co == "pat") {
                 include("./V/mod_home.php");
             }

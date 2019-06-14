@@ -52,6 +52,9 @@
                 case "modif_account_prac";
                     include("C/req_modif_account_prac.php");
                     break;
+                case "home_prac";
+                    include("C/req_home_prac.php");
+                    break;
                 default:
                     include('E/404.html');
             }

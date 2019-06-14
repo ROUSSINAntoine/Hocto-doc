@@ -80,8 +80,6 @@
         return $req;
     }
     
-
-  
     function sql_histo_appointment_prac () {
         include("M/db_connect.php");
         $req = $db->prepare("SELECT CONCAT(Pat.firstname,\" \", Pat.lastname) AS patient, R.dtrdv, R.hrrdv, R.observations, R.id FROM rdv R JOIN patient Pat ON R.patient = Pat.id WHERE R.practitioner = :id AND DATEDIFF(DATE(CONCAT(R.dtrdv,\" \", R.hrrdv)),DATE(NOW())) < 0 ORDER BY R.dtrdv, R.hrrdv");
@@ -113,6 +111,16 @@
             'id'=> $_SESSION["id"]
         ));
 
+        return $req;
+    }
+
+    function sql_modif_pract() {
+        include("M/db_connect.php");
+        $req=$db->prepare("SELECT * FROM practitioner WHERE practitioner.id = :id");
+        $req->execute(array(
+            'id'=>$_SESSION['id']
+            )
+        );
         return $req;
     }
 
