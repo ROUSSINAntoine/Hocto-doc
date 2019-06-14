@@ -74,7 +74,11 @@
 
     function sql_reg_prac () {
         include("M/db_connect.php");
-        $req = $db->query("INSERT INTO practitioner (id, email, psw) VALUES (null, \"".$_GET["email"]."\",\"".$_GET["pass"]."\")");
+        $req = $db->prepare("INSERT INTO practitioner (id, email, psw) VALUES (null, :email, :psw)");
+        $req->execute(array(
+            'email'=>$_GET['email'],
+            'psw'=>$_GET['pass']
+        ));
     }
 
     function sql_reg_patient() { 
