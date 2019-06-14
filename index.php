@@ -36,7 +36,7 @@
                 case "histo";
                     include("C/req_histo.php");
                     break;
-                    case "modif_rdv";
+                case "modif_rdv";
                     include("C/req_modif_rdv.php");
                     break;
                 case "delete_rdv";
@@ -54,6 +54,9 @@
                     break;
                 case "home_prac";
                     include("C/req_home_prac.php");
+                    break;
+                case "popup_delete_rdv";
+                    include("C/req_popup_delete_rdv.php");
                     break;
                 default:
                     include('E/404.html');
