@@ -66,7 +66,7 @@
 
     function sql_consult () {
         include("M/db_connect.php");
-        $req =$db->query("SELECT * FROM planning WHERE practitioner = ".$_GET["doc"]);
+        $req =$db->query("SELECT * FROM planning2 WHERE practitioner = ".$_GET["doc"]);
         return $req;
     }
 
@@ -105,6 +105,7 @@
         
         return $req;
     }
+    
     
 
 ?>
