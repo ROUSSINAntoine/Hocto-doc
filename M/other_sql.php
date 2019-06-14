@@ -18,6 +18,24 @@
         return $req;
     }
 
+    function sql_modif_prac () {
+        include("M/db_connect.php");
+        //modif account prac
+        $req =$db->prepare ("UPDATE practitioner SET practitioner.firstname = :firstname, practitioner.lastname = :lastname, practitioner.psw = :psw, practitioner.adrs = :adrs, practitioner.city = :city, practitioner.postcode= :postcode, practitioner.email = :emails, practitioner.phone_number = :phone WHERE practitioner.id = :id");
+        $req ->execute(array (
+            'psw'=>$_GET['psw'],
+            'id'=>$_SESSION['id'],
+            'firstname'=>$_GET['firstname'],
+            'lastname' =>$_GET['lastname'],
+            'phone'=>$_GET['phone'],
+            'adrs' =>$_GET['adrs'],
+            'city' =>$_GET['city'],
+            'postcode' =>$_GET['postcode'],
+            'emails'=>$_GET['emails'] ));
+        return $req;
+    }
+
+
      function modif_planning () 
     //modifier la table planning
     {
@@ -56,7 +74,11 @@
 
     function sql_reg_prac () {
         include("M/db_connect.php");
-        $req = $db->query("INSERT INTO practitioner (id, email, psw) VALUES (null, \"".$_GET["email"]."\",\"".$_GET["pass"]."\")");
+        $req = $db->prepare("INSERT INTO practitioner (id, email, psw) VALUES (null, :email, :psw)");
+        $req->execute(array(
+            'email'=>$_GET['email'],
+            'psw'=>$_GET['pass']
+        ));
     }
 
     function sql_reg_patient() { 
@@ -72,13 +94,21 @@
     
     function sql_reg_del() {
         include("M/db_connect.php");
-        $req = $db->query("DELETE FROM account WHERE id = ".$_SESSION["type"]);
+        $req = $db->prepare("DELETE FROM account WHERE id = :id_type");
+        $req->execute(array(
+            'id_type' => $_SESSION['id'],
+            )
+        );
         header('Location: index.php');  
     }
     
     function sql_reg_del_prac() {
         include("M/db_connect.php");
-        $req = $db->query("DELETE FROM practitioner WHERE id = ".$_SESSION["id"]);
+        $req = $db->prepare("DELETE FROM practitioner WHERE id = :id");
+        $req->execute(array(
+            'id' => $_SESSION['id'],
+            )
+        );
         header('Location: index.php');  
     }
 

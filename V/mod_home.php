@@ -24,7 +24,7 @@
             </div>
         </nav>
         <a href="index.php?page=search&type=prac"><button>Choose a practitioner</button></a>
-        <a href="index.php?page=search&type=str"><button>Choose near a location</button></a>
+        <a href="index.php?page=search&type=str"><button disabled>Choose near a location</button></a>
         <a href="index.php?page=modif_rdv"><button>rdv</button></a>
         <a href="index.php?page=calendar"><button>calendar</button></a>
         
