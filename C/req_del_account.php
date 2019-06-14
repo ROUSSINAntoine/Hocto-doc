@@ -7,4 +7,6 @@
     } elseif (isset($_SESSION['type']) && $_SESSION["type"] == "prac") {
         sql_reg_del_prac();
     }
+
+    include("V/mod_login.php");
 ?>    

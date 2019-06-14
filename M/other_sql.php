@@ -15,7 +15,7 @@
             "ssn" =>$_GET['ssn'],
             "email"=>$_GET['email'],
             "emails"=>$_GET['emails'] ));
-        return $req;
+            $req->closeCursor();
     }
 
     function sql_modif_prac () {
@@ -32,7 +32,7 @@
             'city' =>$_GET['city'],
             'postcode' =>$_GET['postcode'],
             'emails'=>$_GET['emails'] ));
-        return $req;
+            $req->closeCursor();
     }
 
 
@@ -51,7 +51,7 @@
             "start_hollyday" =>$_GET['start_hollyday'],
             "end_hollyday" =>$_GET['end_hollyday'],
             "practitioner" =>$_GET['practitioner'] ));
-            return $req;
+            $req->closeCursor();
         }
     
     function sql_add_patient () {
@@ -65,11 +65,13 @@
         include("M/db_connect.php");
         //$hr = date("H:i", strtotime($_GET['hrrdv']));
         $req =$db->query("INSERT INTO `rdv` (`id`, `dtrdv`, `hrrdv`, `observations`, `practitioner`, `patient`) VALUES (NULL, \"".$_GET["dtrdv"]."\", \"".$hr."\", '', \"".$_GET['doc']."\", \"".$_GET['patient']."\")");
+        $req->closeCursor();
     }
 
     function sql_del_patient () {
         include("M/db_connect.php");
         $req = $db->query("DELETE FROM patient WHERE id = ".$_GET["id"]);
+        $req->closeCursor();
     }
 
     function sql_reg_prac () {
@@ -79,6 +81,7 @@
             'email'=>$_GET['email'],
             'psw'=>$_GET['pass']
         ));
+        $req->closeCursor();
     }
 
     function sql_reg_patient() { 
@@ -90,6 +93,7 @@
             'email' => $_SESSION['email']
             )
         );
+        $req->closeCursor();
     }
     
     function sql_reg_del() {
@@ -99,7 +103,7 @@
             'id_type' => $_SESSION['id'],
             )
         );
-        header('Location: index.php');  
+        $req->closeCursor();  
     }
     
     function sql_reg_del_prac() {
@@ -109,7 +113,7 @@
             'id' => $_SESSION['id'],
             )
         );
-        header('Location: index.php');  
+        $req->closeCursor();  
     }
 
     function sql_delete_rdv() {
@@ -118,8 +122,21 @@
         $req ->execute (array (
             "id_rdv"=>$_GET["id_rdv"]
         ));
-        return $req;
-        header('Location: index.php');  
+        return $req; 
+    }
+
+    function sql_available_false () {
+        include("M/db_connect.php");
+        
+        $req = $db->query("INSERT INTO practitioner (available) VALUES (0)");
+        $req->closeCursor();
+    }
+
+    function sql_available_true () {
+        include("M/db_connect.php");
+        
+        $req = $db->query("INSERT INTO practitioner (available) VALUES (1)");
+        $req->closeCursor();
     }
 
 ?> 
