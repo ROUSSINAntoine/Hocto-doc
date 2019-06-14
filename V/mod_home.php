@@ -26,6 +26,7 @@
         <a href="index.php?page=search&type=prac"><button>Choose a practitioner</button></a>
         <a href="index.php?page=search&type=str"><button>Choose near a location</button></a>
         <a href="index.php?page=modif_rdv"><button>rdv</button></a>
+        <a href="index.php?page=calendar"><button>calendar</button></a>
         
         
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
