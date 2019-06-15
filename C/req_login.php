@@ -68,7 +68,14 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
         if ($co == "prac") {
             include("./V/mod_prac_home.php");
         } else if ($co == "pat") {
-            include("./V/mod_home.php");
+            $req= sql_membre();
+            $data= $req->fetch();
+            $req->closeCursor();
+            if($data['firstname'] == null || $data['firstname'] == "") {
+                include("./V/mod_home_start.php");
+            } else {
+                include("./V/mod_home.php");
+            }
         }
     }
     

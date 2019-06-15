@@ -4,6 +4,6 @@
 
     sql_delete_rdv();
 
-    //header('Location: index.php?page=modif_rdv');
+    header('Location: index.php?page=modif_rdv');
 
 ?>

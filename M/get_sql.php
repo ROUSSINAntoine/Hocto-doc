@@ -49,7 +49,7 @@
         include("M/db_connect.php");
         $req = $db->prepare ("SELECT * FROM account JOIN patient ON account.id = patient.account WHERE patient.id LIKE :id ");
         $req ->execute (array(
-        "id"=>$_GET['id'] ));
+        "id"=>$_SESSION['id'] ));
 
         return $req;
 
@@ -121,6 +121,16 @@
             'id'=>$_SESSION['id']
             )
         );
+        return $req;
+    }
+
+    function sql_membre() {
+        include("M/db_connect.php");
+        $req=$db->prepare("SELECT * FROM patient JOIN account ON patient.account = account.id WHERE account.id = :id_account");
+        $req->execute(array(
+            'id_account'=>$_SESSION['id']
+        ));
+
         return $req;
     }
 
