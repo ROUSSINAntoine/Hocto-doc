@@ -9,8 +9,8 @@
         
         <a href="index.php?page=delete"><button>delete account</button></a>
         <a href="index.php?page=histo"><button>appointement historic</button></a>
-        <a href="index.php?page=login"><button>return</button></a>
         <a href="index.php?page=modif_account_prac"><button>modif account</button></a>
+        <a href="index.php?page=login"><button>return</button></a>
 
         Take appointment<input type="checkbox" name="available" id="0" onchange="available(this)">
         <script>

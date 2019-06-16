@@ -64,6 +64,15 @@
                 case "modif_account_prac";
                     include("C/req_modif_account_prac.php");
                     break;
+                case "home_prac";
+                    include("C/req_home_prac.php");
+                    break;
+                case "popup_delete_rdv";
+                    include("C/req_popup_delete_rdv.php");
+                    break;
+                case "home";
+                    include("C/req_home.php");
+                    break;
                 default:
                     include('E/404.html');
             }
