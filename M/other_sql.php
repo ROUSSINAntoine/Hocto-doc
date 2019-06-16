@@ -126,14 +126,21 @@
     function sql_available_false () {
         include("M/db_connect.php");
         
-        $req = $db->query("INSERT INTO practitioner (available) VALUES (0)");
-        $req->closeCursor();
+        $req = $db->prepare("UPDATE `practitioner` SET `available` = '0' WHERE `practitioner`.`id` = :id");
+        $req->execute(array(
+            'id' => $_SESSION['id'],
+            )
+        );
     }
 
     function sql_available_true () {
         include("M/db_connect.php");
         
-        $req = $db->query("INSERT INTO practitioner (available) VALUES (1)");
+        $req = $db->prepare("UPDATE `practitioner` SET `available` = '1' WHERE `practitioner`.`id` = 1");
+        $req->execute(array(
+            'id' => $_SESSION['id'],
+            )
+        );
         $req->closeCursor();
     }
 

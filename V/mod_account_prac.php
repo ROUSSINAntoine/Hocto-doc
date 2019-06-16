@@ -12,5 +12,21 @@
         <a href="index.php?page=login"><button>return</button></a>
         <a href="index.php?page=modif_account_prac"><button>modif account</button></a>
 
+        Take appointment<input type="checkbox" name="available" id="0" onchange="available(this)">
+        <script>
+            function available (value) {
+                var check = document.getElementById("0");
+
+                check.addEventListener("change", function(event) {
+                    
+                    if (check.checked === true) {
+                        console.log(check.checked);
+                        fetch("/index.php?page=available&action=is", {method: "GET"});
+                    } else {
+                        fetch("/index.php?page=available&action=not", {method: "GET"});
+                    }
+                });
+        }
+        </script>
     </body>
 </html>

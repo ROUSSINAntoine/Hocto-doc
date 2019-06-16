@@ -45,7 +45,7 @@
                 case "histo";
                     include("C/req_histo.php");
                     break;
-                    case "modif_rdv";
+                case "modif_rdv";
                     include("C/req_modif_rdv.php");
                     break;
                 case "delete_rdv";
@@ -57,6 +57,9 @@
                     } else if (isset($_GET["del"])) {
                         include("C/req_del_patient.php");
                     }
+                    break;
+                case "available":
+                    include("C/req_available.php");
                     break;
                 case "modif_account_prac";
                     include("C/req_modif_account_prac.php");
