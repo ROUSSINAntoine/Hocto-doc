@@ -54,8 +54,8 @@
                 case "modif_account":
                     if (isset($_GET["modif"])) {
                         include("C/req_modif_account.php");
-                    } else if (isset($_GET["del"])) {
-                        include("C/req_del_patient.php");
+                    } else if (isset($_GET["del_popup"])) {
+                        include("C/req_del_patient_popup.php");
                     }
                     break;
                 case "modif_account_prac";
