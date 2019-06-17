@@ -48,7 +48,7 @@
                 case "histo";
                     include("C/req_histo.php");
                     break;
-                    case "modif_rdv";
+                case "modif_rdv";
                     include("C/req_modif_rdv.php");
                     break;
                 case "delete_rdv";
@@ -61,8 +61,20 @@
                         include("C/req_del_patient.php");
                     }
                     break;
+                case "available":
+                    include("C/req_available.php");
+                    break;
                 case "modif_account_prac";
                     include("C/req_modif_account_prac.php");
+                    break;
+                case "home_prac";
+                    include("C/req_home_prac.php");
+                    break;
+                case "popup_delete_rdv";
+                    include("C/req_popup_delete_rdv.php");
+                    break;
+                case "home";
+                    include("C/req_home.php");
                     break;
                 default:
                     include('E/404.html');

@@ -20,5 +20,6 @@
         <a href="index.php?page=delete"><button>delete account</button></a>
         <a href="index.php?page=histo"><button>appointement historic</button></a></p>
 
+
     </body>
 </html>

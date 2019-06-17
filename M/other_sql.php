@@ -55,7 +55,17 @@
     function sql_add_patient () {
         include("M/db_connect.php");
         
-        $req = $db->query("INSERT INTO patient (id, firstname, lastname, phone_number, adrs, city, postcode, ssn, account) VALUES (NULL, \"".$_GET['firstname']."\", \"".$_GET['lastname']."\", ".$_GET['phone_number'].", \"".$_GET['adrs']."\", \"".$_GET['city']."\", ".$_GET['postcode'].", ".$_GET['ssn'].", ".$_SESSION['id'].")");
+        $req = $db->prepare("INSERT INTO patient (id, firstname, lastname, phone_number, adrs, city, postcode, ssn, account) VALUES (NULL, :firstname, :lastname, :phone, :adrs, :city, :postcode, :ssn, :id_account)");
+        $req->execute(array(
+            'firstname'=>$_GET['firstname'],
+            'lastname'=>$_GET['lastname'],
+            'phone'=>$_GET['phone_number'],
+            'adrs'=>$_GET['adrs'],
+            'city'=>$_GET['city'],
+            'postcode'=>$_GET['postcode'],
+            'ssn'=>$_GET['ssn'],
+            'id_account'=>$_SESSION['id']
+        ));
         $req->closeCursor();
     }
     
@@ -118,7 +128,7 @@
         include("M/db_connect.php");
         $req = $db->prepare("DELETE FROM rdv WHERE id = :id_rdv");
         $req ->execute (array (
-            "id_rdv"=>$_GET["id_rdv"]
+            "id_rdv"=>$_SESSION["id_rdv"]
         ));
         return $req; 
     }
@@ -126,14 +136,21 @@
     function sql_available_false () {
         include("M/db_connect.php");
         
-        $req = $db->query("INSERT INTO practitioner (available) VALUES (0)");
-        $req->closeCursor();
+        $req = $db->prepare("UPDATE `practitioner` SET `available` = '0' WHERE `practitioner`.`id` = :id");
+        $req->execute(array(
+            'id' => $_SESSION['id'],
+            )
+        );
     }
 
     function sql_available_true () {
         include("M/db_connect.php");
         
-        $req = $db->query("INSERT INTO practitioner (available) VALUES (1)");
+        $req = $db->prepare("UPDATE `practitioner` SET `available` = '1' WHERE `practitioner`.`id` = 1");
+        $req->execute(array(
+            'id' => $_SESSION['id'],
+            )
+        );
         $req->closeCursor();
     }
 
