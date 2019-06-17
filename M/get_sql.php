@@ -49,7 +49,7 @@
         include("M/db_connect.php");
         $req = $db->prepare ("SELECT * FROM account JOIN patient ON account.id = patient.account WHERE patient.id LIKE :id ");
         $req ->execute (array(
-        "id"=>$_GET['id'] ));
+        "id"=>$_SESSION['id'] ));
 
         return $req;
 
@@ -66,7 +66,7 @@
 
     function sql_consult () {
         include("M/db_connect.php");
-        $req =$db->query("SELECT * FROM planning WHERE practitioner = ".$_GET["doc"]);
+        $req =$db->query("SELECT * FROM planning2 WHERE practitioner = ".$_GET["doc"]);
         return $req;
     }
 
@@ -80,8 +80,6 @@
         return $req;
     }
     
-
-  
     function sql_histo_appointment_prac () {
         include("M/db_connect.php");
         $req = $db->prepare("SELECT CONCAT(Pat.firstname,\" \", Pat.lastname) AS patient, R.dtrdv, R.hrrdv, R.observations, R.id FROM rdv R JOIN patient Pat ON R.patient = Pat.id WHERE R.practitioner = :id AND DATEDIFF(DATE(CONCAT(R.dtrdv,\" \", R.hrrdv)),DATE(NOW())) < 0 ORDER BY R.dtrdv, R.hrrdv");

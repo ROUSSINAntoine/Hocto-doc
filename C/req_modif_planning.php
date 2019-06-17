@@ -2,7 +2,15 @@
 
 include("M/other_sql.php");
 include("V/mod_modif_planning.php");
-$days = "";
+
+/*function sql_planning () {
+    include("M/get_sql.php");
+    $data = $req->fetch();
+
+    $req->closeCursor();
+    return $data;
+}*/
+/*$days = "";
 if(isset($_GET["lundi"])){
     $days = $days."lundi; ";
 }
@@ -21,13 +29,20 @@ if(isset($_GET["vendredi"])){
 if(isset($_GET["samedi"])){
     $days = $days."samedi; ";
 }
-$_GET['days']=$days;
+if(isset($_GET["dimanche"])){
+    $days = $days."dimanche; ";
+}
+$_GET['days']=$days;*/
 
+if(isset($_GET["days_time"])){
 if(isset($_GET["practitioner"])){
 
 $req = modif_planning();
 
 }
+}
+
+//$data = sql_planning();
     
 
 

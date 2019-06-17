@@ -1,3 +1,13 @@
 .custom {
     color: white;
 }
+
+.titre {
+    font-size: 18px;
+    color: black;
+}
+
+.switch {
+    font-size: 14px;
+    color: black;
+}
