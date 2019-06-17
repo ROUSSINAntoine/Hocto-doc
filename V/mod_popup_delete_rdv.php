@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>text</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="./style/popup_rdv.css"> 
-=======
     <link rel="stylesheet" href="./style/popup.css">
->>>>>>> vincent
     <script type="text/javascript" src="index.php?page=modif_rdv"></script>
 </head>
 <body>
