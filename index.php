@@ -67,6 +67,12 @@
                 case "popup_delete_rdv";
                     include("C/req_popup_delete_rdv.php");
                     break;
+                case "popup_delete_account";
+                    include("C/req_popup_delete_account.php");
+                    break;
+                case "popup_delete_account_prac";
+                    include("C/req_popup_delete_prac.php");
+                    break;
                 case "home";
                     include("C/req_home.php");
                     break;

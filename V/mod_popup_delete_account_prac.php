@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>text</title>
     <link rel="stylesheet" href="./style/popup.css">
-    <script type="text/javascript" src="index.php?page=modif_rdv"></script>
+    <script type="text/javascript" src="index.php?page=account"></script>
 </head>
 <body>
-<div class="popup"> <a href="index.php?page=modif_rdv" class="close"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+<div class="popup"> <a href="index.php?page=account" class="close"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
     x="0px" y="0px" width="10px" height="10px" viewBox="215.186 215.671 80.802 80.8"
     enable-background="new 215.186 215.671 80.802 80.8" xml:space="preserve">
         <polygon fill="#FFFFFF" points="280.486,296.466 255.586,271.566 230.686,296.471 215.19,280.964 240.086,256.066 215.186,231.17 
@@ -25,11 +25,10 @@
 	C275.983,244.402,265.359,258.502,250.062,285.934z" />
         </svg>
     </div>
-     <h1>Do you want to cancel your rdv?</h1>
+     <h1>Do you want to cancel your account?</h1>
 
     <p></p>
-    <input type="hidden" name="id_rdv" value="<?php echo $_SESSION['id_rdv']?>"><br>
-    <div class="bottom-popup"><a class="start" href="index.php?page=delete_rdv">Yes</a>
+    <div class="bottom-popup"><a class="start" href="index.php?page=delete">Confirm</a>
     </div>
 </div>
 </body>

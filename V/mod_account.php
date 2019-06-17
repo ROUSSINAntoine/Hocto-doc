@@ -17,7 +17,7 @@
             <input type="submit" name="del" value="Delete patient" <?php echo $dis ?>>
         </form>
         <a href="index.php?page=add_patient"><button>add patient</button></a></p>
-        <a href="index.php?page=delete"><button>delete account</button></a>
+        <a href="index.php?page=popup_delete_account"><button>delete account</button></a>
         <a href="index.php?page=histo"><button>appointement historic</button></a></p>
 
     </body>
