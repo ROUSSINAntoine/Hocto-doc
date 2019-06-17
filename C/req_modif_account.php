@@ -6,10 +6,10 @@ function modif () {
     $req=sql_modif();
     $req->closeCursor();
 }
-function modif_patient() {
+/*function modif_patient() {
     include("M/other_sql.php");
     modif_patient();
-}
+}*/
 function affichage_account() {
     include("M/get_sql.php");
     $req = sql_display_member();

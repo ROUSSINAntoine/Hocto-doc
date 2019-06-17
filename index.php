@@ -58,6 +58,9 @@
                         include("C/req_del_patient_popup.php");
                     }
                     break;
+                case "available":
+                    include("C/req_available.php");
+                    break;
                 case "modif_account_prac";
                     include("C/req_modif_account_prac.php");
                     break;

@@ -5,7 +5,7 @@
         $req =$db->prepare ("UPDATE account JOIN patient ON account.id = patient.account SET account.psw =:psw , account.email =:emails ,patient.firstname =:firstname ,patient.lastname=:lastname, patient.adrs= :adrs , patient.phone_number =:phone , patient.city=:city , patient.postcode =:postcode , patient.ssn =:ssn WHERE patient.id LIKE :id AND account.email=:email");
         $req ->execute (array (
             "psw"=>$_GET["psw"],
-            "id"=>$_GET['id'],
+            "id"=>$_SESSION['id'],
             "firstname"=>$_GET['firstname'],
             "lastname" =>$_GET['lastname'],
             "phone"=>$_GET['phone'],
@@ -136,14 +136,21 @@
     function sql_available_false () {
         include("M/db_connect.php");
         
-        $req = $db->query("INSERT INTO practitioner (available) VALUES (0)");
-        $req->closeCursor();
+        $req = $db->prepare("UPDATE `practitioner` SET `available` = '0' WHERE `practitioner`.`id` = :id");
+        $req->execute(array(
+            'id' => $_SESSION['id'],
+            )
+        );
     }
 
     function sql_available_true () {
         include("M/db_connect.php");
         
-        $req = $db->query("INSERT INTO practitioner (available) VALUES (1)");
+        $req = $db->prepare("UPDATE `practitioner` SET `available` = '1' WHERE `practitioner`.`id` = 1");
+        $req->execute(array(
+            'id' => $_SESSION['id'],
+            )
+        );
         $req->closeCursor();
     }
 
