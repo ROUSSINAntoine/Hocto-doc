@@ -25,7 +25,7 @@
                     include("C/patient/req_add_patient.php");
                     break;
                 case "account":
-                    include("C/patient/req_account.php");
+                    include("C/both/req_account.php");
                     break;
                 case "search":
                     include("C/patient/req_search.php");
