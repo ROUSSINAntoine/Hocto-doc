@@ -25,7 +25,7 @@ if (isset($_GET["psw"])) {
 }
 
 $data = affichage_account();
-include("V/mod_modif_account.php");
+include("V/patient/mod_modif_account.php");
 
 
 ?>
