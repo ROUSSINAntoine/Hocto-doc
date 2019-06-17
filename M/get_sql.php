@@ -58,8 +58,12 @@
     function sql_search_by_prac() {
         include("M/db_connect.php");
 
-        $req = $db->query("SELECT * FROM practitioner WHERE lastname LIKE \"%".$_GET["srch"]."%\"");
-
+        $req = $db->prepare("SELECT * FROM practitioner WHERE lastname LIKE %:doc% AND available = 1");
+        $req ->execute (array (
+            "doc"=> $_GET["srch"],
+            "id"=> $_SESSION["id"] 
+            )
+        );
         return $req;
     }
 
@@ -134,4 +138,13 @@
         return $req;
     }
 
+    function sql_is_available() {
+        include("M/db_connect.php");
+        $req=$db->prepare("SELECT available FROM practitioner WHERE practitioner.id = :id AND available = 0");
+        $req->execute(array(
+            'id'=>$_SESSION['id']
+            )
+        );
+        return $req;
+    }
 ?>
