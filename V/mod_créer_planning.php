@@ -18,6 +18,7 @@
     </style>
 
 <?php include("V/navbar.html"); ?> 
+
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
     <a class="nav-link active" id="Monday-tab" data-toggle="tab" href="#monday" role="tab" aria-controls="Monday" aria-selected="true">Monday</a>
