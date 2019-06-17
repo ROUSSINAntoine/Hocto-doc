@@ -40,7 +40,6 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
             
             //redirecton vers le home pour l'user connecté
             if ($co == "prac") {
-                //include("./M/get_sql.php");
                 $req= sql_modif_pract();
                 $data= $req->fetch();
                 $req->closeCursor();
@@ -84,12 +83,26 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
 
     //deja connecté
 } else if (isset($_SESSION['email'])) {
-
+    include("M/get_sql.php");
     //redirige vers le home
     if ($_SESSION['type'] == "prac") {
-        include("./V/mod_prac_home.php");
+        $req= sql_modif_pract();
+        $data= $req->fetch();
+        $req->closeCursor();
+        if($data['firstname'] == null || $data['firstname'] == "") {
+            include("./V/mod_info_prac.php");
+        } else {
+            include("./V/mod_prac_home.php");
+        }
     } else if ($_SESSION['type'] == "pat") {
-        include("./V/mod_home.php");
+        $req= sql_membre();
+            $data= $req->fetch();
+            $req->closeCursor();
+            if($data['firstname'] == null || $data['firstname'] == "") {
+                include("./V/mod_home_start.php");
+            } else {
+                include("./V/mod_home.php");
+            }
     }
 }
 ?>
