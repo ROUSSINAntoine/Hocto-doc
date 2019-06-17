@@ -39,6 +39,9 @@
                 case "delete":
                     include("C/req_del_account.php");
                     break;
+                case "créer_planning";
+                    include("C/req_créer_planning.php");
+                    break;
                 case "modif_planning";
                     include("C/req_modif_planning.php");
                     break;

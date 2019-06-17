@@ -137,4 +137,41 @@
         $req->closeCursor();
     }
 
+    function creer_planning () {
+        include("M/db_connect.php");
+        
+        $req = $db->prepare("INSERT INTO `planning2`(id, open_time, break_time, resume_time, close_time, day_time, practitioner, length_time) VALUES (NULL , :open_time , :break_time , :resume_time , :close_time , :days_time , :practitioner , :length_time)");
+       $req ->execute(array(
+        "open_time"=>$_GET['open_time'],
+            "break_time" =>$_GET['break_time'],
+            "resume_time"=>$_GET['resume_time'],
+            "close_time" =>$_GET['close_time'],
+            "length_time" =>$_GET['length_time'],
+            "days_time" =>$_GET['days_time'],
+            "practitioner" =>$_GET['practitioner'] ));
+        $req->closeCursor();
+    }
+
+    function modif_hollyday () {
+        include("M/db_connect.php");
+
+        $req = $db->prepare("UPDATE hollyday SET start_hollyday=:start_hollyday , end_hollyday =:end_hollyday WHERE practitioner=:practitioner");
+        $req ->execute(array(
+            "start_hollyday" =>$_GET['start_hollyday'],
+            "end_hollyday" =>$_GET['end_hollyday'],
+            "practitioner" =>$_GET['practitioner']));
+        $req->closeCursor();
+    }
+
+    function creer_hollyday () {
+        include("M/db_connect.php");
+
+        $req =$db->prepare("INSERT INTO hollyday (start_hollyday , end_hollyday , practitioner ) VALUES (:start_hollyday , :end_hollyday , :practitioner)");
+        $req->execute(array(
+            "start_hollyday" =>$_GET['start_hollyday'],
+            "end_hollyday" =>$_GET['end_hollyday'],
+            "practitioner" =>$_GET['practitioner']));
+        $req->closeCursor();
+    }
+
 ?> 

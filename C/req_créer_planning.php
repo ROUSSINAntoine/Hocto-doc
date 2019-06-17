@@ -1,7 +1,7 @@
 <?php
 
 include("M/other_sql.php");
-include("V/mod_modif_planning.php");
+include("V/mod_créer_planning.php");
 
 /*function sql_planning () {
     include("M/get_sql.php");
@@ -37,19 +37,11 @@ $_GET['days']=$days;*/
 if(isset($_GET["days_time"])){
 if(isset($_GET["practitioner"])){
 
-$req = modif_planning();
+$req = creer_planning();
 
 }
 }
 if(isset($_GET["start_hollyday"])){
-$req = modif_hollyday ();
+$req = creer_hollyday();
 }
-
 //$data = sql_planning();
-    
-
-
-
-
-
-?>

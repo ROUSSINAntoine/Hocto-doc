@@ -20,11 +20,11 @@
 <?php include("V/navbar.html"); ?> 
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="Monday-tab" data-toggle="tab" href="#Monday" role="tab" aria-controls="Monday" aria-selected="true">Monday</a>
+    <a class="nav-link active" id="Monday-tab" data-toggle="tab" href="#monday" role="tab" aria-controls="Monday" aria-selected="true">Monday</a>
     </li>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="tuesday-tab" data-toggle="tab" href="#Tuesday" role="tab" aria-controls="tuesday" aria-selected="false">tuesday</a>
+    <a class="nav-link" id="tuesday-tab" data-toggle="tab" href="#tuesday" role="tab" aria-controls="tuesday" aria-selected="false">tuesday</a>
    
   </li>
   <li class="nav-item">
@@ -67,15 +67,15 @@
         <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days :lundi <br>
+        days : lundi <br>
         <input type="hidden" name="days_time" value="lundi"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
+        <input type="hidden" name="page" value="créer_planning">
         <input type="submit" value="valider" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
-  <div class="tab-pane fade" id="Tuesday" role="tabpanel" aria-labelledby="tuesday-tab">
+  <div class="tab-pane fade" id="tuesday" role="tabpanel" aria-labelledby="tuesday-tab">
    <form action="index.php" method="GET">
     <p>
         open
@@ -92,7 +92,7 @@
         days : mardi <br>
         <input type="hidden" name="days_time" value="mardi"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
+        <input type="hidden" name="page" value="créer_planning">
         <input type="submit" value="valider" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
@@ -111,10 +111,10 @@
         <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : mercredi<br>
+        days : <br>
         <input type="hidden" name="days_time" value="mercredi"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
+        <input type="hidden" name="page" value="créer_planning">
         <input type="submit" value="valider" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
@@ -133,10 +133,10 @@
         <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : jeudi <br>
+        days : <br>
         <input type="hidden" name="days_time" value="jeudi"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
+        <input type="hidden" name="page" value="créer_planning">
         <input type="submit" value="valider" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
@@ -155,10 +155,10 @@
         <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : vendredi <br>
+        days : <br>
         <input type="hidden" name="days_time" value="vendredi"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
+        <input type="hidden" name="page" value="créer_planning">
         <input type="submit" value="valider" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
@@ -177,10 +177,10 @@
         <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : samedi<br>
+        days : <br>
         <input type="hidden" name="days_time" value="samedi"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
+        <input type="hidden" name="page" value="créer_planning">
         <input type="submit" value="valider" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
@@ -199,15 +199,15 @@
         <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : dimanche <br>
+        days : <br>
         <input type="hidden" name="days_time" value="dimanche"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
+        <input type="hidden" name="page" value="créer_planning">
         <input type="submit" value="valider" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
-    <div class="tab-pane fade" id="Hollyday" role="tabpanel" aria-labelledby="Hollyday-tab">
+     <div class="tab-pane fade" id="Hollyday" role="tabpanel" aria-labelledby="Hollyday-tab">
   <form action="index.php" method="GET">
     <p>
         start hollyday
@@ -217,7 +217,7 @@
         <input type="date" name="end_hollyday"><br/>
         
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
+        <input type="hidden" name="page" value="créer_planning">
         <input type="submit" value="valider" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
