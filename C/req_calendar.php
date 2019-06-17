@@ -20,30 +20,27 @@
                 plugins: ['interaction', 'dayGrid', 'timeGrid'],
                 height: 'parent'
             });
+            <?php
+                $appointment = getAppointment((get($_SESSION['id'])));
+                foreach ($appointment as $key) {
+                    ?>
+                    var date = new date('<?php echo $row['dateStr']; ?>' + 'T00:00:00' );        
+                    
+                    calendar.addEvent({
+                        title: '<?php echo $row['notes'];?>,
+                        start: date,
+                        alldays: true,
+                        color: <?php if ($row['typeEvent'] == "appoint") { echo '\'rouge\''; }?>
+                    });
+                    <?php
+                }
+            ?>
             calendar.render();
         });
     </script>
-    <script>    
-        var calendar = new Calendar(calendarEl, {
-            events: [
-                {
-                title: 'My Event',
-                start: '2010-01-01',
-                description: 'This is a cool event'
-                }
-                // more events here
-            ],
-  eventRender: function(info) {
-    var tooltip = new Tooltip(info.el, {
-      title: info.event.extendedProps.description,
-      placement: 'top',
-      trigger: 'hover',
-      container: 'body'
-    });
-  }
-});
-    </script>
-
+   
+        
+    
 </head>
 <body>
     <div id="calendar"></div>

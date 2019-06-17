@@ -116,4 +116,19 @@
         return $req;
     }
 
+    function getAppointment() {
+        try {
+            include("M/db_connect.php");
+            $req = $db->prepare("SELECT * FROM rdv WHERE id LIKE :id ORDER BY dtrdv, hrrdv");  
+
+            $req->execute(array(
+                "id" => $_SESSION['id']
+            ));
+            $result = $req->fetchall();
+            return $result;
+        } catch (Exception $e) {
+            die('Erreur: ' . $e->getMessage());
+        }
+    }
+
 ?>
