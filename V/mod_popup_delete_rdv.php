@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>text</title>
-    <link rel="stylesheet" href="./V/popup_rdv.css"> 
-    <script type="text/javascript" src="index.php?page=modif_rdv"></script>
+    <link rel="stylesheet" href="./V/popup_rdv.css">
+    <script type="text/javascript" src="./Script/req_popup_rdv.js"></script>
 </head>
 <body>
 <div class="popup"> <a href="index.php?page=modif_rdv" class="close"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
