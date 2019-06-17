@@ -2,14 +2,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Account</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/custom_nav.css">
     <style>
             input:invalid {color : red; }
             input:valid {color : black ; }
     </style>
 </head>
 <body>
+<<<<<<< HEAD
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <span class="navbar-brand">Hocto'doc</span>
         
@@ -25,6 +24,9 @@
             <a class="nav-link custom" href="index.php?page=logout">Logout</a>
         </div>
     </nav>
+=======
+<?php include("V/navbar.html"); ?> 
+>>>>>>> vincent
     <form action="index.php" method="GET">
         email : <input type="text" name="emails"pattern="[A-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,3}$" value="<?php echo $data['email']?>"><br>
         password : <input type="text" name="psw"minlength='4' maxlength='50' value="<?php echo $data['psw']?>"><br>
