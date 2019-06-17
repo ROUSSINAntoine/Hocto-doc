@@ -2,11 +2,11 @@
 
 include("M/other_sql.php");
 include("V/mod_créer_planning.php");
-if(isset($_GET["d_time"])){
+if(isset($_GET["id='mychangeContent"])){
 if($_GET["id='créer-tab'"] = true){
-    echo ($_GET["id='mycréerContent'"]);
+    echo ($_GET["name"]);
 } else {
-     echo ($_GET["id='mychangeContent'"]);
+     echo ($_GET["nam"]);
 }
 }
 if(isset($_GET["days_time"])){
