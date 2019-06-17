@@ -129,4 +129,14 @@
         }
     }
 
+    function sql_membre() {
+        include("M/db_connect.php");
+        $req=$db->prepare("SELECT * FROM patient JOIN account ON patient.account = account.id WHERE account.id = :id_account");
+        $req->execute(array(
+            'id_account'=>$_SESSION['id']
+        ));
+
+        return $req;
+    }
+
 ?>

@@ -20,7 +20,7 @@
                 plugins: ['interaction', 'dayGrid', 'timeGrid'],
                 height: 'parent'
             });
-            <?php
+            /*<?php
                 $appointment = getAppointment((get($_SESSION['id'])));
                 foreach ($appointment as $key) {
                     ?>
@@ -34,7 +34,7 @@
                     });
                     <?php
                 }
-            ?>
+            ?>*/
             calendar.render();
         });
     </script>
