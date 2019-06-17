@@ -1,7 +1,7 @@
 <?php
 
 include("M/other_sql.php");
-include("V/mod_créer_planning.php");
+include("V/mod_planning.php");
 if(isset($_GET["id='mychangeContent"])){
 if($_GET["id='créer-tab'"] = true){
     echo ($_GET["name"]);
