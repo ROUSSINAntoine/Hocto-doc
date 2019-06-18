@@ -10,7 +10,7 @@ $date = date('Y-m-j');?>
 <body>
 <?php include("V/navbar.html"); ?> 
     <form action="index.php" method="GET">
-        <input type="date" name="dtrdv" min="2019-11-06" required></br>
+        <input type="date" name="dtrdv" min="2019-06-17" required></br>
         <select name="patient">
                 <?php echo $select; ?>
         </select><br>

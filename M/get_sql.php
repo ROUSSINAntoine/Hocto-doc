@@ -114,7 +114,7 @@
         return $req;
     }
 
-    function getAppointment() {
+    function get_appointment() {
         try {
             include("M/db_connect.php");
             $req = $db->prepare("SELECT * FROM rdv WHERE id LIKE :id ORDER BY dtrdv, hrrdv");  
