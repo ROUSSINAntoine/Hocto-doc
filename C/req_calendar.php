@@ -19,20 +19,20 @@
             var calendarEl = document.getElementById('calendar');
             
             var calendar = new FullCalendar.Calendar(calendarEl, {
-                plugins: ['interaction', 'dayGrid', 'timeGrid'],
+                plugins: ['interaction', 'dayGrid'],
                 height: 'parent'
             });
             <?php
                 $appointment = get_appointment($_SESSION['id']);
                 foreach ($appointment as $row) {
                     ?>
-                    var date = new date('<?php echo $row['dateStr']; ?>' + 'T00:00:00' );        
                     
                     calendar.addEvent({
-                        title: '<?php echo $row['notes'];?>,
-                        start: date,
-                        alldays: true,
-                        color: <?php if ($row['typeEvent'] == "appoint") { echo '\'rouge\''; }?>
+                        title: '<?php echo $row['observations'];?>' + '<?php echo $row['hrrdv']; ?>',
+                        start: '<?php echo $row['dtrdv']; ?>',
+                        allday: false,
+                        color: 'red',
+                        textColor: 'black'
                     });
                     <?php
                 }
