@@ -50,7 +50,6 @@
         $req = $db->prepare ("SELECT * FROM account JOIN patient ON account.id = patient.account WHERE patient.id LIKE :id ");
         $req ->execute (array(
         "id"=>$_GET['id'] ));
-
         return $req;
 
     }
@@ -133,5 +132,4 @@
 
         return $req;
     }
-
 ?>

@@ -6,12 +6,12 @@
     $req->closeCursor();
     if($data['firstname'] == null || $data['firstname'] == "") {
         if($_GET['firstname'] == "" || $_GET['lastname'] == "" || $_GET['phone_number'] == "" || $_GET['adrs'] == "" || $_GET['city'] == "" || $_GET['postcode'] == "") {
-            include("./V/mod_home_start.php");
+            include("./V/practitioner/mod_home_start.php");
         } else {
             sql_add_patient ();
-            include("./V/mod_home.php");
+            include("./V/patient/mod_home.php");
         }
     } else {
-        include("./V/mod_home.php");
+        include("./V/patient/mod_home.php");
     }
 ?>

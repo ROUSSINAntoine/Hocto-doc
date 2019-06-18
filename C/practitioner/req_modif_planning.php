@@ -1,7 +1,7 @@
 <?php
 
 include("M/other_sql.php");
-include("V/mod_modif_planning.php");
+include("V/practitioner/mod_modif_planning.php");
 
 /*function sql_planning () {
     include("M/get_sql.php");

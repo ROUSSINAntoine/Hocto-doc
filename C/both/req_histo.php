@@ -31,5 +31,5 @@
         }
     
         //var_dump($histo);
-        include("V/mod_histo.php");
+        include("V/both/mod_histo.php");
 ?>

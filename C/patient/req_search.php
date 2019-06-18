@@ -6,6 +6,6 @@
             break;
     }
 
-    include("V/mod_search.php");
+    include("V/patient/mod_search.php");
 
 ?>

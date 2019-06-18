@@ -13,9 +13,9 @@
             $dis = "disabled";
         }
 
-        include("V/mod_account.php");
+        include("V/patient/mod_account.php");
     } else {
-        include("V/mod_account_prac.php");
+        include("V/practitioner/mod_account_prac.php");
     }
     
      
