@@ -14,7 +14,7 @@
             </select>
             <input type="hidden" name="page" value="modif_account">
             <input type="submit" name="modif" value="Change user data" <?php echo $dis ?>>
-            <input type="submit" name="del" value="Delete patient" <?php echo $dis ?>>
+            <input type="submit" name="del_popup" value="Delete patient" <?php echo $dis ?>>
         </form>
         <a href="index.php?page=add_patient"><button>add patient</button></a></p>
         <a href="index.php?page=popup_delete_account"><button>delete account</button></a>
