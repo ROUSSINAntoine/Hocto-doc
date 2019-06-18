@@ -61,6 +61,9 @@
                 case "available":
                     include("C/practitioner/req_available.php");
                     break;
+                case "del_patient":
+                    include("C/req_del_patient.php");
+                    break;
                 case "modif_account_prac";
                     include("C/practitioner/req_modif_account_prac.php");
                     break;
