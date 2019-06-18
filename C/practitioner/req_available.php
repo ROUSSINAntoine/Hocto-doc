@@ -6,8 +6,6 @@
         sql_available_true();
     } else if ($_GET["action"] == "not") {
         sql_available_false();
-    } else {
-        sql_available_true();
     }
     
 ?>

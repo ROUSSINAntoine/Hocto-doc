@@ -22,8 +22,8 @@
 
         }
     
-            include('V/mod_login.php');
+            include('V/connection/mod_login.php');
         } else {
-            include('V/mod_register.php');
+            include('V/connection/mod_register.php');
         }
 ?>

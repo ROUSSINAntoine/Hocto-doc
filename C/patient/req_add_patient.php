@@ -42,7 +42,7 @@
         header('Location: index.php?page=account');
         
     } else if (count($_GET) > 1) {
-        include("V/mod_add_patient.php");
+        include("V/patient/mod_add_patient.php");
         echo "Some fields are empty, incomplete or too long";
     } else {
         $ssn = "";
@@ -52,7 +52,7 @@
         $phone_number = "";
         $lastname = "";
         $firstname = "";
-        include("V/mod_add_patient.php");
+        include("V/patient/mod_add_patient.php");
     }
 
 ?>

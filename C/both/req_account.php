@@ -20,14 +20,15 @@
             $dis = "disabled";
         }
 
-        include("V/mod_account.php");
+        include("V/patient/mod_account.php");
     } else {
         $req = sql_is_available();
 
         if ($req->fetch() == false) {
             $dis = "checked";
         }
-        include("V/mod_account_prac.php");
+        
+        include("V/practitioner/mod_account_prac.php");
     }
     
      

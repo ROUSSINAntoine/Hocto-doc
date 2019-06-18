@@ -18,5 +18,5 @@
         $add = "There is no practitioner register under that name";
     }
 
-    include("V/mod_results.php");
+    include("V/patient/mod_results.php");
 ?>
