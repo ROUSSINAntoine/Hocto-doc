@@ -117,7 +117,8 @@
     function get_appointment() {
         try {
             include("M/db_connect.php");
-            $req = $db->prepare("SELECT * FROM rdv WHERE id LIKE :id ORDER BY dtrdv, hrrdv");  
+            $req = $db->prepare(
+                "SELECT * FROM rdv WHERE practitioner LIKE :id ORDER BY dtrdv, hrrdv");  
 
             $req->execute(array(
                 "id" => $_SESSION['id']
