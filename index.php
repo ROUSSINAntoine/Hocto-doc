@@ -79,6 +79,9 @@
                 case "home";
                     include("C/patient/req_home.php");
                     break;
+                case "observ_modif":
+                    include("C/practitioner/req_observ_modif.php");
+                    break;
                 default:
                     include('E/404.html');
             }
