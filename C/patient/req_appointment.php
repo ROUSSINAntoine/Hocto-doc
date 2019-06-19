@@ -41,7 +41,7 @@
         //echo "a";
         header('Location: index.php?page=login');
     } else {
-        include("V/mod_appointment.php");
+        include("V/patient/mod_appointment.php");
     }
     
 ?>

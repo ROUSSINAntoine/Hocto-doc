@@ -1,6 +1,8 @@
 <?php
-include("V/mod_modif_planning.php");
+
 include("M/other_sql.php");
+include("V/practitioner/mod_modif_planning.php");
+
 
 if(isset($_GET["days_time"])){
 if(isset($_GET["practitioner"])){
