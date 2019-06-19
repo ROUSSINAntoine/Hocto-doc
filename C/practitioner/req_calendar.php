@@ -25,6 +25,7 @@
             <?php
                 $appointment = get_appointment($_SESSION['id']);
                 foreach ($appointment as $row) {
+                   
                     ?>
                     
                     calendar.addEvent({
