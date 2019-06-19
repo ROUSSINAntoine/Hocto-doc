@@ -24,7 +24,7 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
         if ($data == false) {
             $co = "fail";
             //redirection vers le login car erreur
-            include("./V/mod_login.php");
+            include("./V/connection/mod_login.php");
         
             //message d'erreur en rouge
             echo '<span style="color:red;">Password or Incorrect Email</span>';
@@ -44,13 +44,13 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
                 $data= $req->fetch();
                 $req->closeCursor();
                 if($data['firstname'] == null || $data['firstname'] == "") {
-                    include("./V/mod_info_prac.php");
+                    include("./V/practitioner/mod_info_prac.php");
                 } else {
-                    include("./V/mod_prac_home.php");
+                    include("./V/practitioner/mod_prac_home.php");
                 }
                 
             } else if ($co == "pat") {
-                include("./V/mod_home.php");
+                include("./V/patient/mod_home.php");
             }
             
         }
@@ -65,15 +65,15 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
 
         //redirecton vers le home pour l'user connecté
         if ($co == "prac") {
-            include("./V/mod_prac_home.php");
+            include("./V/practitioner/mod_prac_home.php");
         } else if ($co == "pat") {
             $req= sql_membre();
             $data= $req->fetch();
             $req->closeCursor();
             if($data['firstname'] == null || $data['firstname'] == "") {
-                include("./V/mod_home_start.php");
+                include("./V/practitioner/mod_home_start.php");
             } else {
-                include("./V/mod_home.php");
+                include("./V/patient/mod_home.php");
             }
         }
     }
@@ -90,18 +90,18 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
         $data= $req->fetch();
         $req->closeCursor();
         if($data['firstname'] == null || $data['firstname'] == "") {
-            include("./V/mod_info_prac.php");
+            include("./V/practitioner/mod_info_prac.php");
         } else {
-            include("./V/mod_prac_home.php");
+            include("./V/practitioner/mod_prac_home.php");
         }
     } else if ($_SESSION['type'] == "pat") {
         $req= sql_membre();
             $data= $req->fetch();
             $req->closeCursor();
             if($data['firstname'] == null || $data['firstname'] == "") {
-                include("./V/mod_home_start.php");
+                include("./V/practitioner/mod_home_start.php");
             } else {
-                include("./V/mod_home.php");
+                include("./V/patient/mod_home.php");
             }
     }
 }

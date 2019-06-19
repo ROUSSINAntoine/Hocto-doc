@@ -8,5 +8,5 @@
         sql_reg_del_prac();
     }
 
-    include("V/mod_login.php");
+    include("V/connection/mod_login.php");
 ?>    

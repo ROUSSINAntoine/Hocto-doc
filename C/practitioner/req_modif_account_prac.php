@@ -21,7 +21,7 @@
     }
     
     $data = affichage_account();
-    include("V/mod_modif_account_prac.php");
+    include("V/practitioner/mod_modif_account_prac.php");
     
 
 ?>

@@ -22,5 +22,5 @@ while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
     /*echo "<a href='index.php?page=delete_rdv'><button>delete rdv</button></a>"; */
     $_SESSION['id_rdv']=$data['id'];
 }
-include("./V/mod_modif_rdv.php");
+include("./V/patient/mod_modif_rdv.php");
 
