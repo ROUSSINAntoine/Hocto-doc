@@ -64,15 +64,15 @@
         <input type="time" name="break_time" min="00:00" max="23:59" required ><br/>
         resume
         <input type="time" name="resume_time" min="00:00" max="23:59" required ><br/>
-        fin
+        end
         <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : lundi <br>
-        <input type="hidden" name="days_time" value="lundi"><br>
+        days : monday <br>
+        <input type="hidden" name="days_time" value="monday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="créer_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
@@ -86,15 +86,15 @@
         <input type="time" name="break_time" min="00:00" max="23:59" required ><br/>
         resume
         <input type="time" name="resume_time" min="00:00" max="23:59" required ><br/>
-        fin
+        end
         <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : mardi <br>
-        <input type="hidden" name="days_time" value="mardi"><br>
+        days : tuesday <br>
+        <input type="hidden" name="days_time" value="tuesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="créer_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
@@ -108,15 +108,15 @@
         <input type="time" name="break_time" min="00:00" max="23:59" required ><br/>
         resume
         <input type="time" name="resume_time" min="00:00" max="23:59" required ><br/>
-        fin
+        end
         <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : <br>
-        <input type="hidden" name="days_time" value="mercredi"><br>
+        days : wednesday <br>
+        <input type="hidden" name="days_time" value="wednesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="créer_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
@@ -130,12 +130,12 @@
         <input type="time" name="break_time" min="00:00" max="23:59" required ><br/>
         resume
         <input type="time" name="resume_time" min="00:00" max="23:59" required ><br/>
-        fin
+        end
         <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : <br>
-        <input type="hidden" name="days_time" value="jeudi"><br>
+        days : thursday <br>
+        <input type="hidden" name="days_time" value="thursday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="créer_planning">
         <input type="submit" value="valider" >
@@ -152,15 +152,15 @@
         <input type="time" name="break_time" min="00:00" max="23:59" required ><br/>
         resume
         <input type="time" name="resume_time" min="00:00" max="23:59" required ><br/>
-        fin
+        end
         <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : <br>
-        <input type="hidden" name="days_time" value="vendredi"><br>
+        days : friday <br>
+        <input type="hidden" name="days_time" value="friday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="créer_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
@@ -174,15 +174,15 @@
         <input type="time" name="break_time" min="00:00" max="23:59" required ><br/>
         resume
         <input type="time" name="resume_time" min="00:00" max="23:59" required ><br/>
-        fin
+        end
         <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : <br>
-        <input type="hidden" name="days_time" value="samedi"><br>
+        days : saturday <br>
+        <input type="hidden" name="days_time" value="saturday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="créer_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
@@ -196,15 +196,15 @@
         <input type="time" name="break_time" min="00:00" max="23:59" required ><br/>
         resume
         <input type="time" name="resume_time" min="00:00" max="23:59" required ><br/>
-        fin
+        end
         <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : <br>
-        <input type="hidden" name="days_time" value="dimanche"><br>
+        days : sunday<br>
+        <input type="hidden" name="days_time" value="sunday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="créer_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
@@ -219,7 +219,7 @@
         
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="créer_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>

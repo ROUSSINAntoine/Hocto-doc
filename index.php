@@ -48,9 +48,6 @@
                 case "histo";
                     include("C/req_histo.php");
                     break;
-                case "planning";
-                    include("C/req_planning.php");
-                    break;
                 case "modif_rdv";
                     include("C/req_modif_rdv.php");
                     break;

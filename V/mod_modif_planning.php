@@ -57,43 +57,43 @@
   <form action="index.php" method="GET">
     <p>
         open
-        <input type="time" name="open_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data['open_time']?>" ><br/>
     
         break_time
-        <input type="time" name="break_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data['break_time']?>" ><br/>
         resume
-        <input type="time" name="resume_time" min="00:00" max="23:59" required ><br/>
-        fin
-        <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data['resume_time']?>" ><br/>
+        end
+        <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data['close_time']?>" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days :lundi <br>
-        <input type="hidden" name="days_time" value="lundi"><br>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data['length_time']?>"><br/>
+        days : monday <br>
+        <input type="hidden" name="days_time" value="monday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="modif_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
   <div class="tab-pane fade" id="Tuesday" role="tabpanel" aria-labelledby="tuesday-tab">
    <form action="index.php" method="GET">
     <p>
-        open
-        <input type="time" name="open_time" min="00:00" max="23:59" required ><br/>
+       open
+        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data['open_time']?>" ><br/>
     
         break_time
-        <input type="time" name="break_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data['break_time']?>" ><br/>
         resume
-        <input type="time" name="resume_time" min="00:00" max="23:59" required ><br/>
-        fin
-        <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data['resume_time']?>" ><br/>
+        end
+        <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data['close_time']?>" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : mardi <br>
-        <input type="hidden" name="days_time" value="mardi"><br>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data['length_time']?>"><br/>
+        days : tuesday <br>
+        <input type="hidden" name="days_time" value="tuesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="modif_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
@@ -101,43 +101,43 @@
   <form action="index.php" method="GET">
     <p>
         open
-        <input type="time" name="open_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data['open_time']?>" ><br/>
     
         break_time
-        <input type="time" name="break_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data['break_time']?>" ><br/>
         resume
-        <input type="time" name="resume_time" min="00:00" max="23:59" required ><br/>
-        fin
-        <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data['resume_time']?>" ><br/>
+        end
+        <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data['close_time']?>" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : mercredi<br>
-        <input type="hidden" name="days_time" value="mercredi"><br>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data['length_time']?>"><br/>
+        days : wednesday<br>
+        <input type="hidden" name="days_time" value="wednesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="modif_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
   <div class="tab-pane fade" id="Thursday" role="tabpanel" aria-labelledby="Thursday-tab">
   <form action="index.php" method="GET">
     <p>
-        open
-        <input type="time" name="open_time" min="00:00" max="23:59" required ><br/>
+       open
+        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data['open_time']?>" ><br/>
     
         break_time
-        <input type="time" name="break_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data['break_time']?>" ><br/>
         resume
-        <input type="time" name="resume_time" min="00:00" max="23:59" required ><br/>
-        fin
-        <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data['resume_time']?>" ><br/>
+        end
+        <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data['close_time']?>" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : jeudi <br>
-        <input type="hidden" name="days_time" value="jeudi"><br>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data['length_time']?>"><br/>
+        days : thursday <br>
+        <input type="hidden" name="days_time" value="thursday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="modif_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
@@ -145,21 +145,21 @@
   <form action="index.php" method="GET">
     <p>
         open
-        <input type="time" name="open_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data['open_time']?>" ><br/>
     
         break_time
-        <input type="time" name="break_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data['break_time']?>" ><br/>
         resume
-        <input type="time" name="resume_time" min="00:00" max="23:59" required ><br/>
-        fin
-        <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data['resume_time']?>" ><br/>
+        end
+        <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data['close_time']?>" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : vendredi <br>
-        <input type="hidden" name="days_time" value="vendredi"><br>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data['length_time']?>"><br/>
+        days : friday <br>
+        <input type="hidden" name="days_time" value="friday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="modif_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
@@ -167,21 +167,21 @@
   <form action="index.php" method="GET">
     <p>
         open
-        <input type="time" name="open_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data['open_time']?>" ><br/>
     
         break_time
-        <input type="time" name="break_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data['break_time']?>" ><br/>
         resume
-        <input type="time" name="resume_time" min="00:00" max="23:59" required ><br/>
-        fin
-        <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data['resume_time']?>" ><br/>
+        end
+        <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data['close_time']?>" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : samedi<br>
-        <input type="hidden" name="days_time" value="samedi"><br>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data['length_time']?>"><br/>
+        days : saturday<br>
+        <input type="hidden" name="days_time" value="saturday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="modif_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
@@ -189,21 +189,21 @@
   <form action="index.php" method="GET">
     <p>
         open
-        <input type="time" name="open_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data['open_time']?>" ><br/>
     
         break_time
-        <input type="time" name="break_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data['break_time']?>" ><br/>
         resume
-        <input type="time" name="resume_time" min="00:00" max="23:59" required ><br/>
-        fin
-        <input type="time" name="close_time" min="00:00" max="23:59" required ><br/>
+        <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data['resume_time']?>" ><br/>
+        end
+        <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data['close_time']?>" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required ><br/>
-        days : dimanche <br>
-        <input type="hidden" name="days_time" value="dimanche"><br>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data['length_time']?>"><br/>
+        days : sunday <br>
+        <input type="hidden" name="days_time" value="sunday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="modif_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
@@ -218,7 +218,7 @@
         
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="modif_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>

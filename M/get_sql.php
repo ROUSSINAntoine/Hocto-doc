@@ -133,5 +133,12 @@
 
         return $req;
     }
-
+        function sql_planning() {
+        $req = $db->prepare("SELECT id, open_time , break_time , resume_time , close_time, length_time FROM planning2 WHERE day_time LIKE :days_time AND practitioner LIKE :practitioner");
+        $req->execute(array(
+            "days_time" =>$_GET['days_time'],
+            "practitioner" =>$_GET['practitioner'] 
+        ));
+        return $req;
+    }
 ?>
