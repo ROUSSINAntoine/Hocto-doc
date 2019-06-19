@@ -4,7 +4,7 @@
         <title>Account</title>
     </head>
     <body>
-        <?php include("V/navbar.html"); ?>   
+        <?php include_once("V/navbar.html"); ?>   
         <h1>Your account</h1><p></p>
         
         <a href="index.php?page=popup_delete_account_prac"><button>delete account</button></a>

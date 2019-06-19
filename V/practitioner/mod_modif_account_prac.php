@@ -8,7 +8,7 @@
     </style>
 </head>
 <body>
-    <?php include("V/navbar.html"); ?> 
+    <?php include_once("V/navbar.html"); ?> 
     <form action="index.php" method="GET">
         email : <input type="text" name="emails"pattern="[A-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,3}$" value="<?php echo $data['email']?>"><br>
         password : <input type="text" name="psw"minlength='4' maxlength='50' value="<?php echo $data['psw']?>"><br>

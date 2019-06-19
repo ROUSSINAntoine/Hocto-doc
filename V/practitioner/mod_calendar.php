@@ -5,6 +5,6 @@
     <title>Calendar</title>
 </head>
 <body>
-<?php include("V/navbar.html"); ?> 
+<?php include_once("V/navbar.html"); ?> 
 </body>
 </html>

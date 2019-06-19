@@ -153,8 +153,7 @@
         $req=$db->prepare("SELECT observations FROM rdv WHERE id = :id");
         $req->execute(array(
             'id'=>$_GET['id']
-            )
-        );
+        ));
         return $req;
     }
 ?>

@@ -1,7 +1,7 @@
 <?php
 
-    include('M/db_connect.php'); 
-    include("M/other_sql.php");
+    include_once('M/db_connect.php'); 
+    include_once("M/other_sql.php");
 
     if(isset($_GET['email'])){   
         
@@ -22,8 +22,8 @@
 
         }
     
-            include('V/connection/mod_login.php');
+            include_once('V/connection/mod_login.php');
         } else {
-            include('V/connection/mod_register.php');
+            include_once('V/connection/mod_register.php');
         }
 ?>

@@ -1,5 +1,5 @@
 <?php 
-    include("M/get_sql.php");
+    include_once("M/get_sql.php");
     
     $dis = "";
 
@@ -20,7 +20,7 @@
             $dis = "disabled";
         }
 
-        include("V/patient/mod_account.php");
+        include_once("V/patient/mod_account.php");
     } else {
         $req = sql_is_available();
 
@@ -28,7 +28,7 @@
             $dis = "checked";
         }
         
-        include("V/practitioner/mod_account_prac.php");
+        include_once("V/practitioner/mod_account_prac.php");
     }
     
      

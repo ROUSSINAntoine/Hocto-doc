@@ -1,6 +1,6 @@
 
 <?php   
-    include("M/get_sql.php");
+    include_once("M/get_sql.php");
     
     
 
@@ -31,5 +31,5 @@
         }
     
         //var_dump($histo);
-        include("V/both/mod_histo.php");
+        include_once("V/both/mod_histo.php");
 ?>

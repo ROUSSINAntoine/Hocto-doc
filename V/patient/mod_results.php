@@ -4,7 +4,7 @@
     <title>results</title>
 </head>
 <body>
-<?php include("V/navbar.html"); ?> 
+<?php include_once("V/navbar.html"); ?> 
     <?php echo $add ?><p></p>
     <a href="index.php?page=login"><button>return</button></a>  
 
