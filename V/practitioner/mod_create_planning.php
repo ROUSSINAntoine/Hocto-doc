@@ -71,7 +71,7 @@
         days : monday <br>
         <input type="hidden" name="days_time" value="monday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="créer_planning">
+        <input type="hidden" name="page" value="create_planning">
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
@@ -93,7 +93,7 @@
         days : tuesday <br>
         <input type="hidden" name="days_time" value="tuesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="créer_planning">
+        <input type="hidden" name="page" value="create_planning">
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
@@ -115,7 +115,7 @@
         days : wednesday <br>
         <input type="hidden" name="days_time" value="wednesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="créer_planning">
+        <input type="hidden" name="page" value="create_planning">
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
@@ -137,7 +137,7 @@
         days : thursday <br>
         <input type="hidden" name="days_time" value="thursday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="créer_planning">
+        <input type="hidden" name="page" value="create_planning">
         <input type="submit" value="valider" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
@@ -159,7 +159,7 @@
         days : friday <br>
         <input type="hidden" name="days_time" value="friday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="créer_planning">
+        <input type="hidden" name="page" value="create_planning">
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
@@ -181,7 +181,7 @@
         days : saturday <br>
         <input type="hidden" name="days_time" value="saturday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="créer_planning">
+        <input type="hidden" name="page" value="create_planning">
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
@@ -203,7 +203,7 @@
         days : sunday<br>
         <input type="hidden" name="days_time" value="sunday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="créer_planning">
+        <input type="hidden" name="page" value="create_planning">
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
@@ -218,7 +218,7 @@
         <input type="date" name="end_hollyday"><br/>
         
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="créer_planning">
+        <input type="hidden" name="page" value="create_planning">
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
