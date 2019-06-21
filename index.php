@@ -39,16 +39,16 @@
                 case "delete":
                     include("C/both/req_del_account.php");
                     break;
-                case "modif_planning";
+                case "modif_planning":
                     include("C/practitioner/req_modif_planning.php");
                     break;
-                case "histo";
+                case "histo":
                     include("C/both/req_histo.php");
                     break;
-                case "modif_rdv";
+                case "modif_rdv":
                     include("C/both/req_modif_rdv.php");
                     break;
-                case "delete_rdv";
+                case "delete_rdv":
                     include("C/both/req_delete_rdv.php");
                     break;
                 case "modif_account":
@@ -64,23 +64,26 @@
                 case "del_patient":
                     include("C/patient/req_del_patient.php");
                     break;
-                case "modif_account_prac";
+                case "modif_account_prac":
                     include("C/practitioner/req_modif_account_prac.php");
                     break;
-                case "home_prac";
+                case "home_prac":
                     include("C/practitioner/req_home_prac.php");
                     break;
-                case "popup_delete_rdv";
+                case "popup_delete_rdv":
                     include("C/popup/req_popup_delete_rdv.php");
                     break;
-                case "popup_delete_account";
+                case "popup_delete_account":
                     include("C/popup/req_popup_delete_account.php");
                     break;
-                case "popup_delete_account_prac";
+                case "popup_delete_account_prac":
                     include("C/popup/req_popup_delete_prac.php");
                     break;
-                case "home";
+                case "home":
                     include("C/patient/req_home.php");
+                    break;
+                case "change_rdv":
+                    include("C/both/req_change_rdv.php");
                     break;
                 default:
                     include('E/404.html');

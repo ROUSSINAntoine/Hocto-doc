@@ -9,7 +9,7 @@
 <body>
 <?php include("V/navbar.html"); ?> 
 <table border=2>
-        <tr><th>Patient</th><th>Date</th><th>Hour</th><th>Observations</th><th>Practitioner</th><th>Cancel</th></tr>
+        <tr><th>Patient</th><th>Date</th><th>Hour</th><th>Observations</th><th>Practitioner</th><th>Cancel</th><th>Change rdv</th></tr>
         <?php echo $rdv ?>
     </table>
 

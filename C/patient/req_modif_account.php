@@ -4,15 +4,13 @@
 function modif () {
     include("M/other_sql.php");
     $req=sql_modif();
-//$req->closeCursor();
 }
 
 function affichage_account() {
     include("M/get_sql.php");
     $req = sql_display_member();
     $data = $req->fetch();
-    
-    //$req->closeCursor();
+
     return $data;
     
 }
