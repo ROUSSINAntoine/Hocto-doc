@@ -1,21 +1,17 @@
 <?php
-//include("M/db_connect.php");
+//include_once("M/db_connect.php");
 
 function modif () {
-    include("M/other_sql.php");
-    $req=sql_modif();
-    $req->closeCursor();
+    include_once("M/other_sql.php");
+    sql_modif();
 }
-function modif_patient() {
-    include("M/other_sql.php");
-    modif_patient();
-}
+
 function affichage_account() {
-    include("M/get_sql.php");
+    include_once("M/get_sql.php");
     $req = sql_display_member();
     $data = $req->fetch();
     
-    $req->closeCursor();
+    //$req->closeCursor();
     return $data;
     
 }
@@ -23,9 +19,8 @@ function affichage_account() {
 if (isset($_GET["psw"])) {
     modif();
 }
-
 $data = affichage_account();
-include("V/patient/mod_modif_account.php");
+include_once("V/patient/mod_modif_account.php");
 
 
 ?>

@@ -49,8 +49,7 @@
         include("M/db_connect.php");
         $req = $db->prepare ("SELECT * FROM account JOIN patient ON account.id = patient.account WHERE patient.id LIKE :id ");
         $req ->execute (array(
-        "id"=>$_SESSION['id'] ));
-
+        "id"=>$_GET['id'] ));
         return $req;
 
     }
@@ -58,8 +57,7 @@
     function sql_search_by_prac() {
         include("M/db_connect.php");
 
-        $req = $db->query("SELECT * FROM practitioner WHERE lastname LIKE \"%".$_GET["srch"]."%\"");
-
+        $req = $db->query('SELECT * FROM practitioner WHERE lastname LIKE "%'.$_GET["srch"].'%" AND available = 1');
         return $req;
     }
 
@@ -170,6 +168,7 @@
         return $req;
     }
 
+<<<<<<< HEAD
     function sql_planning_friday() {
         include("M/db_connect.php");
         $req = $db->prepare("SELECT open_time , break_time , resume_time , close_time , length_time FROM planning2 WHERE practitioner LIKE :practitioner AND day_time LIKE 'friday'");
@@ -202,6 +201,23 @@
         $req = $db->prepare("SELECT start_hollyday , end_hollyday FROM hollyday WHERE practitioner LIKE :practitioner");
         $req->execute(array(
             "practitioner" =>$_SESSION['id'] 
+=======
+    function sql_is_available() {
+        include("M/db_connect.php");
+        $req=$db->prepare("SELECT available FROM practitioner WHERE practitioner.id = :id AND available = 0");
+        $req->execute(array(
+            'id'=>$_SESSION['id']
+            )
+        );
+        return $req;
+    }
+
+    function sql_get_obs() {
+        include("M/db_connect.php");
+        $req=$db->prepare("SELECT observations FROM rdv WHERE id = :id");
+        $req->execute(array(
+            'id'=>$_GET['id']
+>>>>>>> master
         ));
         return $req;
     }

@@ -17,6 +17,7 @@
 	input:valid {color : black ; }
     </style>
 
+<<<<<<< HEAD
 <?php include("V/navbar.html"); ?> 
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
@@ -55,6 +56,12 @@
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="Monday" role="tabpanel" aria-labelledby="Monday-tab">
   <form action="index.php" method="GET">
+=======
+<?php include_once("V/navbar.html"); ?> 
+
+    <form action="index.php" method="GET">
+        
+>>>>>>> master
     <p>
         open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_monday['open_time']?>" ><br/>

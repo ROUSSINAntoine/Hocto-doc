@@ -1,11 +1,20 @@
 <?php        
 
+<<<<<<< HEAD
     include("M/other_sql.php");      
             
     include("M/get_sql.php");
     
         if(isset($_GET["days_time"])){       
             if(isset($_GET["practitioner"])){        
+=======
+include_once("M/other_sql.php");
+include_once("V/practitioner/mod_modif_planning.php");
+
+/*function sql_planning () {
+    include_once("M/get_sql.php");
+    $data = $req->fetch();
+>>>>>>> master
 
             modif_planning();         
             }

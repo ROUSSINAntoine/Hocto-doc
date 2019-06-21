@@ -7,7 +7,7 @@
     <title>Change your rdv or cancel</title>
 </head>
 <body>
-<?php include("V/navbar.html"); ?> 
+<?php include_once("V/navbar.html"); ?> 
 <table border=2>
         <tr><th>Patient</th><th>Date</th><th>Hour</th><th>Observations</th><th>Practitioner</th><th>Cancel</th></tr>
         <?php echo $rdv ?>

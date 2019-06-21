@@ -2,7 +2,7 @@
     function sql_modif () {
         include("M/db_connect.php");
         //modif account
-        $req =$db->prepare ("UPDATE account JOIN patient ON account.id = patient.account SET account.psw =:psw , account.email =:emails ,patient.firstname =:firstname ,patient.lastname=:lastname, patient.adrs= :adrs , patient.phone_number =:phone , patient.city=:city , patient.postcode =:postcode , patient.ssn =:ssn WHERE patient.id LIKE :id AND account.email=:email");
+        $req =$db->prepare ("UPDATE account JOIN patient ON account.id = patient.account SET account.psw =:psw , account.email =:emails ,patient.firstname =:firstname ,patient.lastname=:lastname, patient.adrs= :adrs , patient.phone_number =:phone , patient.city=:city , patient.postcode =:postcode , patient.ssn =:ssn WHERE patient.id = :id AND account.email=:email");
         $req ->execute (array (
             "psw"=>$_GET["psw"],
             "id"=>$_GET['id'],
@@ -78,7 +78,10 @@
 
     function sql_del_patient () {
         include("M/db_connect.php");
-        $req = $db->query("DELETE FROM patient WHERE id = ".$_GET["id"]);
+        $req = $db->prepare("DELETE FROM patient WHERE id = :id");
+        $req->execute(array(
+            'id'=>$_SESSION['id_patient']
+        ));
         $req->closeCursor();
     }
 
@@ -145,7 +148,7 @@
     function sql_available_true () {
         include("M/db_connect.php");
         
-        $req = $db->prepare("UPDATE `practitioner` SET `available` = '1' WHERE `practitioner`.`id` = 1");
+        $req = $db->prepare("UPDATE `practitioner` SET `available` = '1' WHERE `practitioner`.`id` = :id");
         $req->execute(array(
             'id' => $_SESSION['id']
         ));
@@ -192,4 +195,16 @@
         $req->closeCursor();
     }
 
+    function sql_modif_observ () {
+        include("M/db_connect.php");
+        
+        $req = $db->prepare("UPDATE rdv SET `observations` = :obs WHERE `id` = :id;");
+        $req->execute(array(
+            'id' => $_SESSION['id'],
+            'obs' => $_GET['observ'],
+        ));
+        $req->closeCursor();
+    }
+
+    
 ?> 
