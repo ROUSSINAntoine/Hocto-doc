@@ -2,13 +2,8 @@
 //include_once("M/db_connect.php");
 
 function modif () {
-<<<<<<< HEAD
-    include("M/other_sql.php");
-    $req=sql_modif();
-=======
     include_once("M/other_sql.php");
     sql_modif();
->>>>>>> master
 }
 
 function affichage_account() {

@@ -40,18 +40,6 @@
                     include_once("C/both/req_del_account.php");
                     break;
                 case "modif_planning":
-<<<<<<< HEAD
-                    include("C/practitioner/req_modif_planning.php");
-                    break;
-                case "histo":
-                    include("C/both/req_histo.php");
-                    break;
-                case "modif_rdv":
-                    include("C/both/req_modif_rdv.php");
-                    break;
-                case "delete_rdv":
-                    include("C/both/req_delete_rdv.php");
-=======
                     include_once("C/practitioner/req_modif_planning.php");
                     break;
                 case "histo":
@@ -62,7 +50,6 @@
                     break;
                 case "delete_rdv":
                     include_once("C/both/req_delete_rdv.php");
->>>>>>> master
                     break;
                 case "modif_account":
                     if (isset($_GET["modif"])) {
@@ -78,24 +65,6 @@
                     include("C/patient/req_del_patient.php");
                     break;
                 case "modif_account_prac":
-<<<<<<< HEAD
-                    include("C/practitioner/req_modif_account_prac.php");
-                    break;
-                case "home_prac":
-                    include("C/practitioner/req_home_prac.php");
-                    break;
-                case "popup_delete_rdv":
-                    include("C/popup/req_popup_delete_rdv.php");
-                    break;
-                case "popup_delete_account":
-                    include("C/popup/req_popup_delete_account.php");
-                    break;
-                case "popup_delete_account_prac":
-                    include("C/popup/req_popup_delete_prac.php");
-                    break;
-                case "home":
-                    include("C/patient/req_home.php");
-=======
                     include_once("C/practitioner/req_modif_account_prac.php");
                     break;
                 case "home_prac":
@@ -115,7 +84,6 @@
                     break;
                 case "observ_modif":
                     include_once("C/practitioner/req_observ_modif.php");
->>>>>>> master
                     break;
                 case "change_rdv":
                     include("C/both/req_change_rdv.php");
