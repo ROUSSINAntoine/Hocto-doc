@@ -53,13 +53,16 @@
                     break;
                 case "modif_account":
                     if (isset($_GET["modif"])) {
-                        include_once("C/patient/req_modif_account.php");
-                    } else if (isset($_GET["del"])) {
-                        include_once("C/patient/req_del_patient.php");
+                        include("C/patient/req_modif_account.php");
+                    } else if (isset($_GET["del_popup"])) {
+                        include("C/popup/req_del_patient_popup.php");
                     }
                     break;
                 case "available":
                     include_once("C/practitioner/req_available.php");
+                    break;
+                case "del_patient":
+                    include("C/patient/req_del_patient.php");
                     break;
                 case "modif_account_prac";
                     include_once("C/practitioner/req_modif_account_prac.php");
