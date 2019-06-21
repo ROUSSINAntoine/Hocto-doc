@@ -13,33 +13,34 @@
         case(isset($_GET['page'])):
             switch($_GET['page']){
                 case "login":
-                    include("C/connection/req_login.php");
+                    include_once("C/connection/req_login.php");
                     break;
                 case "logout":
-                    include("C/connection/req_logout.php");
+                    include_once("C/connection/req_logout.php");
                     break;
                 case "register":
-                    include("C/connection/req_register.php");
+                    include_once("C/connection/req_register.php");
                     break;
                 case "add_patient":
-                    include("C/patient/req_add_patient.php");
+                    include_once("C/patient/req_add_patient.php");
                     break;
                 case "account":
-                    include("C/patient/req_account.php");
+                    include_once("C/both/req_account.php");
                     break;
                 case "search":
-                    include("C/patient/req_search.php");
+                    include_once("C/patient/req_search.php");
                     break;
                 case "result":
-                    include("C/patient/req_result.php");
+                    include_once("C/patient/req_result.php");
                     break;
                 case "appointment":
-                    include("C/patient/req_appointment.php");
+                    include_once("C/patient/req_appointment.php");
                     break;
                 case "delete":
-                    include("C/both/req_del_account.php");
+                    include_once("C/both/req_del_account.php");
                     break;
                 case "modif_planning":
+<<<<<<< HEAD
                     include("C/practitioner/req_modif_planning.php");
                     break;
                 case "histo":
@@ -50,6 +51,18 @@
                     break;
                 case "delete_rdv":
                     include("C/both/req_delete_rdv.php");
+=======
+                    include_once("C/practitioner/req_modif_planning.php");
+                    break;
+                case "histo":
+                    include_once("C/both/req_histo.php");
+                    break;
+                case "modif_rdv":
+                    include_once("C/both/req_modif_rdv.php");
+                    break;
+                case "delete_rdv":
+                    include_once("C/both/req_delete_rdv.php");
+>>>>>>> master
                     break;
                 case "modif_account":
                     if (isset($_GET["modif"])) {
@@ -59,12 +72,13 @@
                     }
                     break;
                 case "available":
-                    include("C/practitioner/req_available.php");
+                    include_once("C/practitioner/req_available.php");
                     break;
                 case "del_patient":
                     include("C/patient/req_del_patient.php");
                     break;
                 case "modif_account_prac":
+<<<<<<< HEAD
                     include("C/practitioner/req_modif_account_prac.php");
                     break;
                 case "home_prac":
@@ -81,15 +95,36 @@
                     break;
                 case "home":
                     include("C/patient/req_home.php");
+=======
+                    include_once("C/practitioner/req_modif_account_prac.php");
+                    break;
+                case "home_prac":
+                    include_once("C/practitioner/req_home_prac.php");
+                    break;
+                case "popup_delete_rdv":
+                    include_once("C/popup/req_popup_delete_rdv.php");
+                    break;
+                case "popup_delete_account":
+                    include_once("C/popup/req_popup_delete_account.php");
+                    break;
+                case "popup_delete_account_prac":
+                    include_once("C/popup/req_popup_delete_prac.php");
+                    break;
+                case "home":
+                    include_once("C/patient/req_home.php");
+                    break;
+                case "observ_modif":
+                    include_once("C/practitioner/req_observ_modif.php");
+>>>>>>> master
                     break;
                 case "change_rdv":
                     include("C/both/req_change_rdv.php");
                     break;
                 default:
-                    include('E/404.html');
+                    include_once('E/404.html');
             }
             break;
         default:
-            include('V/connection/mod_login.php');
+            include_once('V/connection/mod_login.php');
     }
 ?>

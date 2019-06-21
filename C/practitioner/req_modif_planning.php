@@ -1,10 +1,10 @@
 <?php
 
-include("M/other_sql.php");
-include("V/practitioner/mod_modif_planning.php");
+include_once("M/other_sql.php");
+include_once("V/practitioner/mod_modif_planning.php");
 
 /*function sql_planning () {
-    include("M/get_sql.php");
+    include_once("M/get_sql.php");
     $data = $req->fetch();
 
     $req->closeCursor();

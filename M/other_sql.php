@@ -149,7 +149,7 @@
     function sql_available_true () {
         include("M/db_connect.php");
         
-        $req = $db->prepare("UPDATE `practitioner` SET `available` = '1' WHERE `practitioner`.`id` = 1");
+        $req = $db->prepare("UPDATE `practitioner` SET `available` = '1' WHERE `practitioner`.`id` = :id");
         $req->execute(array(
             'id' => $_SESSION['id'],
             )
@@ -157,4 +157,16 @@
         $req->closeCursor();
     }
 
+    function sql_modif_observ () {
+        include("M/db_connect.php");
+        
+        $req = $db->prepare("UPDATE rdv SET `observations` = :obs WHERE `id` = :id;");
+        $req->execute(array(
+            'id' => $_SESSION['id'],
+            'obs' => $_GET['observ'],
+        ));
+        $req->closeCursor();
+    }
+
+    
 ?> 

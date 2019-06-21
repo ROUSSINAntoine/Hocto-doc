@@ -11,7 +11,7 @@
 	    input:valid {color : black ; }
     </style>
 <body>
-    <?php include("V/navbar.html"); ?> 
+    <?php include_once("V/navbar.html"); ?> 
     <form action="index.php" action="GET">
         <input type="text" name="firstname" placeholder="First name"require pattern="[A-z ' - é è ê ç à ï]{2,90}" value='<?php echo $firstname ?>'><br>
         <input type="text" name="lastname" placeholder="Lastame"require pattern="[A-z ' - é è ê ç à ï]{2,90}" value='<?php echo $lastname ?>'><br>
