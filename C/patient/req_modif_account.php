@@ -3,8 +3,7 @@
 
 function modif () {
     include_once("M/other_sql.php");
-    $req=sql_modif();
-    $req->closeCursor();
+    sql_modif();
 }
 
 function affichage_account() {
