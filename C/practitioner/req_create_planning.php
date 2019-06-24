@@ -6,15 +6,15 @@ include("M/get_sql.php");
 
     if(isset($_GET["days_time"])){
         if(isset($_GET["practitioner"])){
-
             $req = creer_planning();
         }
     }
+
     if(isset($_GET["start_hollyday"])){
         $req = creer_hollyday();
     }
 
-function display_planning_monday() {
+    function display_planning_monday() {
         
         $req = sql_planning_monday();       
         $data_monday = $req->fetch();       
