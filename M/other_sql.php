@@ -206,5 +206,16 @@
         $req->closeCursor();
     }
 
+    function delete_planning () {
+        include("M/db_connect.php");
+
+        $req = $db->prepare("DELETE FROM planning2  WHERE practitioner LIKE :practitioner AND day_time LIKE :days_time");
+        $req->execute(array(
+            "days_time" =>$_GET['days_time'],
+            "practitioner" =>$_SESSION['id']
+        ));
+        $req->closeCursor();
+    }
+
     
 ?> 

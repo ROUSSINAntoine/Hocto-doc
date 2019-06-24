@@ -17,7 +17,6 @@
 	input:valid {color : black ; }
     </style>
 
-<<<<<<< HEAD
 <?php include("V/navbar.html"); ?> 
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
@@ -56,12 +55,6 @@
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="Monday" role="tabpanel" aria-labelledby="Monday-tab">
   <form action="index.php" method="GET">
-=======
-<?php include_once("V/navbar.html"); ?> 
-
-    <form action="index.php" method="GET">
-        
->>>>>>> master
     <p>
         open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_monday['open_time']?>" ><br/>
@@ -78,9 +71,15 @@
         <input type="hidden" name="days_time" value="monday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="modif_planning">
-        <input type="submit" value="confirm" >
+        <input type="submit" name="modif" value="confirm" >
     </form>
-    <a href="index.php?page=login"><button>return</button></a>
+    <a href="index.php?page=login"><button>return</button></a><br>
+    
+    <form action="index.php" method="GET">
+    <input type="hidden" name="days_time" value="monday">
+    <input type="hidden" name="page" value="delete_planning">
+    <input type="submit" name="delete" value="delete">
+    </form>
     </p></div>
   <div class="tab-pane fade" id="Tuesday" role="tabpanel" aria-labelledby="tuesday-tab">
    <form action="index.php" method="GET">
@@ -103,6 +102,12 @@
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
+
+    <form action="index.php" method="GET">
+    <input type="hidden" name="days_time" value="tuesday">
+    <input type="hidden" name="page" value="delete_planning">
+    <input type="submit" name="delete" value="delete">
+    </form>
     </p></div>
   <div class="tab-pane fade" id="Wednesday" role="tabpanel" aria-labelledby="Wednesday-tab">
   <form action="index.php" method="GET">
@@ -125,6 +130,12 @@
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
+
+    <form action="index.php" method="GET">
+    <input type="hidden" name="days_time" value="wednesday">
+    <input type="hidden" name="page" value="delete_planning">
+    <input type="submit" name="delete" value="delete">
+    </form>
     </p></div>
   <div class="tab-pane fade" id="Thursday" role="tabpanel" aria-labelledby="Thursday-tab">
   <form action="index.php" method="GET">
@@ -147,6 +158,12 @@
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
+
+    <form action="index.php" method="GET">
+    <input type="hidden" name="days_time" value="thursday">
+    <input type="hidden" name="page" value="delete_planning">
+    <input type="submit" name="delete" value="delete">
+    </form>
     </p></div>
   <div class="tab-pane fade" id="Friday" role="tabpanel" aria-labelledby="Friday-tab">
   <form action="index.php" method="GET">
@@ -169,6 +186,12 @@
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
+
+    <form action="index.php" method="GET">
+    <input type="hidden" name="days_time" value="friday">
+    <input type="hidden" name="page" value="delete_planning">
+    <input type="submit" name="delete" value="delete">
+    </form>
     </p></div>
   <div class="tab-pane fade" id="Saturday" role="tabpanel" aria-labelledby="Saturday-tab">
   <form action="index.php" method="GET">
@@ -191,6 +214,12 @@
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
+
+    <form action="index.php" method="GET">
+    <input type="hidden" name="days_time" value="saturday">
+    <input type="hidden" name="page" value="delete_planning">
+    <input type="submit" name="delete" value="delete">
+    </form>
     </p></div>
   <div class="tab-pane fade" id="Sunday" role="tabpanel" aria-labelledby="Sunday-tab">
   <form action="index.php" method="GET">
@@ -213,6 +242,12 @@
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
+
+    <form action="index.php" method="GET">
+    <input type="hidden" name="days_time" value="sunday">
+    <input type="hidden" name="page" value="delete_planning">
+    <input type="submit" name="delete" value="delete">
+    </form>
     </p></div>
     <div class="tab-pane fade" id="Hollyday" role="tabpanel" aria-labelledby="Hollyday-tab">
   <form action="index.php" method="GET">

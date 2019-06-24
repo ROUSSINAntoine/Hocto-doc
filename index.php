@@ -39,16 +39,14 @@
                 case "delete":
                     include_once("C/both/req_del_account.php");
                     break;
-<<<<<<< HEAD
-                case "create_planning":
-                    include("C/practitioner/req_create_planning.php");
-                    break;
-                case "modif_planning":
-                    include("C/practitioner/req_modif_planning.php");
-=======
                 case "modif_planning":
                     include_once("C/practitioner/req_modif_planning.php");
->>>>>>> master
+                    break;
+                case "delete_planning":
+                    include_once("C/practitioner/req_delete_planning.php");
+                    break;
+                case "create_planning":
+                    include_once("C/practitioner/req_create_planning.php");
                     break;
                 case "histo":
                     include_once("C/both/req_histo.php");

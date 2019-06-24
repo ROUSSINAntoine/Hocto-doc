@@ -168,7 +168,6 @@
         return $req;
     }
 
-<<<<<<< HEAD
     function sql_planning_friday() {
         include("M/db_connect.php");
         $req = $db->prepare("SELECT open_time , break_time , resume_time , close_time , length_time FROM planning2 WHERE practitioner LIKE :practitioner AND day_time LIKE 'friday'");
@@ -200,8 +199,10 @@
         include("M/db_connect.php");
         $req = $db->prepare("SELECT start_hollyday , end_hollyday FROM hollyday WHERE practitioner LIKE :practitioner");
         $req->execute(array(
-            "practitioner" =>$_SESSION['id'] 
-=======
+            "practitioner" =>$_SESSION['id'] ));
+            return $req;
+    }
+
     function sql_is_available() {
         include("M/db_connect.php");
         $req=$db->prepare("SELECT available FROM practitioner WHERE practitioner.id = :id AND available = 0");
@@ -217,7 +218,6 @@
         $req=$db->prepare("SELECT observations FROM rdv WHERE id = :id");
         $req->execute(array(
             'id'=>$_GET['id']
->>>>>>> master
         ));
         return $req;
     }

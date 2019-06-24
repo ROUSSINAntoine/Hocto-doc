@@ -14,7 +14,7 @@
         ?>
         <form action="index.php?page" action="GET">
             <input type="email" name="email" id="mail" placeholder="e-mail" /><br>
-            <input type="password" name="password" placeholder="password"><br>
+            <input type="password" name="password" placeholder="password" require><br>
             <input type="hidden" name="page" value="login">
             <input type="submit" value="login">
         </form>
