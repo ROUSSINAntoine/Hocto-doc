@@ -112,7 +112,7 @@
         
     
    
-include("V/practitioner/mod_modif_planning.php");
+    include("V/practitioner/mod_modif_planning.php");
 
 
 ?>       

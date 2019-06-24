@@ -102,6 +102,6 @@ include("M/get_sql.php");
     
     $data_hollyday = display_planning_hollyday();
 
-include("V/practitioner/mod_create_planning.php");
+    include("V/practitioner/mod_create_planning.php");
     
 ?>

@@ -1,7 +1,7 @@
 <?php
-include("M/other_sql.php");      
+    include("M/other_sql.php");      
             
-include("M/get_sql.php");
+    include("M/get_sql.php");
 
     if(isset($_GET["days_time"])){   
         delete_planning ();
@@ -95,5 +95,5 @@ include("M/get_sql.php");
     
     $data_hollyday = display_planning_hollyday();
 
-include("V/practitioner/mod_modif_planning.php");
+    include("V/practitioner/mod_modif_planning.php");
 ?>
