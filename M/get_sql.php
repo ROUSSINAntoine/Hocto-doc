@@ -150,4 +150,13 @@
         ));
         return $req;
     }
+
+    function sql_member_rdv() {
+        include("M/db_connect.php");
+        $req=$db->prepare("SELECT patient.id, patient.firstname, patient.lastname FROM patient JOIN account ON patient.account = account.id WHERE account.id = :id");
+        $req->execute(array(
+            'id'=>$_SESSION['id']
+        ));
+        return $req;
+    }
 ?>

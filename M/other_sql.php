@@ -168,5 +168,16 @@
         $req->closeCursor();
     }
 
+    function sql_modif_rdv_member() {
+        include("M/db_connect.php");
+
+        $req=$db->prepare("UPDATE rdv SET patient= :id_patient WHERE id = :id_rdv");
+        $req->execute(array(
+            'id_patient'=>$_GET['patient'],
+            'id_rdv'=>$_SESSION['id_rdv']
+        ));
+        $req->closeCursor();
+
+    }
     
 ?> 

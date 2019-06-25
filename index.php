@@ -88,6 +88,9 @@
                 case "change_rdv":
                     include("C/both/req_change_rdv.php");
                     break;
+                case "change_member_rdv":
+                    include("C/both/req_change_member_rdv.php");
+                    break;
                 default:
                     include_once('E/404.html');
             }
