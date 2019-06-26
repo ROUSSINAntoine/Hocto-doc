@@ -15,7 +15,7 @@ while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
             $rdv = $rdv."<td>".$value."</td>";
         } else {
             $rdv = $rdv."<td><a href=index.php?page=popup_delete_rdv&id=".$_SESSION["id"]."&id_rdv=".$data["id"]."><button onclick=toto()>cancel rdv</button></a></td><p id=demo></p>";
-            $rdv = $rdv."<td><a href=index.php?page=change_rdv&id=".$_SESSION["id"]."&id_rdv=".$data["id"]."><button>change rdv</button></a>";
+            $rdv = $rdv."<td><a href=index.php?page=change_rdv&id=".$_SESSION["id"]."&id_rdv=".$data["id"]."><button>Change appointment</button></a>";
         }
         
     }
