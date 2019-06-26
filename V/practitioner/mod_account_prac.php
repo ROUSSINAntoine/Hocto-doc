@@ -26,7 +26,7 @@
                         fetch("index.php?page=available&action=not", {method: "GET"});
                     }
                 }
-        }
+            }
         </script>
     </body>
 </html>
