@@ -57,6 +57,9 @@
                 case "delete_rdv":
                     include_once("C/both/req_delete_rdv.php");
                     break;
+                case "calendar";
+                    include("C/practitioner/req_calendar.php");
+                    break; 
                 case "modif_account":
                     if (isset($_GET["modif"])) {
                         include("C/patient/req_modif_account.php");

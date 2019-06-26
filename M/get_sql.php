@@ -112,14 +112,20 @@
         return $req;
     }
 
-    function sql_modif_pract() {
-        include("M/db_connect.php");
-        $req=$db->prepare("SELECT * FROM practitioner WHERE practitioner.id = :id");
-        $req->execute(array(
-            'id'=>$_SESSION['id']
-            )
-        );
-        return $req;
+    function get_appointment() {
+        try {
+            include("M/db_connect.php");
+            $req = $db->prepare(
+                "SELECT * FROM rdv WHERE practitioner LIKE :id ORDER BY dtrdv, hrrdv");  
+
+            $req->execute(array(
+                "id" => $_SESSION['id']
+            ));
+            $result = $req->fetchall();
+            return $result;
+        } catch (Exception $e) {
+            die('Erreur: ' . $e->getMessage());
+        }
     }
 
     function sql_membre() {

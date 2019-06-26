@@ -40,7 +40,7 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
             
             //redirecton vers le home pour l'user connecté
             if ($co == "prac") {
-                $req= sql_modif_pract();
+                $req= sql_prac();
                 $data= $req->fetch();
                 $req->closeCursor();
                 if($data['firstname'] == null || $data['firstname'] == "") {
