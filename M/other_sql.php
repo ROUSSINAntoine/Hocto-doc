@@ -206,7 +206,6 @@
         $req->closeCursor();
     }
 
-<<<<<<< HEAD
     function delete_planning () {
         include("M/db_connect.php");
 
@@ -218,7 +217,6 @@
         $req->closeCursor();
     }
 
-=======
     function sql_modif_rdv_member() {
         include("M/db_connect.php");
 
@@ -230,6 +228,5 @@
         $req->closeCursor();
 
     }
->>>>>>> vincent
     
 ?> 
