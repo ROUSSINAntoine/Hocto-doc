@@ -60,7 +60,7 @@
        open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_monday['open_time']?>" ><br/>
     
-        break_time
+        break time
         <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data_monday['break_time']?>" ><br/>
         resume
         <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data_monday['resume_time']?>" ><br/>
@@ -68,7 +68,6 @@
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_monday['close_time']?>" ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_monday['length_time']?>"><br/>
-        days : monday <br>
         <input type="hidden" name="days_time" value="monday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -80,9 +79,9 @@
    <form action="index.php" method="GET">
     <p>
        open
-        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_tuesday['open_time']?>" ><br/>
+        <input type="time" name="open_time" min="00:00" max="23:59"  required value="<?php echo $data_tuesday['open_time']?>" ><br/>
     
-        break_time
+        break time
         <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data_tuesday['break_time']?>" ><br/>
         resume
         <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data_tuesday['resume_time']?>" ><br/>
@@ -90,7 +89,6 @@
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_tuesday['close_time']?>" ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_tuesday['length_time']?>"><br/>
-        days : tuesday <br>
         <input type="hidden" name="days_time" value="tuesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -104,7 +102,7 @@
         open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_wednesday['open_time']?>" ><br/>
     
-        break_time
+        break time
         <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data_wednesday['break_time']?>" ><br/>
         resume
         <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data_wednesday['resume_time']?>" ><br/>
@@ -112,7 +110,6 @@
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_wednesday['close_time']?>" ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_wednesday['length_time']?>"><br/>
-        days : wednesday <br>
         <input type="hidden" name="days_time" value="wednesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -126,7 +123,7 @@
          open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_thursday['open_time']?>" ><br/>
     
-        break_time
+        break time
         <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data_thursday['break_time']?>" ><br/>
         resume
         <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data_thursday['resume_time']?>" ><br/>
@@ -134,7 +131,6 @@
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_thursday['close_time']?>" ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_thursday['length_time']?>"><br/>
-        days : thursday <br>
         <input type="hidden" name="days_time" value="thursday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -148,7 +144,7 @@
         open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_friday['open_time']?>" ><br/>
     
-        break_time
+        break time
         <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data_friday['break_time']?>" ><br/>
         resume
         <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data_friday['resume_time']?>" ><br/>
@@ -156,7 +152,6 @@
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_friday['close_time']?>" ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_friday['length_time']?>"><br/>
-        days : friday <br>
         <input type="hidden" name="days_time" value="friday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -170,7 +165,7 @@
         open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_saturday['open_time']?>" ><br/>
     
-        break_time
+        break time
         <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data_saturday['break_time']?>" ><br/>
         resume
         <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data_saturday['resume_time']?>" ><br/>
@@ -178,7 +173,6 @@
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_saturday['close_time']?>" ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_saturday['length_time']?>"><br/>
-        days : saturday <br>
         <input type="hidden" name="days_time" value="saturday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -192,7 +186,7 @@
        open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_sunday['open_time']?>" ><br/>
     
-        break_time
+        break time
         <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data_sunday['break_time']?>" ><br/>
         resume
         <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data_sunday['resume_time']?>" ><br/>
@@ -200,7 +194,6 @@
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_sunday['close_time']?>" ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_sunday['length_time']?>"><br/>
-        days : sunday<br>
         <input type="hidden" name="days_time" value="sunday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
