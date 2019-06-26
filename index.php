@@ -91,6 +91,12 @@
                 case "observ_modif":
                     include_once("C/practitioner/req_observ_modif.php");
                     break;
+                case "change_rdv":
+                    include("C/both/req_change_rdv.php");
+                    break;
+                case "change_member_rdv":
+                    include("C/both/req_change_member_rdv.php");
+                    break;
                 default:
                     include_once('E/404.html');
             }

@@ -10,8 +10,7 @@ function affichage_account() {
     include_once("M/get_sql.php");
     $req = sql_display_member();
     $data = $req->fetch();
-    
-    //$req->closeCursor();
+
     return $data;
     
 }
