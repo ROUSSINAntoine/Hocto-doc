@@ -1,23 +1,17 @@
-<?php        
+<?php
 
-    include("M/other_sql.php");      
-            
-    include("M/get_sql.php");
-    
-        if(isset($_GET["days_time"])){       
-            if(isset($_GET["practitioner"])){        
+include("M/other_sql.php");
+include("M/get_sql.php");
 
-            modif_planning();         
-            }
-        }        
-    
 
-    if(isset($_GET["practitioner"])){        
-        if(isset($_GET["start_hollyday"])){ 
-            if(isset($_GET["end_hollyday"])){ 
-            modif_hollyday(); 
-            }
+    if(isset($_GET["days_time"])){
+        if(isset($_GET["practitioner"])){
+            $req = creer_planning();
         }
+    }
+
+    if(isset($_GET["start_hollyday"])){
+        $req = creer_hollyday();
     }
 
     function display_planning_monday() {
@@ -107,12 +101,8 @@
     }        
     
     $data_hollyday = display_planning_hollyday();
-
     
-        
-    
-   
-    include("V/practitioner/mod_modif_planning.php");
 
 
-?>       
+    include("V/practitioner/mod_create_planning.php");
+?>

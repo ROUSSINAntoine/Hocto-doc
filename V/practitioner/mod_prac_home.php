@@ -4,10 +4,9 @@
         <title>Home</title>
     </head>
     <body>
-    <?php include("V/navbar.html"); ?> 
+    <?php include_once("V/navbar.html"); ?> 
         <h1>Hocto'doc</h1><p></p>
-        <a href="index.php?page=logout"><button>Logout</button></a> 
-        <a href="index.php?page=account"><button>Account</button></a>  
+        <a href="index.php?page=create_planning"><button>create_planning</button></a>
         <a href="index.php?page=modif_planning"><button>modif_planning</button></a>
         <a href="index.php?page=calendar"><button>calendar</button></a>
         

@@ -5,7 +5,7 @@
     <title>search</title>
 </head>
 <body>
-    <?php include("V/navbar.html"); ?> 
+    <?php include_once("V/navbar.html"); ?> 
     <form action="index.php"  method="get">
         <input type="text" name="srch">
         <input type="hidden" name="page" value="result">

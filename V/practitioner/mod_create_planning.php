@@ -18,13 +18,14 @@
     </style>
 
 <?php include("V/navbar.html"); ?> 
+
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="Monday-tab" data-toggle="tab" href="#Monday" role="tab" aria-controls="Monday" aria-selected="true">Monday</a>
+    <a class="nav-link active" id="Monday-tab" data-toggle="tab" href="#monday" role="tab" aria-controls="Monday" aria-selected="true">Monday</a>
     </li>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="tuesday-tab" data-toggle="tab" href="#Tuesday" role="tab" aria-controls="tuesday" aria-selected="false">tuesday</a>
+    <a class="nav-link" id="tuesday-tab" data-toggle="tab" href="#tuesday" role="tab" aria-controls="tuesday" aria-selected="false">tuesday</a>
    
   </li>
   <li class="nav-item">
@@ -56,7 +57,7 @@
   <div class="tab-pane fade show active" id="Monday" role="tabpanel" aria-labelledby="Monday-tab">
   <form action="index.php" method="GET">
     <p>
-        open
+       open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_monday['open_time']?>" onchange="min_fin(0, 1)" id="0" ><br/>
     
         break_time
@@ -67,24 +68,17 @@
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_monday['close_time']?>" id="3" ><br/>
         appointment time
         <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_monday['length_time']?>"><br/>
-
         <input type="hidden" name="days_time" value="monday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
-        <input type="submit" name="modif" value="confirm" >
+        <input type="hidden" name="page" value="create_planning">
+        <input type="submit" value="confirm" >
     </form>
-    <a href="index.php?page=login"><button>return</button></a><br>
-    
-    <form action="index.php" method="GET">
-    <input type="hidden" name="days_time" value="monday">
-    <input type="hidden" name="page" value="delete_planning">
-    <input type="submit" name="delete" value="delete">
-    </form>
+    <a href="index.php?page=login"><button>return</button></a>
     </p></div>
-  <div class="tab-pane fade" id="Tuesday" role="tabpanel" aria-labelledby="tuesday-tab">
+  <div class="tab-pane fade" id="tuesday" role="tabpanel" aria-labelledby="tuesday-tab">
    <form action="index.php" method="GET">
     <p>
-       open
+      open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_tuesday['open_time']?>" onchange="min_fin(4, 5)" id="4" ><br/>
     
         break_time
@@ -97,16 +91,10 @@
         <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_tuesday['length_time']?>"><br/>
         <input type="hidden" name="days_time" value="tuesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
+        <input type="hidden" name="page" value="create_planning">
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
-
-    <form action="index.php" method="GET">
-    <input type="hidden" name="days_time" value="tuesday">
-    <input type="hidden" name="page" value="delete_planning">
-    <input type="submit" name="delete" value="delete">
-    </form>
     </p></div>
   <div class="tab-pane fade" id="Wednesday" role="tabpanel" aria-labelledby="Wednesday-tab">
   <form action="index.php" method="GET">
@@ -124,21 +112,15 @@
         <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_wednesday['length_time']?>"><br/>
         <input type="hidden" name="days_time" value="wednesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
+        <input type="hidden" name="page" value="create_planning">
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
-
-    <form action="index.php" method="GET">
-    <input type="hidden" name="days_time" value="wednesday">
-    <input type="hidden" name="page" value="delete_planning">
-    <input type="submit" name="delete" value="delete">
-    </form>
     </p></div>
   <div class="tab-pane fade" id="Thursday" role="tabpanel" aria-labelledby="Thursday-tab">
   <form action="index.php" method="GET">
     <p>
-       open
+         open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_thursday['open_time']?>" onchange="min_fin(12, 13)" id="12" ><br/>
     
         break_time
@@ -151,21 +133,15 @@
         <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_thursday['length_time']?>"><br/>
         <input type="hidden" name="days_time" value="thursday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
-        <input type="submit" value="confirm" >
+        <input type="hidden" name="page" value="create_planning">
+        <input type="submit" value="valider" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
-
-    <form action="index.php" method="GET">
-    <input type="hidden" name="days_time" value="thursday">
-    <input type="hidden" name="page" value="delete_planning">
-    <input type="submit" name="delete" value="delete">
-    </form>
     </p></div>
   <div class="tab-pane fade" id="Friday" role="tabpanel" aria-labelledby="Friday-tab">
   <form action="index.php" method="GET">
     <p>
-       open
+        open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_friday['open_time']?>" onchange="min_fin(16, 17)" id="16" ><br/>
     
         break_time
@@ -178,16 +154,10 @@
         <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_friday['length_time']?>"><br/>
         <input type="hidden" name="days_time" value="friday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
+        <input type="hidden" name="page" value="create_planning">
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
-
-    <form action="index.php" method="GET">
-    <input type="hidden" name="days_time" value="friday">
-    <input type="hidden" name="page" value="delete_planning">
-    <input type="submit" name="delete" value="delete">
-    </form>
     </p></div>
   <div class="tab-pane fade" id="Saturday" role="tabpanel" aria-labelledby="Saturday-tab">
   <form action="index.php" method="GET">
@@ -205,21 +175,15 @@
         <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_saturday['length_time']?>"><br/>
         <input type="hidden" name="days_time" value="saturday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
+        <input type="hidden" name="page" value="create_planning">
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
-
-    <form action="index.php" method="GET">
-    <input type="hidden" name="days_time" value="saturday">
-    <input type="hidden" name="page" value="delete_planning">
-    <input type="submit" name="delete" value="delete">
-    </form>
     </p></div>
   <div class="tab-pane fade" id="Sunday" role="tabpanel" aria-labelledby="Sunday-tab">
   <form action="index.php" method="GET">
     <p>
-         open
+        open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_sunday['open_time']?>" onchange="min_fin(24, 25)" id="24" ><br/>
     
         break_time
@@ -232,34 +196,27 @@
         <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_sunday['length_time']?>"><br/>
         <input type="hidden" name="days_time" value="sunday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
+        <input type="hidden" name="page" value="create_planning">
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
-
-    <form action="index.php" method="GET">
-    <input type="hidden" name="days_time" value="sunday">
-    <input type="hidden" name="page" value="delete_planning">
-    <input type="submit" name="delete" value="delete">
-    </form>
     </p></div>
-    <div class="tab-pane fade" id="Hollyday" role="tabpanel" aria-labelledby="Hollyday-tab">
+     <div class="tab-pane fade" id="Hollyday" role="tabpanel" aria-labelledby="Hollyday-tab">
   <form action="index.php" method="GET">
     <p>
-        brake start
+         brake start
         <input type="date" name="start_hollyday" value="<?php echo $data_hollyday['start_hollyday']?>"onchange="min_fin(28, 29)" id="28"><br/>
     
         brake end
         <input type="date" name="end_hollyday" value="<?php echo $data_hollyday['end_hollyday']?>" id="29"><br/>
         
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
-        <input type="hidden" name="page" value="modif_planning">
+        <input type="hidden" name="page" value="create_planning">
         <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>
 </div>
-
 <script>
     function min_fin (b, a) {
         console.log("kebab");
