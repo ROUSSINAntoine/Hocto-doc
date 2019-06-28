@@ -1,5 +1,5 @@
 <?php 
-    include("M/get_sql.php");
+    include_once("M/get_sql.php");
 
     switch($_GET["type"]) {
         case "prac":
@@ -18,5 +18,5 @@
         $add = "There is no practitioner register under that name";
     }
 
-    include("V/patient/mod_results.php");
+    include_once("V/patient/mod_results.php");
 ?>

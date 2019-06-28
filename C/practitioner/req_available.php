@@ -1,5 +1,5 @@
 <?php
-    include("M/other_sql.php");
+    include_once("M/other_sql.php");
 
     if ($_GET["action"] == "is") {
         echo "panda";

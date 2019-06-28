@@ -1,6 +1,6 @@
 <?php
-include("M/other_sql.php");
-include("M/get_sql.php");
+include_once("M/other_sql.php");
+include_once("M/get_sql.php");
 
 
 $req = sql_modif_rdv();
@@ -15,6 +15,7 @@ while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
             $rdv = $rdv."<td>".$value."</td>";
         } else {
             $rdv = $rdv."<td><a href=index.php?page=popup_delete_rdv&id=".$_SESSION["id"]."&id_rdv=".$data["id"]."><button onclick=toto()>cancel rdv</button></a></td><p id=demo></p>";
+            $rdv = $rdv."<td><a href=index.php?page=change_rdv&id=".$_SESSION["id"]."&id_rdv=".$data["id"]."><button>Change appointment</button></a>";
         }
         
     }
@@ -22,5 +23,5 @@ while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
     /*echo "<a href='index.php?page=delete_rdv'><button>delete rdv</button></a>"; */
     $_SESSION['id_rdv']=$data['id'];
 }
-include("./V/patient/mod_modif_rdv.php");
+include_once("./V/patient/mod_modif_rdv.php");
 

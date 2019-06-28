@@ -3,7 +3,7 @@
     $_SESSION = array();
     session_destroy();
     
-    include('./V/connection/mod_login.php');
+    include_once('./V/connection/mod_login.php');
     
     exit;	
 ?>
