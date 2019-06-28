@@ -56,26 +56,26 @@ INSERT INTO `patient` (`id`, `firstname`, `lastname`, `phone_number`, `adrs`, `c
 DROP TABLE IF EXISTS `planning2`;
 CREATE TABLE IF NOT EXISTS `planning2` (
   `id` int(3) NOT NULL AUTO_INCREMENT,
-  `open_time` time NOT NULL,
-  `break_time` time NOT NULL,
-  `resume_time` time NOT NULL,
-  `close_time` time NOT NULL,
-  `day_time` varchar(10) NOT NULL,
-  `disabled` tinyint(4) NOT NULL DEFAULT '0',
+  `open_time` time DEFAULT NULL,
+  `break_time` time DEFAULT NULL,
+  `resume_time` time DEFAULT NULL,
+  `close_time` time DEFAULT NULL,
+  `day_time` varchar(10) DEFAULT NULL,
+  `disabled` tinyint(4) DEFAULT '0',
+  `length_time` int(2) DEFAULT NULL,
   `practitioner` int(11) NOT NULL,
-  `length_time` int(2) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `practitioner` (`practitioner`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
-INSERT INTO `planning2` (`id`, `open_time`, `break_time`, `resume_time`, `close_time`, `day_time`, `disabled`, `practitioner`, `length_time`) VALUES
-(1, '05:56:00', '05:45:00', '04:59:00', '03:32:00', 'lundi', 0, 1, 33),
-(2, '00:00:00', '10:00:00', '12:00:00', '16:35:00', 'mardi', 0, 1, 25),
-(3, '01:54:00', '06:54:00', '04:21:00', '03:21:00', 'mercredi', 0, 1, 57),
-(4, '05:00:00', '07:00:00', '10:00:00', '12:00:00', 'jeudi', 0, 1, 0),
-(5, '05:00:00', '07:00:00', '10:00:00', '12:00:00', 'vendredi', 0, 1, 0),
-(6, '05:00:00', '07:00:00', '10:00:00', '12:00:00', 'samedi', 0, 1, 0),
-(11, '05:04:00', '03:02:00', '01:00:00', '10:54:00', 'dimanche', 0, 1, 56);
+INSERT INTO `planning2` (`id`, `open_time`, `break_time`, `resume_time`, `close_time`, `day_time`, `disabled`, `length_time`, `practitioner`) VALUES
+(1, '05:56:00', '05:45:00', '04:59:00', '03:32:00', 'lundi', 0, 33, 1),
+(2, '00:00:00', '10:00:00', '12:00:00', '16:35:00', 'mardi', 0, 25, 1),
+(3, '01:54:00', '06:54:00', '04:21:00', '03:21:00', 'mercredi', 0, 57, 1),
+(4, '05:00:00', '07:00:00', '10:00:00', '12:00:00', 'jeudi', 0, 0, 1),
+(5, '05:00:00', '07:00:00', '10:00:00', '12:00:00', 'vendredi', 0, 0, 1),
+(6, '05:00:00', '07:00:00', '10:00:00', '12:00:00', 'samedi', 0, 0, 1),
+(11, '05:04:00', '03:02:00', '01:00:00', '10:54:00', 'dimanche', 0, 56, 1);
 
 DROP TABLE IF EXISTS `practitioner`;
 CREATE TABLE IF NOT EXISTS `practitioner` (
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `rdv` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 INSERT INTO `rdv` (`id`, `dtrdv`, `hrrdv`, `observations`, `practitioner`, `patient`) VALUES
-(1, '2019-06-18', '19:00:00', '', 1, 25),
+(1, '2019-06-18', '19:00:00', 'Kebab\r\nsd', 1, 25),
 (2, '2019-06-11', '00:00:03', '', 1, 26);
 
 
