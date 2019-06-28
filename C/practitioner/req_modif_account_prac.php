@@ -1,13 +1,13 @@
 <?php
     
     function modif () {
-        include("M/other_sql.php");
+        include_once("M/other_sql.php");
         $req=sql_modif_prac();
         $req->closeCursor();
     }
 
     function affichage_account() {
-        include("M/get_sql.php");
+        include_once("M/get_sql.php");
         $req = sql_prac();
         $data = $req->fetch();
         
@@ -21,7 +21,7 @@
     }
     
     $data = affichage_account();
-    include("V/practitioner/mod_modif_account_prac.php");
+    include_once("V/practitioner/mod_modif_account_prac.php");
     
 
 ?>

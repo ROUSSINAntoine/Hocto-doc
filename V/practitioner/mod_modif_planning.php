@@ -13,7 +13,7 @@
 	input:valid {color : black ; }
     </style>
 
-<?php include("V/navbar.html"); ?> 
+<?php include_once("V/navbar.html"); ?> 
 
     <form action="index.php" method="GET">
         

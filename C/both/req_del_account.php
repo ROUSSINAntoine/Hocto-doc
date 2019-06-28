@@ -1,6 +1,6 @@
 <?php
-    include('M/db_connect.php');
-    include("M/other_sql.php");
+    include_once('M/db_connect.php');
+    include_once("M/other_sql.php");
 
     if (isset($_SESSION['type']) && $_SESSION["type"] == "pat") {
         sql_reg_del();
@@ -8,5 +8,5 @@
         sql_reg_del_prac();
     }
 
-    include("V/connection/mod_login.php");
+    include_once("V/connection/mod_login.php");
 ?>    

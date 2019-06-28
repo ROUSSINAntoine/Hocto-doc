@@ -1,7 +1,7 @@
 <?php
-    include("M/get_sql.php");
-    include("M/other_sql.php");
-    include("C/fct/select.php");
+    include_once("M/get_sql.php");
+    include_once("M/other_sql.php");
+    include_once("C/fct/select.php");
 
     $req = sql_account();
     $select = "";
@@ -41,7 +41,7 @@
         //echo "a";
         header('Location: index.php?page=login');
     } else {
-        include("V/patient/mod_appointment.php");
+        include_once("V/patient/mod_appointment.php");
     }
     
 ?>

@@ -4,7 +4,7 @@
         <title>Home</title>
     </head>
     <body>
-    <?php include("V/navbar.html"); ?> 
+    <?php include_once("V/navbar.html"); ?> 
         <h1>Hocto'doc</h1><p></p>
         <a href="index.php?page=modif_planning"><button>modif_planning</button></a>
         
