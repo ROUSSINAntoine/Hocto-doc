@@ -86,7 +86,7 @@ if(isset($_GET['email']) && isset($_GET['password'])) {
     include_once("M/get_sql.php");
     //redirige vers le home
     if ($_SESSION['type'] == "prac") {
-        $req= sql_modif_pract();
+        $req= sql_prac();
         $data= $req->fetch();
         $req->closeCursor();
         if($data['firstname'] == null || $data['firstname'] == "") {
