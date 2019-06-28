@@ -1,7 +1,7 @@
 <?php
     include_once("./M/get_sql.php");
     include_once("./M/other_sql.php");
-    $req= sql_modif_pract();
+    $req= sql_prac();
     $data= $req->fetch();
     $req->closeCursor();
     if($data['firstname'] == null || $data['firstname'] == "") {
