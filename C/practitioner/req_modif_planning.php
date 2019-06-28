@@ -20,6 +20,10 @@
         }
     }
 
+
+    $ajd = date("Y-m-d");
+    
+
     function display_planning_monday() {
         
         $req = sql_planning_monday();       
@@ -107,10 +111,6 @@
     }        
     
     $data_hollyday = display_planning_hollyday();
-
-    
-        
-    
    
     include("V/practitioner/mod_modif_planning.php");
 

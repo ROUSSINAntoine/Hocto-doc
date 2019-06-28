@@ -55,8 +55,12 @@
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="Monday" role="tabpanel" aria-labelledby="Monday-tab">
+  
   <form action="index.php" method="GET">
     <p>
+      None working day
+      <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)">
+
        open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_monday['open_time']?>" onchange="min_fin(0, 1)" id="0" ><br/>
     
@@ -67,7 +71,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_monday['close_time']?>" id="3" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_monday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_monday['length_time']?>" id="a"><br/>
         <input type="hidden" name="days_time" value="monday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -224,7 +228,23 @@
         var date_debut = document.getElementById(b).value;
         date_min_fin.setAttribute("min", date_debut);
     }
-</script>
 
+</script>
+<script>
+    function ta_mere (x) {
+        switch (x.id) {
+            case "qs":
+                document.getElementById("0").disabled = true;
+                document.getElementById("1").disabled = true;
+                document.getElementById("2").disabled = true;
+                document.getElementById("3").disabled = true;
+                document.getElementById("a").disabled = true;
+                break;
+        }
+    }
+</script>
+<?php
+var_dump(empty($_GET["open_time"] ));
+?>
 </body>
 </html>

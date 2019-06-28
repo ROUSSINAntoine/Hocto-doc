@@ -247,10 +247,10 @@
   <form action="index.php" method="GET">
     <p>
         brake start
-        <input type="date" name="start_hollyday" value="<?php echo $data_hollyday['start_hollyday']?>"onchange="min_fin(28, 29)" id="28"><br/>
+        <input type="date" name="start_hollyday" min="<?php echo $ajd ?>" required value="<?php echo $data_hollyday['start_hollyday']?>"onchange="min_fin(28, 29)" id="28"><br/>
     
         brake end
-        <input type="date" name="end_hollyday" value="<?php echo $data_hollyday['end_hollyday']?>" id="29"><br/>
+        <input type="date" name="end_hollyday" min="<?php echo $ajd ?>" required value="<?php echo $data_hollyday['end_hollyday']?>" id="29"><br/>
         
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="modif_planning">
