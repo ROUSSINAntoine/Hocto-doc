@@ -3,7 +3,16 @@
 
 function modif () {
     include_once("M/other_sql.php");
+<<<<<<< HEAD
     sql_modif();
+=======
+    $req=sql_modif();
+    $req->closeCursor();
+}
+function modif_patient() {
+    include_once("M/other_sql.php");
+    modif_patient();
+>>>>>>> antoine
 }
 
 function affichage_account() {
