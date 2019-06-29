@@ -37,6 +37,9 @@
                 case "appointment":
                     include_once("C/patient/appointment/req_appointment.php");
                     break;
+                case "appointment2":
+                    include_once("C/patient/appointment/req_appoitment2.php");
+                    break;
                 case "delete":
                     include_once("C/both/req_del_account.php");
                     break;
