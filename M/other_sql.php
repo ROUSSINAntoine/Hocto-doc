@@ -39,7 +39,7 @@
     function modif_planning () 
     {
         include("M/db_connect.php");
-        $req =$db->prepare ("UPDATE planning2 SET open_time =:open_time,break_time=:break_time ,resume_time =:resume_time , close_time =:close_time ,length_time= :length_time WHERE day_time LIKE :days_time AND practitioner LIKE :practitioner");
+        $req =$db->prepare ("UPDATE planning2 SET open_time =:open_time,break_time=:break_time ,resume_time =:resume_time , close_time =:close_time ,length_time= :length_time , `disabled`=:qs WHERE day_time LIKE :days_time AND practitioner LIKE :practitioner");
         $req ->execute (array (
             "open_time"=>$_GET['open_time'],
             "break_time" =>$_GET['break_time'],
@@ -47,7 +47,8 @@
             "close_time" =>$_GET['close_time'],
             "length_time" =>$_GET['length_time'],
             "days_time" =>$_GET['days_time'],
-            "practitioner" =>$_GET['practitioner'] 
+            "practitioner" =>$_GET['practitioner'],
+            "qs" =>$_GET['qs']
         ));
         $req->closeCursor();
     }
