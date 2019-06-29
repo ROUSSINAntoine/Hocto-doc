@@ -39,7 +39,7 @@
     function modif_planning () 
     {
         include("M/db_connect.php");
-        $req =$db->prepare ("UPDATE planning2 SET open_time =:open_time,break_time=:break_time ,resume_time =:resume_time , close_time =:close_time ,length_time= :length_time WHERE day_time LIKE :days_time AND practitioner LIKE :practitioner");
+        $req =$db->prepare ("UPDATE planning2 SET open_time =:open_time,break_time=:break_time ,resume_time =:resume_time , close_time =:close_time ,length_time= :length_time , `disabled`=:qs WHERE day_time LIKE :days_time AND practitioner LIKE :practitioner");
         $req ->execute (array (
             "open_time"=>$_GET['open_time'],
             "break_time" =>$_GET['break_time'],
@@ -47,7 +47,8 @@
             "close_time" =>$_GET['close_time'],
             "length_time" =>$_GET['length_time'],
             "days_time" =>$_GET['days_time'],
-            "practitioner" =>$_GET['practitioner'] 
+            "practitioner" =>$_GET['practitioner'],
+            "qs" =>$_GET['qs']
         ));
         $req->closeCursor();
     }
@@ -155,10 +156,10 @@
         $req->closeCursor();
     }
 
-    function creer_planning () {
+    function create_planning () {
         include("M/db_connect.php");
         
-        $req = $db->prepare("INSERT INTO planning2 (id, open_time, break_time, resume_time, close_time, day_time, practitioner, length_time) VALUES (NULL , :open_time , :break_time , :resume_time , :close_time , :days_time , :practitioner , :length_time)");
+        $req = $db->prepare("INSERT INTO planning2 (id, open_time, break_time, resume_time, close_time, day_time, practitioner, length_time , `disabled`) VALUES (NULL , :open_time , :break_time , :resume_time , :close_time , :days_time , :practitioner , :length_time , :qs)");
         $req ->execute(array(
             "open_time"=>$_GET['open_time'],
             "break_time" =>$_GET['break_time'],
@@ -166,7 +167,8 @@
             "close_time" =>$_GET['close_time'],
             "length_time" =>$_GET['length_time'],
             "days_time" =>$_GET['days_time'],
-            "practitioner" =>$_GET['practitioner']
+            "practitioner" =>$_GET['practitioner'],
+            "qs" =>$_GET['qs']
         ));
         $req->closeCursor();
     }
@@ -183,7 +185,7 @@
         $req->closeCursor();
     }
 
-    function creer_hollyday () {
+    function create_hollyday () {
         include("M/db_connect.php");
 
         $req =$db->prepare("INSERT INTO hollyday (start_hollyday , end_hollyday , practitioner ) VALUES (:start_hollyday , :end_hollyday , :practitioner)");

@@ -55,8 +55,12 @@
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="Monday" role="tabpanel" aria-labelledby="Monday-tab">
+  
   <form action="index.php" method="GET">
     <p>
+      None working day
+      <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)"><br>
+
        open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_monday['open_time']?>" onchange="min_fin(0, 1)" id="0" ><br/>
     
@@ -67,7 +71,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_monday['close_time']?>" id="3" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_monday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_monday['length_time']?>" id="a"><br/>
         <input type="hidden" name="days_time" value="monday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -78,6 +82,8 @@
   <div class="tab-pane fade" id="tuesday" role="tabpanel" aria-labelledby="tuesday-tab">
    <form action="index.php" method="GET">
     <p>
+    None working day
+      <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)"><br>
       open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_tuesday['open_time']?>" onchange="min_fin(4, 5)" id="4" ><br/>
     
@@ -88,7 +94,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_tuesday['close_time']?>" id="7" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_tuesday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_tuesday['length_time']?>" id="b"><br/>
         <input type="hidden" name="days_time" value="tuesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -99,6 +105,8 @@
   <div class="tab-pane fade" id="Wednesday" role="tabpanel" aria-labelledby="Wednesday-tab">
   <form action="index.php" method="GET">
     <p>
+    None working day
+      <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)"><br>
         open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_wednesday['open_time']?>" onchange="min_fin(8, 9)" id="8" ><br/>
     
@@ -109,7 +117,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_wednesday['close_time']?>" id="11" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_wednesday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_wednesday['length_time']?>" id="c"><br/>
         <input type="hidden" name="days_time" value="wednesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -120,6 +128,8 @@
   <div class="tab-pane fade" id="Thursday" role="tabpanel" aria-labelledby="Thursday-tab">
   <form action="index.php" method="GET">
     <p>
+    None working day
+      <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)"><br>
          open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_thursday['open_time']?>" onchange="min_fin(12, 13)" id="12" ><br/>
     
@@ -130,7 +140,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_thursday['close_time']?>" id="15" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_thursday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_thursday['length_time']?>" id="d"><br/>
         <input type="hidden" name="days_time" value="thursday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -141,6 +151,8 @@
   <div class="tab-pane fade" id="Friday" role="tabpanel" aria-labelledby="Friday-tab">
   <form action="index.php" method="GET">
     <p>
+    None working day
+      <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)"><br>
         open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_friday['open_time']?>" onchange="min_fin(16, 17)" id="16" ><br/>
     
@@ -151,7 +163,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_friday['close_time']?>" id="19" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_friday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_friday['length_time']?>" id="e"><br/>
         <input type="hidden" name="days_time" value="friday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -162,6 +174,8 @@
   <div class="tab-pane fade" id="Saturday" role="tabpanel" aria-labelledby="Saturday-tab">
   <form action="index.php" method="GET">
     <p>
+    None working day
+      <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)"><br>
         open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_saturday['open_time']?>" onchange="min_fin(20, 21)" id="20" ><br/>
     
@@ -172,7 +186,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_saturday['close_time']?>" id="23" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_saturday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_saturday['length_time']?>" id="f"><br/>
         <input type="hidden" name="days_time" value="saturday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -183,6 +197,8 @@
   <div class="tab-pane fade" id="Sunday" role="tabpanel" aria-labelledby="Sunday-tab">
   <form action="index.php" method="GET">
     <p>
+    None working day
+      <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)"><br>
         open
         <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_sunday['open_time']?>" onchange="min_fin(24, 25)" id="24" ><br/>
     
@@ -193,7 +209,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_sunday['close_time']?>" id="27" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_sunday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_sunday['length_time']?>" id="g"><br/>
         <input type="hidden" name="days_time" value="sunday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -223,6 +239,51 @@
         var date_min_fin = document.getElementById(a);
         var date_debut = document.getElementById(b).value;
         date_min_fin.setAttribute("min", date_debut);
+    }
+
+</script>
+<script>
+    function ta_mere (x) {
+        switch (x.id) {
+            case "qs":
+                document.getElementById("0").disabled = true;
+                document.getElementById("1").disabled = true;
+                document.getElementById("2").disabled = true;
+                document.getElementById("3").disabled = true;
+                document.getElementById("a").disabled = true;
+                document.getElementById("4").disabled = true;
+                document.getElementById("5").disabled = true;
+                document.getElementById("6").disabled = true;
+                document.getElementById("7").disabled = true;
+                document.getElementById("b").disabled = true;
+                document.getElementById("8").disabled = true;
+                document.getElementById("9").disabled = true;
+                document.getElementById("10").disabled = true;
+                document.getElementById("11").disabled = true;
+                document.getElementById("c").disabled = true;
+                document.getElementById("12").disabled = true;
+                document.getElementById("13").disabled = true;
+                document.getElementById("14").disabled = true;
+                document.getElementById("15").disabled = true;
+                document.getElementById("d").disabled = true;
+                document.getElementById("16").disabled = true;
+                document.getElementById("17").disabled = true;
+                document.getElementById("18").disabled = true;
+                document.getElementById("19").disabled = true;
+                document.getElementById("e").disabled = true;
+                document.getElementById("20").disabled = true;
+                document.getElementById("21").disabled = true;
+                document.getElementById("22").disabled = true;
+                document.getElementById("23").disabled = true;
+                document.getElementById("f").disabled = true;
+                document.getElementById("24").disabled = true;
+                document.getElementById("25").disabled = true;
+                document.getElementById("26").disabled = true;
+                document.getElementById("27").disabled = true;
+                document.getElementById("g").disabled = true;
+
+                break;
+        }
     }
 </script>
 

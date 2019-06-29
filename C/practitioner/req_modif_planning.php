@@ -3,6 +3,24 @@
     include("M/other_sql.php");      
             
     include("M/get_sql.php");
+    if(!(isset($_GET["qs"]))){
+        $_GET["qs"]=0 ;  
+    }
+    if(!(isset($_GET["open_time"]))){
+        $_GET["open_time"]=NULL ;
+    }
+    if(!(isset($_GET["break_time"]))){
+        $_GET["break_time"]=NULL ;
+    }
+    if(!(isset($_GET["resume_time"]))){
+        $_GET["resume_time"]=NULL ; 
+    }   
+    if(!(isset($_GET["close_time"]))){
+        $_GET["close_time"]=NULL ;    
+    }
+    if(!(isset($_GET["length_time"]))){
+         $_GET["length_time"]=NULL ;
+    }
     
         if(isset($_GET["days_time"])){       
             if(isset($_GET["practitioner"])){        
@@ -19,6 +37,10 @@
             }
         }
     }
+
+
+    $ajd = date("Y-m-d");
+    
 
     function display_planning_monday() {
         
@@ -107,10 +129,6 @@
     }        
     
     $data_hollyday = display_planning_hollyday();
-
-    
-        
-    
    
     include("V/practitioner/mod_modif_planning.php");
 
