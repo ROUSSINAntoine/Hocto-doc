@@ -1,8 +1,11 @@
 <?php 
-    function create_select ($start, $end, $step) {
+    function create_select ($starth, $endh, $steph, $startm, $endm, $stepm) {
         $select = "";
-        for ($i=$start; $i < $end ; $i = $i+$step) {
-            $select = $select."<option value='$i'>$i</option>\n";
+        for ($i=$starth; $i < $endh ; $i = $i+$steph) {
+            for ($j=$startm; $j < $endm ; $j = $j+$stepm) {
+                if (is_working_hour($i.":".$j.":00";))
+                $select = $select."<option value='$i'>$i</option>\n";
+            }
         }
 
         return $select;

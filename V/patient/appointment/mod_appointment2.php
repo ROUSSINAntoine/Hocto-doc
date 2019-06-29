@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>appointement</title>
+</head>
+<body>
+<?php include_once("V/navbar.html"); ?> 
+    <form action="index.php" method="GET">
+        <select name="hours" <?php echo $dis["hour"] ?>>
+                <?php echo $select_hours; ?>
+        </select>         
+        <input type="hidden" name="patient" value="<?php echo $_GET["patient"] ?>">
+        <input type="hidden" name="date" value="<?php echo $_GET["dtrdv"] ?>">
+        <input type="hidden" name="page" value="appointment">
+        <input type="hidden" name="doc" value="<?php echo $_GET["doc"] ?>">
+        <input type="submit" value="go">
+    </form>
+</body>
+</html>

@@ -236,4 +236,14 @@
         ));
         return $req;
     }
+    
+    // function sql_member_rdv() {
+    //     include("M/db_connect.php");
+    //     $req=$db->prepare("SELECT debut, fin FROM emprunt WHERE article = 4 AND debut BETWEEN :debut AND :fin OR fin BETWEEN :debut AND :fin");
+    //     $req->execute(array(
+    //         'id'=>$_SESSION['id']
+    //     ));
+    //     return $req;
+    // }
+    
 ?>
