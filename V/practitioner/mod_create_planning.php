@@ -62,16 +62,16 @@
       <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)"><br>
 
        open
-        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_monday['open_time']?>" onchange="min_fin(0, 1)" id="0" ><br/>
+        <input type="time" name="open_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_monday['open_time']?>" onchange="min_fin(0, 1)" id="0" ><br/>
     
         break_time
-        <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data_monday['break_time']?>" onchange="min_fin(1, 2)" id="1" ><br/>
-        resume
-        <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data_monday['resume_time']?>"onchange="min_fin(2, 3)" id="2" ><br/>
+        <input type="time" name="break_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_monday['break_time']?>" onchange="min_fin(1, 2)" id="1" ><br/>
+        resume 
+        <input type="time" name="resume_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_monday['resume_time']?>"onchange="min_fin(2, 3)" id="2" ><br/>
         end
-        <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_monday['close_time']?>" id="3" ><br/>
+        <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_monday['close_time']?>" id="3" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_monday['length_time']?>" id="a"><br/>
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_monday['length_time']?>"><br/>
         <input type="hidden" name="days_time" value="monday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -85,16 +85,16 @@
     None working day
       <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)"><br>
       open
-        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_tuesday['open_time']?>" onchange="min_fin(4, 5)" id="4" ><br/>
+        <input type="time" name="open_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_tuesday['open_time']?>" onchange="min_fin(4, 5)" id="4" ><br/>
     
         break_time
-        <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data_tuesday['break_time']?>" onchange="min_fin(5, 6)" id="5" ><br/>
+        <input type="time" name="break_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_tuesday['break_time']?>" onchange="min_fin(5, 6)" id="5" ><br/>
         resume
-        <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data_tuesday['resume_time']?>"onchange="min_fin(6, 7)" id="6" ><br/>
+        <input type="time" name="resume_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_tuesday['resume_time']?>"onchange="min_fin(6, 7)" id="6" ><br/>
         end
-        <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_tuesday['close_time']?>" id="7" ><br/>
+        <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_tuesday['close_time']?>" id="7" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_tuesday['length_time']?>" id="b"><br/>
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_tuesday['length_time']?>"><br/>
         <input type="hidden" name="days_time" value="tuesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -108,16 +108,16 @@
     None working day
       <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)"><br>
         open
-        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_wednesday['open_time']?>" onchange="min_fin(8, 9)" id="8" ><br/>
+        <input type="time" name="open_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_wednesday['open_time']?>" onchange="min_fin(8, 9)" id="8" ><br/>
     
         break_time
-        <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data_wednesday['break_time']?>" onchange="min_fin(9, 10)" id="9" ><br/>
+        <input type="time" name="break_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_wednesday['break_time']?>" onchange="min_fin(9, 10)" id="9" ><br/>
         resume
-        <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data_wednesday['resume_time']?>"onchange="min_fin(10, 11)" id="10" ><br/>
+        <input type="time" name="resume_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_wednesday['resume_time']?>"onchange="min_fin(10, 11)" id="10" ><br/>
         end
-        <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_wednesday['close_time']?>" id="11" ><br/>
+        <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_wednesday['close_time']?>" id="11" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_wednesday['length_time']?>" id="c"><br/>
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_wednesday['length_time']?>"><br/>
         <input type="hidden" name="days_time" value="wednesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -131,16 +131,16 @@
     None working day
       <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)"><br>
          open
-        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_thursday['open_time']?>" onchange="min_fin(12, 13)" id="12" ><br/>
+        <input type="time" name="open_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_thursday['open_time']?>" onchange="min_fin(12, 13)" id="12" ><br/>
     
         break_time
-        <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data_thursday['break_time']?>" onchange="min_fin(13, 14)" id="13" ><br/>
+        <input type="time" name="break_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_thursday['break_time']?>" onchange="min_fin(13, 14)" id="13" ><br/>
         resume
-        <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data_thursday['resume_time']?>"onchange="min_fin(14, 15)" id="14" ><br/>
+        <input type="time" name="resume_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_thursday['resume_time']?>"onchange="min_fin(14, 15)" id="14" ><br/>
         end
-        <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_thursday['close_time']?>" id="15" ><br/>
+        <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_thursday['close_time']?>" id="15" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_thursday['length_time']?>" id="d"><br/>
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_thursday['length_time']?>"><br/>
         <input type="hidden" name="days_time" value="thursday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -154,16 +154,16 @@
     None working day
       <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)"><br>
         open
-        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_friday['open_time']?>" onchange="min_fin(16, 17)" id="16" ><br/>
+        <input type="time" name="open_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_friday['open_time']?>" onchange="min_fin(16, 17)" id="16" ><br/>
     
         break_time
-        <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data_friday['break_time']?>" onchange="min_fin(17, 18)" id="17" ><br/>
+        <input type="time" name="break_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_friday['break_time']?>" onchange="min_fin(17, 18)" id="17" ><br/>
         resume
-        <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data_friday['resume_time']?>"onchange="min_fin(18, 19)" id="18" ><br/>
+        <input type="time" name="resume_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_friday['resume_time']?>"onchange="min_fin(18, 19)" id="18" ><br/>
         end
-        <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_friday['close_time']?>" id="19" ><br/>
+        <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_friday['close_time']?>" id="19" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_friday['length_time']?>" id="e"><br/>
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_friday['length_time']?>"><br/>
         <input type="hidden" name="days_time" value="friday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -177,16 +177,16 @@
     None working day
       <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)"><br>
         open
-        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_saturday['open_time']?>" onchange="min_fin(20, 21)" id="20" ><br/>
+        <input type="time" name="open_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_saturday['open_time']?>" onchange="min_fin(20, 21)" id="20" ><br/>
     
         break_time
-        <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data_saturday['break_time']?>" onchange="min_fin(21, 22)" id="21" ><br/>
+        <input type="time" name="break_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_saturday['break_time']?>" onchange="min_fin(21, 22)" id="21" ><br/>
         resume
-        <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data_saturday['resume_time']?>"onchange="min_fin(22, 23)" id="22" ><br/>
+        <input type="time" name="resume_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_saturday['resume_time']?>"onchange="min_fin(22, 23)" id="22" ><br/>
         end
-        <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_saturday['close_time']?>" id="23" ><br/>
+        <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_saturday['close_time']?>" id="23" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_saturday['length_time']?>" id="f"><br/>
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_saturday['length_time']?>"><br/>
         <input type="hidden" name="days_time" value="saturday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -200,16 +200,16 @@
     None working day
       <input type="checkbox" name="qs" value=1 id="qs" onchange="ta_mere(this)"><br>
         open
-        <input type="time" name="open_time" min="00:00" max="23:59" required value="<?php echo $data_sunday['open_time']?>" onchange="min_fin(24, 25)" id="24" ><br/>
+        <input type="time" name="open_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_sunday['open_time']?>" onchange="min_fin(24, 25)" id="24" ><br/>
     
         break_time
-        <input type="time" name="break_time" min="00:00" max="23:59" required value="<?php echo $data_sunday['break_time']?>" onchange="min_fin(25, 26)" id="25" ><br/>
+        <input type="time" name="break_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_sunday['break_time']?>" onchange="min_fin(25, 26)" id="25" ><br/>
         resume
-        <input type="time" name="resume_time" min="00:00" max="23:59" required value="<?php echo $data_sunday['resume_time']?>"onchange="min_fin(26, 27)" id="26" ><br/>
+        <input type="time" name="resume_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_sunday['resume_time']?>"onchange="min_fin(26, 27)" id="26" ><br/>
         end
-        <input type="time" name="close_time" min="00:00" max="23:59" required value="<?php echo $data_sunday['close_time']?>" id="27" ><br/>
+        <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_sunday['close_time']?>" id="27" ><br/>
         appointment time
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_sunday['length_time']?>" id="g"><br/>
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_sunday['length_time']?>"><br/>
         <input type="hidden" name="days_time" value="sunday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">

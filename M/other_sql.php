@@ -70,10 +70,16 @@
         $req->closeCursor();
     }
     
-    function sql_appointment ($hr) {
+    function sql_appointment () {
         include("M/db_connect.php");
         //$hr = date("H:i", strtotime($_GET['hrrdv']));
-        $req =$db->query("INSERT INTO `rdv` (`id`, `dtrdv`, `hrrdv`, `observations`, `practitioner`, `patient`) VALUES (NULL, \"".$_GET["dtrdv"]."\", \"".$hr."\", '', \"".$_GET['doc']."\", \"".$_GET['patient']."\")");
+        $req =$db->prepare("INSERT INTO `rdv` (`id`, `dtrdv`, `hrrdv`, `observations`, `practitioner`, `patient`) VALUES (NULL, :dtrdv, :hrrdv, '', :prac, :pat)");
+        $req->execute(array(
+            'prac'=>$_GET['doc'],
+            'pat'=>$_GET['patient'],
+            'dtrdv'=>$_GET['date'],
+            'hrrdv'=>$_GET['hours']
+        ));
         $req->closeCursor();
     }
 
