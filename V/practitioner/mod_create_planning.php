@@ -71,7 +71,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_monday['close_time']?>" id="3" ><br/>
         appointment time
-        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_monday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_monday['length_time']?>" id="a"><br/>
         <input type="hidden" name="days_time" value="monday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -94,7 +94,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_tuesday['close_time']?>" id="7" ><br/>
         appointment time
-        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_tuesday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_tuesday['length_time']?>" id="b"><br/>
         <input type="hidden" name="days_time" value="tuesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -117,7 +117,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_wednesday['close_time']?>" id="11" ><br/>
         appointment time
-        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_wednesday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_wednesday['length_time']?>" id="c"><br/>
         <input type="hidden" name="days_time" value="wednesday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -140,7 +140,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_thursday['close_time']?>" id="15" ><br/>
         appointment time
-        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_thursday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_thursday['length_time']?>" id="d"><br/>
         <input type="hidden" name="days_time" value="thursday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -163,7 +163,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_friday['close_time']?>" id="19" ><br/>
         appointment time
-        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_friday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_friday['length_time']?>" id="e"><br/>
         <input type="hidden" name="days_time" value="friday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -186,7 +186,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_saturday['close_time']?>" id="23" ><br/>
         appointment time
-        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_saturday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_saturday['length_time']?>" id="f"><br/>
         <input type="hidden" name="days_time" value="saturday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
@@ -209,7 +209,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_sunday['close_time']?>" id="27" ><br/>
         appointment time
-        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_sunday['length_time']?>"><br/>
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_sunday['length_time']?>" id="g"><br/>
         <input type="hidden" name="days_time" value="sunday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
