@@ -68,11 +68,7 @@
         end
         <input type="time" name="close_time" min="00:00" max="23:59" step="300" required value="<?php echo $data_monday['close_time']?>" id="3" ><br/>
         appointment time
-<<<<<<< HEAD
-        <input type="number" name="length_time" min="10" max="120" required value="<?php echo $data_monday['length_time']?>" id="a"><br/>
-=======
-        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_monday['length_time']?>"><br/>
->>>>>>> antoine
+        <input type="number" name="length_time" min="5" max="60" step="5" required value="<?php echo $data_monday['length_time']?>" id="a"><br/>
 
         <input type="hidden" name="days_time" value="monday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
