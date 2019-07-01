@@ -206,7 +206,7 @@
     function sql_modif_observ () {
         include("M/db_connect.php");
         
-        $req = $db->prepare("UPDATE rdv SET `observations` = :obs WHERE `id` = :id;");
+        $req = $db->prepare("UPDATE rdv SET `observations` = :obs WHERE `id` = :id");
         $req->execute(array(
             'id' => $_SESSION['id'],
             'obs' => $_GET['observ'],
