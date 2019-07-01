@@ -8,11 +8,9 @@
     while ($data = $req->fetch()) {
         $select = $select."<option value='".$data["id"]."'>".$data["firstname"]." ".$data["lastname"]."</option>\n";
     }
-
     $req->closeCursor();
 
     $req = sql_consult();
-
     $data = $req->fetch();
 
     $select_hours;

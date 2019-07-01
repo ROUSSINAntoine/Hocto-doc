@@ -3,15 +3,37 @@
 include("M/other_sql.php");
 include("M/get_sql.php");
 
-
-    if(isset($_GET["days_time"])){
-        if(isset($_GET["practitioner"])){
-            $req = creer_planning();
-        }
+    if(!(isset($_GET["qs"]))){
+        $_GET["qs"]=0 ;  
     }
+    if(!(isset($_GET["open_time"]))){
+        $_GET["open_time"]=NULL ;
+    }
+    if(!(isset($_GET["break_time"]))){
+        $_GET["break_time"]=NULL ;
+    }
+    if(!(isset($_GET["resume_time"]))){
+        $_GET["resume_time"]=NULL ; 
+    }   
+    if(!(isset($_GET["close_time"]))){
+        $_GET["close_time"]=NULL ;    
+    }
+    if(!(isset($_GET["length_time"]))){
+         $_GET["length_time"]=NULL ;
+    }
+                            
+            
+    if(isset($_GET["qs"])){
+        if(isset($_GET["practitioner"])){
+            if(isset($_GET["days_time"])){
+                $req = create_planning();
+            }
+        }
+    }  
+
 
     if(isset($_GET["start_hollyday"])){
-        $req = creer_hollyday();
+        $req = create_hollyday();
     }
 
     function display_planning_monday() {
@@ -102,6 +124,7 @@ include("M/get_sql.php");
     
     $data_hollyday = display_planning_hollyday();
     
+
 
 
     include("V/practitioner/mod_create_planning.php");
