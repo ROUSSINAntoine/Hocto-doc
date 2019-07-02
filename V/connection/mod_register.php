@@ -13,15 +13,15 @@
         <form action="index.php" action="GET">
         <div class="form-group">
             <label for="mail" class="titre">Email address</label>
-            <input type="email" class="form-control" name="email" id="mail" pattern="[A-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,3}$" placeholder="Enter email"><br>
+            <input type="email" class="form-control" name="email" id="mail" required pattern="[A-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,3}$" placeholder="Enter email"><br>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1" class="titre">Password</label>
-            <input type="password" name="pass" class="form-control" id="exampleInputPassword1" minlength='4' maxlength='50' placeholder="Password">
+            <input type="password" name="pass" class="form-control" id="exampleInputPassword1" minlength='4' maxlength='50' placeholder="Password" required>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1" class="titre">Confirm assword</label>
-            <input type="password" name="conf" class="form-control" id="exampleInputPassword1" minlength='4' maxlength='50' placeholder="Confirm your assword">
+            <input type="password" name="conf" class="form-control" id="exampleInputPassword1" minlength='4' maxlength='50' placeholder="Confirm your assword" required>
         </div>
         <div class="switch">
         <label class="switch">Practitioner account
