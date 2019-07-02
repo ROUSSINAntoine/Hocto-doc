@@ -3,6 +3,7 @@
     include("M/other_sql.php");      
             
     include("M/get_sql.php");
+    
     if(!(isset($_GET["qs"]))){
         $_GET["qs"]=0 ;  
     }
