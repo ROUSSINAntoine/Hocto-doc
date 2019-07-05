@@ -8,8 +8,8 @@
     <form action="index.php" method="GET">
         <select name="patient">
             <?php echo $select; ?>
-        </select><br>
-        <input type="date" id name="dtrdv" min="<?php echo $date ?>" required></br>
+        </select><br><br>
+        <input type="date" id name="dtrdv" min="<?php echo $date ?>" required></br><br>
         <input type="hidden" name="page" value="appointment">
         <input type="hidden" name="doc" value="<?php echo $_GET["doc"] ?>">
         <input type="submit" value="go">

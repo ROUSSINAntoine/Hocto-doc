@@ -75,7 +75,7 @@
         <input type="hidden" name="page" value="modif_planning">
         <input type="submit" name="modif" value="confirm" >
     </form>
-    <a href="index.php?page=login"><button>return</button></a><br>
+    <a href="index.php?page=login"><button>return</button></a><br><br>
     
     <form action="index.php" method="GET">
     <input type="hidden" name="days_time" value="monday">
@@ -104,7 +104,7 @@
         <input type="hidden" name="page" value="modif_planning">
         <input type="submit" value="confirm" >
     </form>
-    <a href="index.php?page=login"><button>return</button></a>
+    <a href="index.php?page=login"><button>return</button></a><br><br>
 
     <form action="index.php" method="GET">
     <input type="hidden" name="days_time" value="tuesday">
@@ -133,7 +133,7 @@
         <input type="hidden" name="page" value="modif_planning">
         <input type="submit" value="confirm" >
     </form>
-    <a href="index.php?page=login"><button>return</button></a>
+    <a href="index.php?page=login"><button>return</button></a><br><br>
 
     <form action="index.php" method="GET">
     <input type="hidden" name="days_time" value="wednesday">
@@ -162,7 +162,7 @@
         <input type="hidden" name="page" value="modif_planning">
         <input type="submit" value="confirm" >
     </form>
-    <a href="index.php?page=login"><button>return</button></a>
+    <a href="index.php?page=login"><button>return</button></a><br><br>
 
     <form action="index.php" method="GET">
     <input type="hidden" name="days_time" value="thursday">
@@ -191,7 +191,7 @@
         <input type="hidden" name="page" value="modif_planning">
         <input type="submit" value="confirm" >
     </form>
-    <a href="index.php?page=login"><button>return</button></a>
+    <a href="index.php?page=login"><button>return</button></a><br><br>
 
     <form action="index.php" method="GET">
     <input type="hidden" name="days_time" value="friday">
@@ -220,7 +220,7 @@
         <input type="hidden" name="page" value="modif_planning">
         <input type="submit" value="confirm" >
     </form>
-    <a href="index.php?page=login"><button>return</button></a>
+    <a href="index.php?page=login"><button>return</button></a><br><br>
 
     <form action="index.php" method="GET">
     <input type="hidden" name="days_time" value="saturday">
@@ -249,7 +249,7 @@
         <input type="hidden" name="page" value="modif_planning">
         <input type="submit" value="confirm" >
     </form>
-    <a href="index.php?page=login"><button>return</button></a>
+    <a href="index.php?page=login"><button>return</button></a><br><br>
 
     <form action="index.php" method="GET">
     <input type="hidden" name="days_time" value="sunday">
@@ -268,9 +268,9 @@
         
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="modif_planning">
-        <input type="submit" value="confirm" >
+        <input type="submit" value="confirm" ><br>
     </form>
-    <a href="index.php?page=login"><button>return</button></a>
+    <a href="index.php?page=login"><button>return</button></a><br><br>
     </p></div>
 </div>
 

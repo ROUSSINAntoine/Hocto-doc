@@ -13,25 +13,14 @@
 <body>
     <?php include_once("V/navbar.html"); ?> 
     <form action="index.php" action="GET">
-<<<<<<< HEAD
-        <h5><input type="text" name="firstname" placeholder="First name"require pattern="[A-z ' - é è ê ç à ï]{2,90}" value='<?php echo $firstname ?>'><br>
-        <input type="text" name="lastname" placeholder="Lastame"require pattern="[A-z ' - é è ê ç à ï]{2,90}" value='<?php echo $lastname ?>'><br>
-        <input type="text" name="phone_number" placeholder="Phone number"require pattern="[0-9]{10}" value='<?php echo $phone_number ?>'><br>
-        <input type="text" name="adrs" placeholder="Address" value='<?php echo $adrs ?>'><br>
-        <input type="text" name="city" placeholder="City" value='<?php echo $city ?>'><br>
-        <input type="text" name="postcode" placeholder="Postcode"require pattern="[0-9]{5}" value='<?php echo $postcode ?>'><br>
-        <input type="text" name="ssn" placeholder="Social security number"require pattern="[0-9]{15}" value='<?php echo $ssn ?>'><br>
-        <input type="hidden" name="page" value="add_patient"></h5>
-=======
-        <input type="text" name="firstname" placeholder="First name"required pattern="[A-z ' - é è ê ç à ï]{2,90}" value='<?php echo $firstname ?>'><br>
-        <input type="text" name="lastname" placeholder="Lastame"required pattern="[A-z ' - é è ê ç à ï]{2,90}" value='<?php echo $lastname ?>'><br>
-        <input type="text" name="phone_number" placeholder="Phone number"required pattern="[0-9]{10}" value='<?php echo $phone_number ?>'><br>
-        <input type="text" name="adrs" placeholder="Address" value='<?php echo $adrs ?>' required><br>
-        <input type="text" name="city" placeholder="City" value='<?php echo $city ?>' required><br>
-        <input type="text" name="postcode" placeholder="Postcode"requirec pattern="[0-9]{5}" value='<?php echo $postcode ?>'><br>
-        <input type="text" name="ssn" placeholder="Social security number"requirec pattern="[0-9]{15}" value='<?php echo $ssn ?>'><br>
-        <input type="hidden" name="page" value="add_patient">
->>>>>>> master
+        <h5><input type="text" name="firstname" placeholder="First name"require pattern="[A-z ' - é è ê ç à ï]{2,90}" value='<?php echo $firstname ?>'><br><br>
+        <input type="text" name="lastname" placeholder="Lastame"require pattern="[A-z ' - é è ê ç à ï]{2,90}" value='<?php echo $lastname ?>'><br><br>
+        <input type="text" name="phone_number" placeholder="Phone number"require pattern="[0-9]{10}" value='<?php echo $phone_number ?>'><br><br>
+        <input type="text" name="adrs" placeholder="Address" value='<?php echo $adrs ?>'><br><br>
+        <input type="text" name="city" placeholder="City" value='<?php echo $city ?>'><br><br>
+        <input type="text" name="postcode" placeholder="Postcode"require pattern="[0-9]{5}" value='<?php echo $postcode ?>'><br><br>
+        <input type="text" name="ssn" placeholder="Social security number"require pattern="[0-9]{15}" value='<?php echo $ssn ?>'><br><br>
+        <input type="hidden" name="page" value="add_patient"><br></h5>
         <input type="submit" value="Register">
     </form>
     <a href="index.php?page=account"><button>return</button></a> <br>

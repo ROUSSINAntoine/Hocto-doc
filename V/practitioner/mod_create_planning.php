@@ -144,7 +144,7 @@
         <input type="hidden" name="days_time" value="thursday"><br>
         <input type="hidden" name="practitioner" value="<?php echo $_SESSION['id']?>">
         <input type="hidden" name="page" value="create_planning">
-        <input type="submit" value="valider" >
+        <input type="submit" value="confirm" >
     </form>
     <a href="index.php?page=login"><button>return</button></a>
     </p></div>

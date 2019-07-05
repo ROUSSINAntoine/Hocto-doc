@@ -20,10 +20,10 @@
             $histo = $histo."<tr>";
             foreach ($data as $key => $value) {
                 if ($key == "observations" && $_SESSION["type"] == "prac") {
-                    $histo = $histo."<td><a href=index.php?page=observ_modif&id=".$data["id"]."><button>".$data["observations"]."</button></td>";
+                    $histo = $histo."<td><h5><a href=index.php?page=observ_modif&id=".$data["id"]."></h5><button>".$data["observations"]."</button></td>";
                 } else if ($key == "id") {
                 } else {
-                    $histo = $histo."<td>".$value."</td>";
+                    $histo = $histo."<td><h5>".$value."</h5></td>";
                 }
                 
             }

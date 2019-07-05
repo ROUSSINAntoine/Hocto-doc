@@ -11,7 +11,7 @@
         <a href="index.php?page=histo"><button>appointement historic</button></a>
         <a href="index.php?page=modif_account_prac"><button>change account</button></a>
 
-        Take appointment<input type="checkbox" name="available" id="0" <?php echo $dis; ?> onchange="available(this)">
+        <h5>Take appointment</h5><input type="checkbox" name="available" id="0" <?php echo $dis; ?> onchange="available(this)">
         <script>
             function available (value) {
                 var check = document.getElementById("0");
