@@ -73,7 +73,7 @@
     function sql_appointment () {
         include("M/db_connect.php");
         //$hr = date("H:i", strtotime($_GET['hrrdv']));
-        $req =$db->prepare("INSERT INTO `rdv` (`id`, `dtrdv`, `hrrdv`, `observations`, `practitioner`, `patient`) VALUES (NULL, :dtrdv, :hrrdv, '', :prac, :pat)");
+        $req =$db->prepare("INSERT INTO `rdv` (`id`, `dtrdv`, `hrrdv`, `observations`, `practitioner`, `patient`) VALUES (NULL, :dtrdv, :hrrdv, 'No observation yet', :prac, :pat)");
         $req->execute(array(
             'prac'=>$_GET['doc'],
             'pat'=>$_GET['patient'],

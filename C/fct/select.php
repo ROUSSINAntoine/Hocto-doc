@@ -27,7 +27,8 @@
 
     function is_working_hour ($hour, $day) {
         $req = sql_working_hour($day, $hour);
-        if ($req->fetch() == false) {
+        $data = $req->fetch();
+        if ($data == false || $hour == $data["break_time"] || $hour == $data["close_time"]) {
             $return = false;
         } else {
             $return = true;
@@ -49,15 +50,4 @@
         return $return;
     }
 
-    // function is_hollyday ($hour, $day) {
-    //     $req = sql_working_hour($day, $hour);
-    //     if ($req->fetch() == false) {
-    //         $return = false;
-    //     } else {
-    //         $return = true;
-    //     }
-    //     $req->closeCursor();
-
-    //     return $return;
-    // }
 ?>

@@ -17,9 +17,10 @@ function affichage_account() {
 
 if (isset($_GET["psw"])) {
     modif();
+    $message='your data is changed';
+    echo '<script type="text/javascript">window.alert("'.$message.'");</script>';
 }
 $data = affichage_account();
 include_once("V/patient/mod_modif_account.php");
-
 
 ?>

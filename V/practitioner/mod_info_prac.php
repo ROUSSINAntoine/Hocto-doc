@@ -10,14 +10,14 @@
 <body>
 <?php include_once("V/navbar.html"); ?> 
     <form action="index.php" method="GET">
-        email : <input type="text" name="emails"pattern="[A-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,3}$" value="<?php echo $data['email']?>"><br>
-        password : <input type="text" name="psw"minlength='4' maxlength='50' value="<?php echo $data['psw']?>"><br>
-        firstname : <input type="text" name="firstname"require pattern="[A-z ' - é è ê ç à ï]{2,90}" value="<?php echo $data['firstname']?>"><br>
-        lastname : <input type="text" name="lastname"require pattern="[A-z ' - é è ê ç à ï]{2,90}" value="<?php echo $data['lastname']?>"><br>
-        phone : <input type="text" name="phone"require pattern="[0-9]{10}"  value="<?php echo $data['phone_number']?>"><br>
-        adrs : <input type="text" name="adrs" value="<?php echo $data['adrs']?>"><br>
-        city : <input type="text" name="city" value="<?php echo $data['city']?>"><br>
-        postcode : <input type="text" name="postcode"require pattern="[0-9]{5}" value="<?php echo $data['postcode']?>"><br>
+        email : <input type="text" name="emails" required pattern="[A-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,3}$" value="<?php echo $data['email']?>"><br>
+        password : <input type="text" name="psw" required minlength='4' maxlength='50' value="<?php echo $data['psw']?>"><br>
+        firstname : <input type="text" name="firstname"required pattern="[A-z ' - é è ê ç à ï]{2,90}" value="<?php echo $data['firstname']?>"><br>
+        lastname : <input type="text" name="lastname"required pattern="[A-z ' - é è ê ç à ï]{2,90}" value="<?php echo $data['lastname']?>"><br>
+        phone : <input type="text" name="phone"required pattern="[0-9]{10}"  value="<?php echo $data['phone_number']?>"><br>
+        adrs : <input type="text" name="adrs" value="<?php echo $data['adrs']?>" required><br>
+        city : <input type="text" name="city" value="<?php echo $data['city']?>" required><br>
+        postcode : <input type="text" name="postcode"required pattern="[0-9]{5}" value="<?php echo $data['postcode']?>"><br>
         <input type="hidden" name="page" value="home_prac">
         <input type="hidden" name="email" value="<?php echo $data['email']?>">
         <input type="hidden" name="id" value="<?php echo $data['id']?>">
