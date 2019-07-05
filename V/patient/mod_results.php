@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php include_once("V/navbar.html"); ?> 
-    <?php echo $add ?><p></p>
+    <h5><?php echo $add ?></h5><p></p>
     <a href="index.php?page=login"><button>return</button></a>  
 
 </body>

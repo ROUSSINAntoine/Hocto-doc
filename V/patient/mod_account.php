@@ -5,7 +5,7 @@
     </head>
     <body>
     <?php include_once("V/navbar.html"); ?> 
-        <h1>Your account</h1><p></p>
+        <h5>Your account</h5><p></p>
         
         </form>
         <form action="index.php" method="GET">
