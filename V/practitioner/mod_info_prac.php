@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php include_once("V/navbar.html"); ?> 
-    <form action="index.php" method="GET">
+    <form action="index.php" method="GET"><h5>
         email : <input type="text" name="emails" required pattern="[A-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,3}$" value="<?php echo $data['email']?>"><br>
         password : <input type="text" name="psw" required minlength='4' maxlength='50' value="<?php echo $data['psw']?>"><br>
         firstname : <input type="text" name="firstname"required pattern="[A-z ' - é è ê ç à ï]{2,90}" value="<?php echo $data['firstname']?>"><br>
@@ -21,7 +21,7 @@
         <input type="hidden" name="page" value="home_prac">
         <input type="hidden" name="email" value="<?php echo $data['email']?>">
         <input type="hidden" name="id" value="<?php echo $data['id']?>">
-        <input type="submit" value="confirm">
+        <input type="submit" value="confirm"></h5>
     </form>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

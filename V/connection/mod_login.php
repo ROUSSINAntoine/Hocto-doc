@@ -16,7 +16,7 @@
             <input type="email" name="email" id="mail" placeholder="e-mail"required><br><br>
             <input type="password" name="password" placeholder="password" required><br><br>
             <input type="hidden" name="page" value="login">
-            <input type="submit" value="login">
+            <input type="submit" value="login"><br><br><br>
         </form>
         <a href="index.php?page=register"><button>register</button></a>
     </body>
